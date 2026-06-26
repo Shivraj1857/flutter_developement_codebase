@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 void main() {
   runApp(const MyApp());
@@ -18,6 +19,7 @@ class MyApp extends StatelessWidget {
 
 class WeightGoalScreen extends StatefulWidget {
   const WeightGoalScreen({super.key});
+
 
   @override
   State<WeightGoalScreen> createState() => _WeightGoalScreenState();
@@ -61,86 +63,109 @@ class _WeightGoalScreenState extends State<WeightGoalScreen> {
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 24),
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               const SizedBox(height: 60),
 
-              const Text(
-                "Set goal weight",
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 30,
-                  fontWeight: FontWeight.w500,
+              const Center(
+                child: Text(
+                  "Set goal weight",
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 30,
+                    fontWeight: FontWeight.w500,
+                  ),
                 ),
               ),
 
               const SizedBox(height: 12),
 
-              Text(
-                "Your current goal weight is $goalWeight LBS!",
-                style: const TextStyle(
-                  color: Colors.white70,
-                  fontSize: 16,
+              Center(
+                child: Text.rich(
+                  TextSpan(
+                    children: [
+                      const TextSpan(
+                        text: "Your current goal weight is ",
+                        style: TextStyle(
+                          color: Colors.white70,
+                          fontSize: 16,
+                          fontWeight: FontWeight.normal,
+                        ),
+                      ),
+                      TextSpan(
+                        text: "$goalWeight LBS!",
+                        style: const TextStyle(
+                          color: Colors.white70,
+                          fontSize: 16,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ],
+                  ),
+                  textAlign: TextAlign.center,
                 ),
               ),
 
-              const SizedBox(height: 60),
+              const SizedBox(height: 70),
 
-              Container(
-                height: 90,
-                width: 250,
-                decoration: BoxDecoration(
-                  //color: Colors.white.withOpacity(0.15),
-                  color: Colors.white.withAlpha(38),
-                  borderRadius: BorderRadius.circular(8),
-                  border: Border.all(
-                    color: Colors.white54,
-                    width: 1,
+              Center(
+                child: Container(
+                  width: 300,
+                  height: 90,
+                  decoration: BoxDecoration(
+                    color: Colors.white.withOpacity(0.15),
+                    borderRadius: BorderRadius.circular(8),
+                    border: Border.all(color: Colors.white54),
                   ),
-                ),
-                child: Center(
-                  child: IntrinsicWidth(
-                    child: Row(
-                      mainAxisSize: MainAxisSize.min,
-                      crossAxisAlignment: CrossAxisAlignment.end,
-                      children: [
-                        SizedBox(
-                          width: 120,
-                          child: TextField(
-                            controller: _controller,
-                            keyboardType:
-                            const TextInputType.numberWithOptions(
-                              decimal: true,
-                            ),
-                            textAlign: TextAlign.right,
-                            style: const TextStyle(
-                              color: Colors.white,
-                              fontSize: 42,
-                              fontWeight: FontWeight.bold,
-                              height: 1,
-                            ),
-                            decoration: const InputDecoration(
-                              border: InputBorder.none,
-                              isDense: true,
-                              contentPadding: EdgeInsets.zero,
-                            ),
-                          ),
-                        ),
-
-                        const SizedBox(width: 2),
-
-                        const Padding(
-                          padding: EdgeInsets.only(bottom: 6),
-                          child: Text(
-                            'lbs',
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 24,
-                              fontWeight: FontWeight.w500,
-                              height: 1,
+                  child: Center(
+                    child: IntrinsicWidth(
+                      child: Row(
+                        mainAxisSize: MainAxisSize.min,
+                        crossAxisAlignment: CrossAxisAlignment.end,
+                        children: [
+                          SizedBox(
+                            width: 120,
+                            child: TextField(
+                              controller: _controller,
+                              keyboardType:
+                              const TextInputType.numberWithOptions(
+                                decimal: true,
+                              ),
+                              inputFormatters: [
+                                FilteringTextInputFormatter.allow(
+                                  RegExp(r'^\d*\.?\d*$'),
+                                ),
+                              ],
+                              textAlign: TextAlign.right,
+                              style: const TextStyle(
+                                color: Colors.white,
+                                fontSize: 42,
+                                fontWeight: FontWeight.bold,
+                                height: 1,
+                              ),
+                              decoration: const InputDecoration(
+                                border: InputBorder.none,
+                                isDense: true,
+                                contentPadding: EdgeInsets.zero,
+                              ),
                             ),
                           ),
-                        ),
-                      ],
+                          const SizedBox(width: 2),
+                          const Padding(
+                            padding: EdgeInsets.only(bottom: 6),
+                            child: Text(
+                              'lbs',
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 24,
+                                fontWeight: FontWeight.w500,
+                                height: 1,
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                 ),
