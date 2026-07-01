@@ -4,7 +4,7 @@ import 'weight_event.dart';
 import 'weight_state.dart';
 
 class WeightBloc extends Bloc<WeightEvent, WeightState> {
-  WeightBloc() : super(const WeightState(weight: "000.0")) {
+  WeightBloc() : super(const WeightState()) {
     on<WeightChanged>(_onWeightChanged);
   }
 
@@ -13,8 +13,9 @@ class WeightBloc extends Bloc<WeightEvent, WeightState> {
       Emitter<WeightState> emit,
       ) {
     emit(
-      WeightState(
+      state.copyWith(
         weight: event.weight,
+        status: WeightStatus.success,
       ),
     );
   }
