@@ -1,8 +1,15 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(
-    MaterialApp(
+  runApp(myApp());
+}
+
+class myApp extends StatelessWidget {
+  const myApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
       home: Scaffold(
         backgroundColor: Colors.black,
         appBar: AppBar(
@@ -10,8 +17,10 @@ void main() {
           title: Text("my dashboard"),
           backgroundColor: Colors.blue,
         ),
-        body: Center(child: Image.asset("Image/dashatar.png"),),
+        body: Center(child: Container
+
+          (child: Image.asset("Image/dashatar.png"))),
       ),
-    ),
-  );
+    );
+  }
 }
