@@ -57,8 +57,6 @@ class PetModeScreen2 extends StatelessWidget {
                     print("Button tapped");
                   },
                 ),
-
-
               ],
             ),
           ),

@@ -1,5 +1,4 @@
-import 'package:braun_metra_demo/screens/pet_mode_screen1.dart';
-import 'package:braun_metra_demo/screens/PetModeScreen2.dart';
+import 'screens/pet_mode_screen4.dart';
 
 import 'package:flutter/material.dart';
 import 'screens/baby_mode_screen.dart';
@@ -17,7 +16,9 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       //home: const BabyModeScreen(),
       //home: const PetModeScreen1(),
-      home: const PetModeScreen2()
+      //home: const PetModeScreen2()
+      //home: const PetModeScreen3(),
+      home: const PetModeScreen4(),
     );
   }
 }
