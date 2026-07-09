@@ -1,5 +1,14 @@
 import 'package:flutter/material.dart';
 
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:fluttertoast/fluttertoast.dart';
+
+import '../bloc/pet_mode_bloc.dart';
+import '../bloc/pet_mode_event.dart';
+import '../bloc/pet_mode_state.dart';
+
+import 'pet_mode_screen1.dart';
+
 import '../utils/app_colors.dart';
 import '../widgets/instruction_text.dart';
 import '../widgets/user_info.dart';
@@ -10,54 +19,68 @@ class PetModeScreen4 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Container(
-        width: double.infinity,
+    return BlocListener<PetModeBloc, PetModeState>(
+      listener: (context, state) {
+        if (state is WeightSavedState) {
+          Fluttertoast.showToast(msg: "Weight saved successfully");
+        }
 
-        decoration: const BoxDecoration(
-          gradient: LinearGradient(
-            begin: Alignment.topCenter,
-            end: Alignment.bottomCenter,
-            colors: [
-              AppColors.backgroundTop,
-              AppColors.backgroundBottom,
-            ],
+        if (state is NavigateScreen1State) {
+          Navigator.pushAndRemoveUntil(
+            context,
+
+            MaterialPageRoute(builder: (_) => const PetModeScreen1()),
+
+            (route) => false,
+          );
+        }
+      },
+
+      child: Scaffold(
+        body: Container(
+          width: double.infinity,
+
+          decoration: const BoxDecoration(
+            gradient: LinearGradient(
+              begin: Alignment.topCenter,
+              end: Alignment.bottomCenter,
+              colors: [AppColors.backgroundTop, AppColors.backgroundBottom],
+            ),
           ),
-        ),
 
-        child: SafeArea(
-          child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 20),
+          child: SafeArea(
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 20),
 
-            child: Column(
-              children: [
+              child: Column(
+                children: [
+                  SizedBox(height: 15),
 
-                SizedBox(height: 15),
+                  _CustomAppBar(),
 
-                _CustomAppBar(),
+                  SizedBox(height: 35),
 
-                SizedBox(height: 35),
+                  UserInfo(),
 
-                UserInfo(),
+                  SizedBox(height: 60),
 
-                SizedBox(height: 60),
+                  Instruction_Text(),
 
-                Instruction_Text(),
+                  SizedBox(height: 15),
 
-                SizedBox(height: 15),
+                  WeightInfoWidget(),
 
-                WeightInfoWidget(),
+                  SizedBox(height: 70),
 
-                SizedBox(height: 70),
+                  WeighingCircle_3(),
 
-                WeighingCircle_3(),
+                  Spacer(),
 
-                Spacer(),
+                  WeightButtons(),
 
-                WeightButtons(),
-
-                SizedBox(height: 30),
-              ],
+                  SizedBox(height: 30),
+                ],
+              ),
             ),
           ),
         ),
@@ -73,12 +96,7 @@ class _CustomAppBar extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: const [
-
-        Icon(
-          Icons.close,
-          color: Colors.white,
-          size: 30,
-        ),
+        Icon(Icons.close, color: Colors.white, size: 30),
 
         SizedBox(width: 12),
 
@@ -95,7 +113,6 @@ class _CustomAppBar extends StatelessWidget {
   }
 }
 
-
 class Instruction_Text extends StatelessWidget {
   const Instruction_Text({super.key});
 
@@ -103,7 +120,6 @@ class Instruction_Text extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-
         Text(
           "Your pet's\nweight",
           textAlign: TextAlign.center,
@@ -123,11 +139,7 @@ class WeighButton extends StatelessWidget {
   final String text;
   final VoidCallback onPressed;
 
-  const WeighButton({
-    super.key,
-    required this.text,
-    required this.onPressed,
-  });
+  const WeighButton({super.key, required this.text, required this.onPressed});
 
   @override
   Widget build(BuildContext context) {
@@ -156,7 +168,6 @@ class WeighButton extends StatelessWidget {
   }
 }
 
-
 class WeightInfoWidget extends StatelessWidget {
   const WeightInfoWidget({super.key});
 
@@ -164,23 +175,16 @@ class WeightInfoWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-
-        Container(
-          height: 1,
-          width: 325,
-          color: Colors.white.withOpacity(0.5),
-        ),
+        Container(height: 1, width: 325, color: Colors.white.withOpacity(0.5)),
 
         const SizedBox(height: 6),
 
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: const [
-
                 Text(
                   "21 APRIL",
                   style: TextStyle(
@@ -192,56 +196,36 @@ class WeightInfoWidget extends StatelessWidget {
 
                 Text(
                   "9:15 AM",
-                  style: TextStyle(
-                    color: Colors.white70,
-                    fontSize: 12,
-                  ),
+                  style: TextStyle(color: Colors.white70, fontSize: 12),
                 ),
-
               ],
             ),
 
             const SizedBox(width: 90),
 
-
             Row(
               crossAxisAlignment: CrossAxisAlignment.baseline,
               textBaseline: TextBaseline.alphabetic,
               children: const [
-
                 Text(
                   "15.0",
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 32,
-                  ),
+                  style: TextStyle(color: Colors.white, fontSize: 32),
                 ),
 
                 SizedBox(width: 3),
 
                 Text(
                   "LBS",
-                  style: TextStyle(
-                    color: Colors.white70,
-                    fontSize: 18,
-                  ),
+                  style: TextStyle(color: Colors.white70, fontSize: 18),
                 ),
-
               ],
             ),
-
           ],
         ),
 
-
         const SizedBox(height: 6),
 
-        Container(
-          height: 1,
-          width: 325,
-          color: Colors.white.withOpacity(0.5),
-        ),
-
+        Container(height: 1, width: 325, color: Colors.white.withOpacity(0.5)),
       ],
     );
   }
@@ -261,12 +245,11 @@ class WeighingCircle_3 extends StatelessWidget {
           shape: BoxShape.circle,
           color: AppColors.circle1,
           boxShadow: [
-
             BoxShadow(
               color: Colors.black.withOpacity(.35),
               blurRadius: 25,
               spreadRadius: 8,
-            )
+            ),
           ],
         ),
 
@@ -312,15 +295,12 @@ class WeightButtons extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
     return Column(
       children: [
-
         SizedBox(
           height: 50,
           width: 350,
           child: ElevatedButton(
-
             style: ElevatedButton.styleFrom(
               backgroundColor: Colors.white,
               shape: RoundedRectangleBorder(
@@ -330,6 +310,7 @@ class WeightButtons extends StatelessWidget {
 
             onPressed: () {
               print("Save weight button is clicked");
+              context.read<PetModeBloc>().add(SaveWeightEvent());
             },
 
             child: const Text(
@@ -339,24 +320,18 @@ class WeightButtons extends StatelessWidget {
                 fontWeight: FontWeight.bold,
               ),
             ),
-
           ),
         ),
 
-
         const SizedBox(height: 15),
-
 
         SizedBox(
           height: 50,
           width: 350,
 
           child: OutlinedButton(
-
             style: OutlinedButton.styleFrom(
-              side: const BorderSide(
-                color: Colors.white,
-              ),
+              side: const BorderSide(color: Colors.white),
 
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(30),
@@ -365,6 +340,8 @@ class WeightButtons extends StatelessWidget {
 
             onPressed: () {
               print("Weigh Again is clicked");
+
+              context.read<PetModeBloc>().add(WeighAgainEvent());
             },
 
             child: const Text(
@@ -374,7 +351,6 @@ class WeightButtons extends StatelessWidget {
                 fontWeight: FontWeight.bold,
               ),
             ),
-
           ),
         ),
       ],

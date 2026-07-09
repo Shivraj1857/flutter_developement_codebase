@@ -1,16 +1,39 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../utils/app_colors.dart';
 import '../widgets/instruction_text.dart';
 import '../widgets/user_info.dart';
 import '../widgets/weighing_circle.dart';
+import '../bloc/pet_mode_bloc.dart';
+import '../bloc/pet_mode_event.dart';
+import 'pet_mode_screen3.dart';
+import '../bloc/pet_mode_state.dart';
 
 class PetModeScreen2 extends StatelessWidget {
   const PetModeScreen2({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+
+    return BlocListener<PetModeBloc, PetModeState>(
+
+        listener: (context, state) {
+
+          if (state is NavigateScreen3State) {
+
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (_) => const PetModeScreen3(),
+              ),
+            );
+
+          }
+
+        },
+
+        child: Scaffold(
       body: Container(
         width: double.infinity,
 
@@ -55,6 +78,11 @@ class PetModeScreen2 extends StatelessWidget {
                   text: "Weigh with Pet",
                   onPressed: () {
                     print("Button tapped");
+                    context
+                        .read<PetModeBloc>()
+                        .add(
+                        WeightWithPetButtonClickEvent()
+                    );
                   },
                 ),
               ],
@@ -62,7 +90,7 @@ class PetModeScreen2 extends StatelessWidget {
           ),
         ),
       ),
-    );
+    ));
   }
 }
 
