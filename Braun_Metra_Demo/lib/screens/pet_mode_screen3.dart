@@ -1,53 +1,84 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 
 import '../utils/app_colors.dart';
-import '../widgets/instruction_text.dart';
 import '../widgets/user_info.dart';
-import '../widgets/weighing_circle.dart';
 
-class PetModeScreen3 extends StatelessWidget {
+import '../bloc/pet_mode_bloc.dart';
+import '../bloc/pet_mode_event.dart';
+import '../bloc/pet_mode_state.dart';
+
+import 'pet_mode_screen4.dart';
+
+class PetModeScreen3 extends StatefulWidget {
   const PetModeScreen3({super.key});
 
   @override
+  State<PetModeScreen3> createState() => _PetModeScreen3State();
+}
+
+class _PetModeScreen3State extends State<PetModeScreen3> {
+  @override
+  void initState() {
+    super.initState();
+
+    Future.delayed(const Duration(seconds: 3), () {
+      Fluttertoast.showToast(msg: "Weight with pet captured");
+
+      context.read<PetModeBloc>().add(StartPetWeightCaptureEvent());
+    });
+  }
+
+  @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Container(
-        width: double.infinity,
+    return BlocListener<PetModeBloc, PetModeState>(
+      listener: (context, state) {
+        if (state is NavigateScreen4State) {
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (_) => const PetModeScreen4()),
+          );
+        }
+      },
 
-        decoration: const BoxDecoration(
-          gradient: LinearGradient(
-            begin: Alignment.topCenter,
-            end: Alignment.bottomCenter,
-            colors: [
-              AppColors.backgroundTop,
-              AppColors.backgroundBottom,
-            ],
+      child: Scaffold(
+        body: Container(
+          width: double.infinity,
+
+          decoration: const BoxDecoration(
+            gradient: LinearGradient(
+              begin: Alignment.topCenter,
+
+              end: Alignment.bottomCenter,
+
+              colors: [AppColors.backgroundTop, AppColors.backgroundBottom],
+            ),
           ),
-        ),
 
-        child: SafeArea(
-          child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 20),
+          child: SafeArea(
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 20),
 
-            child: Column(
-              children: [
+              child: Column(
+                children: const [
+                  SizedBox(height: 15),
 
-                SizedBox(height: 15),
+                  _CustomAppBar(),
 
-                _CustomAppBar(),
+                  SizedBox(height: 35),
 
-                SizedBox(height: 35),
+                  UserInfo(),
 
-                UserInfo(),
+                  SizedBox(height: 60),
 
-                SizedBox(height: 60),
+                  Instruction_Text(),
 
-                Instruction_Text(),
+                  SizedBox(height: 70),
 
-                SizedBox(height: 70),
-
-                WeighingCircle_3(),
-              ],
+                  WeighingCircle_3(),
+                ],
+              ),
             ),
           ),
         ),
@@ -63,12 +94,7 @@ class _CustomAppBar extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: const [
-
-        Icon(
-          Icons.close,
-          color: Colors.white,
-          size: 30,
-        ),
+        Icon(Icons.close, color: Colors.white, size: 30),
 
         SizedBox(width: 12),
 
@@ -85,7 +111,6 @@ class _CustomAppBar extends StatelessWidget {
   }
 }
 
-
 class Instruction_Text extends StatelessWidget {
   const Instruction_Text({super.key});
 
@@ -93,7 +118,6 @@ class Instruction_Text extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-
         Text(
           "Step on scale \n with pet",
           textAlign: TextAlign.center,
@@ -110,11 +134,7 @@ class Instruction_Text extends StatelessWidget {
         Text(
           "weigh yourself with your pet in\nyour arms! ",
           textAlign: TextAlign.center,
-          style: TextStyle(
-            color: Colors.white,
-            fontSize: 20,
-            height: 1.1,
-          ),
+          style: TextStyle(color: Colors.white, fontSize: 20, height: 1.1),
         ),
       ],
     );
@@ -125,11 +145,7 @@ class WeighButton extends StatelessWidget {
   final String text;
   final VoidCallback onPressed;
 
-  const WeighButton({
-    super.key,
-    required this.text,
-    required this.onPressed,
-  });
+  const WeighButton({super.key, required this.text, required this.onPressed});
 
   @override
   Widget build(BuildContext context) {
@@ -172,12 +188,11 @@ class WeighingCircle_3 extends StatelessWidget {
           shape: BoxShape.circle,
           color: AppColors.circle1,
           boxShadow: [
-
             BoxShadow(
               color: Colors.black.withOpacity(.35),
               blurRadius: 25,
               spreadRadius: 8,
-            )
+            ),
           ],
         ),
 
