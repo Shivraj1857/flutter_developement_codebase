@@ -10,9 +10,7 @@ import '../bloc/pet_mode_state.dart';
 import 'pet_mode_screen1.dart';
 
 import '../utils/app_colors.dart';
-import '../widgets/instruction_text.dart';
 import '../widgets/user_info.dart';
-import '../widgets/weighing_circle.dart';
 
 class PetModeScreen4 extends StatelessWidget {
   const PetModeScreen4({super.key});

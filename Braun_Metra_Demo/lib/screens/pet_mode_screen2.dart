@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../utils/app_colors.dart';
-import '../widgets/instruction_text.dart';
 import '../widgets/user_info.dart';
 import '../widgets/weighing_circle.dart';
 import '../bloc/pet_mode_bloc.dart';
