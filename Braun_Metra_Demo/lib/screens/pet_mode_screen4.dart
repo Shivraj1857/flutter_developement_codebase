@@ -15,6 +15,8 @@ import '../widgets/user_info.dart';
 class PetModeScreen4 extends StatelessWidget {
   const PetModeScreen4({super.key});
 
+  //final navigation
+
   @override
   Widget build(BuildContext context) {
     return BlocListener<PetModeBloc, PetModeState>(
