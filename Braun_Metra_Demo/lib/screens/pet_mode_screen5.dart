@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 
 import '../utils/app_colors.dart';
 import '../utils/weight_history_model(pet).dart';
+import '../utils/data_filter.dart';
+import 'package:intl/intl.dart';
 
 class PetModeScreen5 extends StatefulWidget {
   const PetModeScreen5({super.key});
@@ -11,7 +13,47 @@ class PetModeScreen5 extends StatefulWidget {
 }
 
 class _PetModeScreen5State extends State<PetModeScreen5> {
+  DateFilter selectedFilter = DateFilter.daily;
+
+  String dateRange = "";
+
   int selectedMeasure = 0;
+  @override
+  void initState() {
+    super.initState();
+    updateDateRange(DateFilter.daily);
+  }
+
+  void updateDateRange(DateFilter filter) {
+    final DateTime today = DateTime.now();
+
+    final formatter = DateFormat("dd MMM").format;
+
+    switch (filter) {
+      case DateFilter.daily:
+        dateRange = formatter(today).toUpperCase();
+        break;
+
+      case DateFilter.weekly:
+        final start = today.subtract(const Duration(days: 6));
+        dateRange =
+            "${formatter(start).toUpperCase()} - ${formatter(today).toUpperCase()}";
+        break;
+
+      case DateFilter.month30:
+        final start = today.subtract(const Duration(days: 29));
+        dateRange =
+            "${formatter(start).toUpperCase()} - ${formatter(today).toUpperCase()}";
+        break;
+
+      case DateFilter.year1:
+        final start = DateTime(today.year - 1, today.month, today.day);
+
+        dateRange =
+            "${formatter(start).toUpperCase()} - ${formatter(today).toUpperCase()}";
+        break;
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -23,10 +65,7 @@ class _PetModeScreen5State extends State<PetModeScreen5> {
           gradient: LinearGradient(
             begin: Alignment.topCenter,
             end: Alignment.bottomCenter,
-            colors: [
-              AppColors.backgroundTop,
-              AppColors.backgroundBottom,
-            ],
+            colors: [AppColors.backgroundTop, AppColors.backgroundBottom],
           ),
         ),
 
@@ -36,32 +75,88 @@ class _PetModeScreen5State extends State<PetModeScreen5> {
 
             child: Column(
               children: [
-
                 SizedBox(height: 15),
 
                 _CustomAppBar(),
 
                 SizedBox(height: 35),
 
-                UserInfo(),
+                Row(
+                  children: [
+                    const Expanded(child: UserInfo()),
+
+                    const SizedBox(width: 10),
+
+                    Expanded(
+                      child: MeasureTypeWidget(
+                        selectedIndex: selectedMeasure,
+                        onChanged: (index) {
+                          setState(() {
+                            selectedMeasure = index;
+                          });
+                        },
+                      ),
+                    ),
+                  ],
+                ),
 
                 SizedBox(height: 35),
 
-                DateRangeWidget(),
+                const SizedBox(height: 35),
 
-                SizedBox(height: 10),
+                if (selectedMeasure == 0) ...[
+                  DateRangeWidget(dateRange: dateRange),
 
-                SegmentWidget(),
+                  const SizedBox(height: 10),
 
-                Spacer(),
+                  SegmentWidget(
+                    onChanged: (index) {
+                      setState(() {
+                        switch (index) {
+                          case 0:
+                            selectedFilter = DateFilter.daily;
+                            break;
+                          case 1:
+                            selectedFilter = DateFilter.weekly;
+                            break;
+                          case 2:
+                            selectedFilter = DateFilter.month30;
+                            break;
+                          case 3:
+                            selectedFilter = DateFilter.year1;
+                            break;
+                        }
 
-                SizedBox(height: 50),
+                        updateDateRange(selectedFilter);
+                      });
+                    },
+                  ),
 
-                WeightButtons(),
+                  const Spacer(),
 
-                SizedBox(height: 20),
+                  const SizedBox(height: 50),
 
-                HistoryContainer(),
+                  const WeightButtons(),
+
+                  const SizedBox(height: 20),
+
+                  const HistoryContainer(),
+                ] else ...[
+                  const Spacer(),
+
+                  Center(
+                    child: Text(
+                      "Tape Measure is under development",
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 20,
+                        fontWeight: FontWeight.w600,
+                      ),
+                    ),
+                  ),
+
+                  const Spacer(),
+                ],
 
                 SizedBox(height: 30),
               ],
@@ -80,12 +175,7 @@ class _CustomAppBar extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: const [
-
-        Icon(
-          Icons.close,
-          color: Colors.white,
-          size: 30,
-        ),
+        Icon(Icons.close, color: Colors.white, size: 30),
 
         SizedBox(width: 12),
 
@@ -109,16 +199,12 @@ class UserInfo extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-
         CircleAvatar(
           radius: 24,
           backgroundColor: AppColors.avatar,
           child: const Text(
             "M",
-            style: TextStyle(
-              color: Colors.white,
-              fontSize: 22,
-            ),
+            style: TextStyle(color: Colors.white, fontSize: 22),
           ),
         ),
 
@@ -133,12 +219,6 @@ class UserInfo extends StatelessWidget {
             fontWeight: FontWeight.w600,
           ),
         ),
-
-        const SizedBox(width: 16),
-
-        const Expanded(
-          child: MeasureTypeWidget(),
-        ),
       ],
     );
   }
@@ -149,15 +229,12 @@ class WeightButtons extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
     return Column(
       children: [
-
         SizedBox(
           height: 50,
           width: 390,
           child: ElevatedButton(
-
             style: ElevatedButton.styleFrom(
               backgroundColor: Colors.white,
               shape: RoundedRectangleBorder(
@@ -176,7 +253,6 @@ class WeightButtons extends StatelessWidget {
                 fontWeight: FontWeight.bold,
               ),
             ),
-
           ),
         ),
       ],
@@ -264,7 +340,6 @@ class HistoryContainer extends StatelessWidget {
             ),
           ),
 
-
           Expanded(
             child: Row(
               children: [
@@ -290,7 +365,6 @@ class HistoryContainer extends StatelessWidget {
             ),
           ),
 
-
           RichText(
             text: TextSpan(
               children: [
@@ -315,17 +389,19 @@ class HistoryContainer extends StatelessWidget {
 }
 
 class DateRangeWidget extends StatelessWidget {
-  const DateRangeWidget({super.key});
+  final String dateRange;
+
+  const DateRangeWidget({super.key, required this.dateRange});
 
   @override
   Widget build(BuildContext context) {
-    return const Center(
+    return Center(
       child: Text(
-        "15 APR - 21 APR",
-        style: TextStyle(
+        dateRange,
+        style: const TextStyle(
           color: Colors.white,
-          fontSize: 22,
-          fontWeight: FontWeight.w700,
+          fontSize: 24,
+          fontWeight: FontWeight.bold,
         ),
       ),
     );
@@ -333,7 +409,9 @@ class DateRangeWidget extends StatelessWidget {
 }
 
 class SegmentWidget extends StatefulWidget {
-  const SegmentWidget({super.key});
+  final ValueChanged<int> onChanged;
+
+  const SegmentWidget({super.key, required this.onChanged});
 
   @override
   State<SegmentWidget> createState() => _SegmentWidgetState();
@@ -342,12 +420,7 @@ class SegmentWidget extends StatefulWidget {
 class _SegmentWidgetState extends State<SegmentWidget> {
   int selectedIndex = 0;
 
-  final List<String> items = [
-    "DAILY",
-    "WEEKLY",
-    "30 DAY",
-    "1 YEAR",
-  ];
+  final List<String> items = ["DAILY", "WEEKLY", "30 DAY", "1 YEAR"];
 
   @override
   Widget build(BuildContext context) {
@@ -361,15 +434,13 @@ class _SegmentWidgetState extends State<SegmentWidget> {
       child: Row(
         children: List.generate(
           items.length,
-              (index) => _item(
-            items[index],
-            index == selectedIndex,
-                () {
-              setState(() {
-                selectedIndex = index;
-              });
-            },
-          ),
+          (index) => _item(items[index], index == selectedIndex, () {
+            setState(() {
+              selectedIndex = index;
+            });
+
+            widget.onChanged(index);
+          }),
         ),
       ),
     );
@@ -399,16 +470,15 @@ class _SegmentWidgetState extends State<SegmentWidget> {
   }
 }
 
+class MeasureTypeWidget extends StatelessWidget {
+  final int selectedIndex;
+  final ValueChanged<int> onChanged;
 
-class MeasureTypeWidget extends StatefulWidget {
-  const MeasureTypeWidget({super.key});
-
-  @override
-  State<MeasureTypeWidget> createState() => _MeasureTypeWidgetState();
-}
-
-class _MeasureTypeWidgetState extends State<MeasureTypeWidget> {
-  int selectedIndex = 0;
+  const MeasureTypeWidget({
+    super.key,
+    required this.selectedIndex,
+    required this.onChanged,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -420,38 +490,25 @@ class _MeasureTypeWidgetState extends State<MeasureTypeWidget> {
       ),
       child: Row(
         children: [
-          _buildItem(
-            title: "SCALE",
-            index: 0,
-          ),
-          _buildItem(
-            title: "TAPE MEASURE",
-            index: 1,
-          ),
+          _buildItem(title: "SCALE", index: 0),
+          _buildItem(title: "TAPE MEASURE", index: 1),
         ],
       ),
     );
   }
 
-  Widget _buildItem({
-    required String title,
-    required int index,
-  }) {
+  Widget _buildItem({required String title, required int index}) {
     final bool isSelected = selectedIndex == index;
 
     return Expanded(
       child: GestureDetector(
         onTap: () {
-          setState(() {
-            selectedIndex = index;
-          });
+          onChanged(index);
         },
         child: AnimatedContainer(
           duration: const Duration(milliseconds: 250),
           decoration: BoxDecoration(
-            color: isSelected
-                ? const Color(0xff7E9FA6)
-                : Colors.transparent,
+            color: isSelected ? const Color(0xff7E9FA6) : Colors.transparent,
             borderRadius: BorderRadius.circular(25),
           ),
           alignment: Alignment.center,
@@ -468,4 +525,3 @@ class _MeasureTypeWidgetState extends State<MeasureTypeWidget> {
     );
   }
 }
-
