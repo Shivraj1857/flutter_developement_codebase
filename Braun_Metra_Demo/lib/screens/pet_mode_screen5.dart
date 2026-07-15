@@ -1,9 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../utils/app_colors.dart';
 import '../utils/weight_history_model(pet).dart';
 import '../utils/data_filter.dart';
 import 'package:intl/intl.dart';
+
+import '../bloc/pet_mode_bloc.dart';
+import '../bloc/pet_mode_event.dart';
+import '../bloc/pet_mode_state.dart';
+import '../utils/pet_mode_type.dart';
 
 class PetModeScreen5 extends StatefulWidget {
   const PetModeScreen5({super.key});
@@ -13,55 +19,6 @@ class PetModeScreen5 extends StatefulWidget {
 }
 
 class _PetModeScreen5State extends State<PetModeScreen5> {
-  DateFilter selectedFilter = DateFilter.daily;
-
-  String dateRange = "";
-
-  int selectedMeasure = 0;
-  @override
-  void initState() {
-    super.initState();
-    updateDateRange(DateFilter.daily);
-  }
-
-  void updateDateRange(DateFilter filter) {
-    final DateTime today = DateTime.now();
-
-    final formatter = DateFormat("dd MMM").format;
-
-    switch (filter) {
-      case DateFilter.daily:
-        dateRange = formatter(today).toUpperCase();
-        break;
-
-      case DateFilter.weekly:
-        final start = today.subtract(const Duration(days: 6));
-        dateRange =
-            "${formatter(start).toUpperCase()} - ${formatter(today).toUpperCase()}";
-        break;
-
-      case DateFilter.month30:
-        final start = today.subtract(const Duration(days: 29));
-        dateRange =
-            "${formatter(start).toUpperCase()} - ${formatter(today).toUpperCase()}";
-        break;
-
-      case DateFilter.year1:
-        final start = DateTime(
-          today.year - 1,
-          today.month,
-          today.day,
-        );
-
-        final yearFormatter = DateFormat("dd MMM yyyy").format;
-
-        dateRange =
-        "${yearFormatter(start).toUpperCase()} - ${yearFormatter(today).toUpperCase()}";
-
-        break;
-    }
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -82,7 +39,7 @@ class _PetModeScreen5State extends State<PetModeScreen5> {
 
             child: Column(
               children: [
-                SizedBox(height: 15),
+                //SizedBox(height: 15),
 
                 _CustomAppBar(),
 
@@ -95,12 +52,28 @@ class _PetModeScreen5State extends State<PetModeScreen5> {
                     const SizedBox(width: 10),
 
                     Expanded(
-                      child: MeasureTypeWidget(
-                        selectedIndex: selectedMeasure,
-                        onChanged: (index) {
-                          setState(() {
-                            selectedMeasure = index;
-                          });
+                      child: BlocBuilder<PetModeBloc, PetModeState>(
+                        builder: (context, state) {
+                          if (state is PetModeLoadedState) {
+                            return MeasureTypeWidget(
+                              selectedIndex:
+                                  state.selectedType == PetModeType.scale
+                                  ? 0
+                                  : 1,
+
+                              onChanged: (index) {
+                                context.read<PetModeBloc>().add(
+                                  ChangeMeasureTypeEvent(
+                                    index == 0
+                                        ? PetModeType.scale
+                                        : PetModeType.tapeMeasure,
+                                  ),
+                                );
+                              },
+                            );
+                          }
+
+                          return const SizedBox();
                         },
                       ),
                     ),
@@ -111,61 +84,65 @@ class _PetModeScreen5State extends State<PetModeScreen5> {
 
                 const SizedBox(height: 35),
 
-                if (selectedMeasure == 0) ...[
-                  DateRangeWidget(dateRange: dateRange),
+                BlocBuilder<PetModeBloc, PetModeState>(
+                  builder: (context, state) {
+                    if (state is! PetModeLoadedState) {
+                      return const SizedBox();
+                    }
 
-                  const SizedBox(height: 10),
+                    if (state.selectedType == PetModeType.scale) {
+                      return Column(
+                        children: [
+                          DateRangeWidget(dateRange: state.dateRange),
 
-                  SegmentWidget(
-                    onChanged: (index) {
-                      setState(() {
-                        switch (index) {
-                          case 0:
-                            selectedFilter = DateFilter.daily;
-                            break;
-                          case 1:
-                            selectedFilter = DateFilter.weekly;
-                            break;
-                          case 2:
-                            selectedFilter = DateFilter.month30;
-                            break;
-                          case 3:
-                            selectedFilter = DateFilter.year1;
-                            break;
-                        }
+                          const SizedBox(height: 10),
 
-                        updateDateRange(selectedFilter);
-                      });
-                    },
-                  ),
+                          SegmentWidget(
+                            selectedIndex: state.selectedFilter.index,
+                            onChanged: (index) {
+                              DateFilter filter;
 
-                  const Spacer(),
+                              switch (index) {
+                                case 0:
+                                  filter = DateFilter.daily;
+                                  break;
+                                case 1:
+                                  filter = DateFilter.weekly;
+                                  break;
+                                case 2:
+                                  filter = DateFilter.month30;
+                                  break;
+                                default:
+                                  filter = DateFilter.year1;
+                              }
 
-                  const SizedBox(height: 50),
+                              context.read<PetModeBloc>().add(
+                                ChangeDateFilterEvent(filter),
+                              );
+                            },
+                          ),
 
-                  const WeightButtons(),
+                          //const Spacer(),
 
-                  const SizedBox(height: 20),
+                          const SizedBox(height: 300),
 
-                  const HistoryContainer(),
-                ] else ...[
-                  const Spacer(),
+                          const WeightButtons(),
 
-                  Center(
-                    child: Text(
-                      "Tape Measure is under development",
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 20,
-                        fontWeight: FontWeight.w600,
+                          const SizedBox(height: 20),
+
+                          const HistoryContainer(),
+                        ],
+                      );
+                    }
+
+                    return const Center(
+                      child: Text(
+                        "Tape Measure is under development",
+                        style: TextStyle(color: Colors.white, fontSize: 20),
                       ),
-                    ),
-                  ),
-
-                  const Spacer(),
-                ],
-
-                SizedBox(height: 30),
+                    );
+                  },
+                ),
               ],
             ),
           ),
@@ -415,17 +392,15 @@ class DateRangeWidget extends StatelessWidget {
   }
 }
 
-class SegmentWidget extends StatefulWidget {
+class SegmentWidget extends StatelessWidget {
+  final int selectedIndex;
   final ValueChanged<int> onChanged;
 
-  const SegmentWidget({super.key, required this.onChanged});
-
-  @override
-  State<SegmentWidget> createState() => _SegmentWidgetState();
-}
-
-class _SegmentWidgetState extends State<SegmentWidget> {
-  int selectedIndex = 0;
+  SegmentWidget({
+    super.key,
+    required this.selectedIndex,
+    required this.onChanged,
+  });
 
   final List<String> items = ["DAILY", "WEEKLY", "30 DAY", "1 YEAR"];
 
@@ -442,11 +417,7 @@ class _SegmentWidgetState extends State<SegmentWidget> {
         children: List.generate(
           items.length,
           (index) => _item(items[index], index == selectedIndex, () {
-            setState(() {
-              selectedIndex = index;
-            });
-
-            widget.onChanged(index);
+            onChanged(index);
           }),
         ),
       ),
