@@ -47,10 +47,17 @@ class _PetModeScreen5State extends State<PetModeScreen5> {
         break;
 
       case DateFilter.year1:
-        final start = DateTime(today.year - 1, today.month, today.day);
+        final start = DateTime(
+          today.year - 1,
+          today.month,
+          today.day,
+        );
+
+        final yearFormatter = DateFormat("dd MMM yyyy").format;
 
         dateRange =
-            "${formatter(start).toUpperCase()} - ${formatter(today).toUpperCase()}";
+        "${yearFormatter(start).toUpperCase()} - ${yearFormatter(today).toUpperCase()}";
+
         break;
     }
   }
