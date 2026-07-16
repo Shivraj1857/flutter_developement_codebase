@@ -1,0 +1,720 @@
+{
+  "@@locale": "ar",
+  "appName": "ميزان الوزن",
+  "login": "تسجيل الدخول",
+  "logout": "تسجيل الخروج",
+  "email": "البريد الإلكتروني",
+  "password": "كلمة المرور",
+  "weight": "الوزن",
+  "connectScale": "توصيل الميزان",
+  "scanning": "البحث عن الأجهزة...",
+  "connected": "متصل",
+  "disconnected": "غير متصل",
+  "saveWeight": "حفظ الوزن",
+  "weightHistory": "سجل الوزن",
+  "syncInProgress": "جارٍ مزامنة البيانات...",
+  "syncComplete": "اكتملت المزامنة",
+  "noDataAvailable": "لا توجد بيانات متاحة",
+  "errorOccurred": "حدث خطأ",
+  "retry": "إعادة المحاولة",
+  "kg": "كجم",
+  "lbs": "رطل",
+  "welcomeBack": "مرحباً بعودتك",
+  "home": "الرئيسية",
+  "settings": "الإعدادات",
+  "enterYourEmail": "أدخل بريدك الإلكتروني",
+  "enterYourPassword": "أدخل كلمة المرور",
+  "pleaseEnterYourEmail": "الرجاء إدخال بريدك الإلكتروني",
+  "pleaseEnterValidEmail": "الرجاء إدخال بريد إلكتروني صالح",
+  "pleaseEnterYourPassword": "الرجاء إدخال كلمة المرور",
+  "passwordMinLength": "يجب أن تتكون كلمة المرور من 6 أحرف على الأقل",
+  "welcomeToWeightScale": "مرحباً بك في ميزان الوزن",
+  "youAreLoggedIn": "تم تسجيل دخولك بنجاح.",
+  "measureWeight": "قياس الوزن",
+  "deviceConnection": "اتصال الجهاز",
+  "scanForDevices": "البحث عن الأجهزة",
+  "currentReading": "القراءة الحالية",
+  "sync": "مزامنة",
+  "noWeightRecordsYet": "لا توجد سجلات وزن بعد",
+  "weightSaved": "تم حفظ الوزن: {weight} {unit}",
+  "@weightSaved": {
+    "placeholders": {
+      "weight": {
+        "type": "String"
+      },
+      "unit": {
+        "type": "String"
+      }
+    }
+  },
+  "syncedRecords": "تمت مزامنة {count} سجلات",
+  "@syncedRecords": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "connectedDevice": "متصل: {deviceId}",
+  "@connectedDevice": {
+    "placeholders": {
+      "deviceId": {
+        "type": "String"
+      }
+    }
+  },
+  "onboardingHeadline": "نظرة واضحة على\nمقاييس جسمك",
+  "getStarted": "ابدأ الآن",
+  "beforeYouContinue": "قبل المتابعة",
+  "agreeToThe": "أوافق على ",
+  "privacyPolicy": "سياسة الخصوصية",
+  "termsAndConditions": "الشروط والأحكام",
+  "onboardingDisclaimer": "أنت تتحكم في بياناتك الخاصة. لن نتمكن أبداً\nمن الوصول إلى معلوماتك الشخصية.",
+  "selectYourDevice": "اختر جهازك",
+  "scale": "الميزان",
+  "stepOnScaleToStartPairing": "قف على الميزان لبدء الاقتران",
+  "tapeMeasure": "شريط القياس",
+  "powerOnDeviceToStartPairing": "قم بتشغيل الجهاز لبدء الاقتران",
+  "both": "كلاهما",
+  "weWillPairOneDeviceAtATime": "سنقوم بإقران جهاز واحد في كل مرة",
+  "iDontHaveDevice": "ليس لدي جهاز",
+  "allowBluetoothSystemScreen": "السماح\nبشاشة\nنظام\nالبلوتوث",
+  "name": "الاسم",
+  "height": "الطول",
+  "confirm": "تأكيد",
+  "inch": "بوصة",
+  "cm": "سم",
+  "dateFormat": "MM/DD/YYYY",
+  "dateOfBirth": "تاريخ الميلاد",
+  "gender": "الجنس",
+  "male": "ذكر",
+  "female": "أنثى",
+  "areYouPregnant": "هل أنتِ حامل؟",
+  "doYouUsePacemaker": "هل تستخدم جهاز تنظيم\nضربات القلب أو جهاز مزروع؟",
+  "doYouUseImplantedDevice": "هل تستخدم جهاز تنظيم\nضربات القلب أو جهاز مزروع؟",
+  "healthQuestionDescription": "الوصف",
+  "yes": "نعم",
+  "no": "لا",
+  "required": "مطلوب",
+  "athleteMode": "وضع الرياضي",
+  "athleteModeDescription": "يتدرب أكثر من 10 ساعات في الأسبوع. يضبط خوارزميات تكوين الجسم.",
+  "preferNotToSay": "أفضل عدم القول",
+  "genderAtBirth": "الجنس عند الولادة",
+  "enterTheMostAccurateHeight": "أدخل الطول الأكثر دقة للحصول على نتائج دقيقة لتكوين الجسم.",
+  "createYourProfile": "أنشئ ملفك الشخصي",
+  "failedToSaveProfile": "فشل في حفظ الملف الشخصي",
+  "healthDetails": "التفاصيل الصحية",
+  "bodyCompositionReadingsInfo": "تستخدم قراءات تكوين الجسم إشارة كهربائية حيوية منخفضة المستوى من الميزان. تؤثر الحالات الصحية على ما إذا كان ينبغي استخدامها.",
+  "electricImpedance": "المقاومة الكهربائية",
+  "electricImpedanceDescription": "سيتم تعطيل قياسات تكوين الجسم. وسيظل تتبع الوزن متاحًا بالكامل.",
+  "electric": "كهربائي",
+  "pregnant": "حامل",
+  "pacemaker": "منظم ضربات القلب",
+  "iAmPregnant": "أنا حامل",
+  "pregnancyDescription": "سيتم تعطيل قياس تكوين الجسم. يظل تتبع الوزن متاحًا بالكامل.",
+  "iHaveAPacemakerOrImplantedDevice": "لدي جهاز تنظيم ضربات القلب أو جهاز مزروع",
+  "pacemakerDescription": "سيتم تعطيل قياس تكوين الجسم. يظل تتبع الوزن متاحًا بالكامل.",
+  "healthSyncTitle": "مزامنة قراءاتك تلقائيًا مع {platform}.",
+  "@healthSyncTitle": {
+    "placeholders": {
+      "platform": {
+        "type": "String"
+      }
+    }
+  },
+  "healthSyncDescriptionGoogle": "قم بالمزامنة مع Google Health للاحتفاظ بجميع قراءات الوزن في مكان واحد، وتتبع الاتجاهات، والمشاركة مع طبيبك. يمكنك إعداده الآن أو لاحقًا في قائمة المزيد.",
+  "healthSyncDescriptionApple": "قم بالمزامنة مع Apple Health للاحتفاظ بجميع قراءات الوزن في مكان واحد، وتتبع الاتجاهات، والمشاركة مع طبيبك. يمكنك إعداده الآن أو لاحقًا في قائمة المزيد.",
+  "continueButton": "متابعة",
+  "googleHealthInstallTitle": "مطلوب Health Connect",
+  "googleHealthInstallDescription": "للمتابعة، يرجى تثبيت أو تحديث Health Connect.",
+  "install": "تثبيت",
+  "cancel": "إلغاء",
+  "permissionDenied": "تم رفض الإذن",
+  "permissionDeniedMessage": "يمكنك تفعيل مزامنة الصحة لاحقًا في إعدادات التطبيق.",
+  "healthServiceUnavailable": "خدمة الصحة غير متاحة",
+  "healthServiceUnavailableAndroid": "Google Health Connect غير مدعوم على هذا الجهاز.",
+  "healthServiceUnavailableIos": "Apple Health غير متاح على هذا الجهاز.",
+  "permissionError": "خطأ في الإذن",
+  "permissionErrorAndroid": "تعذر طلب أذونات Health Connect. يرجى التأكد من تثبيت Health Connect والمحاولة مرة أخرى.",
+  "permissionErrorIos": "تعذر طلب أذونات Apple Health. يرجى المحاولة مرة أخرى.",
+  "skip": "تخطي",
+  "googleHealth": "Google Health",
+  "appleHealth": "Apple Health",
+  "healthSyncHeadlineGoogle": "مزامنة قراءاتك تلقائيًا مع Google Health.",
+  "healthSyncHeadlineApple": "مزامنة قراءاتك تلقائيًا مع Apple Health.",
+  "healthDataBackup": "نسخ احتياطي للبيانات الصحية",
+  "enableICloudBackup": "تفعيل النسخ الاحتياطي على iCloud",
+  "enableGoogleDriveBackup": "تفعيل النسخ الاحتياطي على Google Drive",
+  "backupPrivacyText": "لا يمكن لأي شخص الوصول إلى بياناتك دون إذنك.",
+  "turnOnSyncingICloud": "قم بتشغيل المزامنة لـ Braun Family Care في إعدادات iCloud.",
+  "turnOnSyncingGoogleDrive": "قم بتشغيل المزامنة لـ Braun Family Care في إعدادات Google Drive.",
+  "createTestProfile": "إنشاء ملف تعريف تجريبي",
+  "viewBackupJson": "عرض بيانات النسخ الاحتياطي JSON",
+  "skipForNow": "تخطي الآن",
+  "continueText": "متابعة",
+  "restoreData": "استعادة البيانات",
+  "importYourPreviousReadings": "استيراد قراءاتك السابقة",
+  "youHavePreviouslySyncedHealthData": "لديك بيانات صحية تمت مزامنتها مسبقًا",
+  "doYouWantToImportDataInApp": "هل تريد استيراد البيانات في التطبيق؟",
+  "uploadBackup": "رفع النسخة الاحتياطية",
+  "restoreBackup": "استعادة النسخة الاحتياطية",
+  "backupRestoredSuccessfully": "تمت استعادة النسخة الاحتياطية بنجاح!",
+  "backupUploadedSuccessfully": "تم رفع النسخة الاحتياطية بنجاح!",
+  "testProfileCreatedAt": "تم إنشاء ملف التعريف التجريبي في: {filePath}",
+  "@testProfileCreatedAt": {
+    "placeholders": {
+      "filePath": {
+        "type": "String"
+      }
+    }
+  },
+  "failedToCreateTestProfile": "فشل إنشاء ملف التعريف التجريبي: {error}",
+  "@failedToCreateTestProfile": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "backupJsonContent": "محتوى JSON للنسخة الاحتياطية",
+  "noBackupDataAvailable": "لا توجد بيانات نسخ احتياطي متاحة",
+  "close": "إغلاق",
+  "noProfileDataFound": "لم يتم العثور على بيانات الملف الشخصي. يرجى إنشاء ملف شخصي أولاً أو الضغط على \"إنشاء ملف شخصي تجريبي\" للاختبار.",
+  "cloudServiceUnavailable": "خدمة السحابة غير متاحة. يرجى المحاولة مرة أخرى.",
+  "failedToCreateProfile": "فشل إنشاء الملف الشخصي. يرجى المحاولة مرة أخرى.",
+  "failedToUploadBackup": "فشل تحميل النسخة الاحتياطية",
+  "uploadFailed": "فشل الرفع: {error}",
+  "@uploadFailed": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "restoredFileCorrupted": "الملف المستعاد تالف أو غير صالح",
+  "restoredFileNotFound": "لم يتم العثور على الملف المستعاد",
+  "noBackupFoundInCloud": "لم يتم العثور على نسخة احتياطية في التخزين السحابي",
+  "restoreFailed": "فشلت الاستعادة: {error}",
+  "@restoreFailed": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "failedToSkip": "فشل التخطي: {error}",
+  "@failedToSkip": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "failedToSignIn": "فشل تسجيل الدخول: {error}",
+  "@failedToSignIn": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "failedToReadBackup": "فشلت قراءة النسخة الاحتياطية: {error}",
+  "@failedToReadBackup": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "noBackupFileFound": "لم يتم العثور على ملف النسخ الاحتياطي",
+  "stepOnScale": "قف على الميزان",
+  "waitingForMeasurement": "يرجى الانتظار بينما نقيس وزنك...",
+  "weightReceived": "تم استلام الوزن",
+  "addManualWeight": "إضافة وزن يدوي",
+  "enterWeight": "أدخل الوزن",
+  "enterWeightHint": "مثال 75.5",
+  "pleaseEnterWeight": "يرجى إدخال قيمة الوزن",
+  "invalidWeight": "يرجى إدخال وزن صالح",
+  "save": "حفظ",
+  "update": "تحديث",
+  "tabHome": "الرئيسية",
+  "@tabHome": {
+    "description": "Bottom navigation tab label for Home"
+  },
+  "tabTrends": "الاتجاهات",
+  "@tabTrends": {
+    "description": "Bottom navigation tab label for Trends"
+  },
+  "tabModes": "الأوضاع",
+  "@tabModes": {
+    "description": "Bottom navigation tab label for Modes"
+  },
+  "tabMenu": "القائمة",
+  "@tabMenu": {
+    "description": "Bottom navigation tab label for Menu"
+  },
+  "menuMore": "المزيد",
+  "@menuMore": {
+    "description": "Title for the More menu screen"
+  },
+  "menuAccount": "الحساب",
+  "@menuAccount": {
+    "description": "Account section header in More menu"
+  },
+  "menuDevices": "الأجهزة",
+  "@menuDevices": {
+    "description": "Devices section header in More menu"
+  },
+  "menuDeviceSettings": "إعدادات الجهاز",
+  "@menuDeviceSettings": {
+    "description": "Manage Device menu item"
+  },
+  "menuMeasurementUnits": "وحدات القياس",
+  "@menuMeasurementUnits": {
+    "description": "Measurement Units menu item"
+  },
+  "menuWifiSettings": "إعدادات WiFi",
+  "@menuWifiSettings": {
+    "description": "WiFi Settings menu item"
+  },
+  "menuTheme": "المظهر",
+  "@menuTheme": {
+    "description": "Theme menu item"
+  },
+  "menuMyProfile": "ملفي الشخصي",
+  "@menuMyProfile": {
+    "description": "My Profile menu item"
+  },
+  "menuLanguage": "اللغات",
+  "@menuLanguage": {
+    "description": "Language menu item"
+  },
+  "menuSupport": "الدعم",
+  "@menuSupport": {
+    "description": "Support section header in More menu"
+  },
+  "menuHelp": "المساعدة",
+  "@menuHelp": {
+    "description": "Help menu item"
+  },
+  "menuDataBackup": "النسخ الاحتياطي للبياناتي",
+  "@menuDataBackup": {
+    "description": "Data & Backup menu item"
+  },
+  "menuLegal": "القانونية",
+  "@menuLegal": {
+    "description": "Legal section header in More menu"
+  },
+  "menuAppVersion": "إصدار التطبيق",
+  "@menuAppVersion": {
+    "description": "App Version label in More menu"
+  },
+  "termsConditions": "الشروط والأحكام",
+  "@termsConditions": {
+    "description": "Terms and Conditions menu item label"
+  },
+  "healthDataBackupTitle": "نسخ احتياطي للبيانات الصحية",
+  "storeHealthDataInICloud": "قم بتخزين بياناتك الصحية في حساب iCloud الخاص بك",
+  "storeHealthDataInGoogleDrive": "قم بتخزين بياناتك الصحية في حساب Google Drive الخاص بك",
+  "dataCannotBeAccessed": "لا يمكن لأي شخص الوصول إلى بياناتك بدون إذنك.",
+  "turnOnSyncingInICloudSettings": "قم بتشغيل المزامنة في إعدادات iCloud",
+  "turnOnSyncingInGoogleDriveSettings": "قم بتشغيل المزامنة في إعدادات Google Drive",
+  "openSettings": "فتح الإعدادات",
+  "backupWarningTitle": "تحذير!",
+  "backupWarningMessage": "لن يتم نسخ بياناتك احتياطيًا إلى iCloud الخاص بك.",
+  "backupWarningDescription": "إذا كنت ترغب في النسخ الاحتياطي في المستقبل، ستحتاج إلى السماح بالمزامنة من إعدادات iCloud.",
+  "backupWarningMessageAndroid": "لن يتم نسخ بياناتك احتياطيًا إلى Google Drive الخاص بك.",
+  "backupWarningDescriptionAndroid": "إذا كنت ترغب في النسخ الاحتياطي في المستقبل، ستحتاج إلى السماح بالمزامنة من إعدادات Google Drive.",
+  "ok": "حسناً",
+  "success": "نجح!",
+  "previousReadingsImported": "تم استيراد قراءاتك السابقة إلى التطبيق",
+  "accessPreviousIllnessJourneys": "يمكنك الآن الوصول إلى رحلات المرض السابقة في التطبيق.",
+  "couldNotImportReadings": "تعذر استيراد القراءات",
+  "errorImportingHealthData": "حدث خطأ أثناء استيراد بيانات صحتك السابقة.",
+  "doYouWantToTryAgain": "هل تريد المحاولة مرة أخرى؟",
+  "somethingWentWrong": "حدث خطأ ما",
+  "couldNotImportYourPreviousReadingsPleaseRetry": "تعذر استيراد قراءاتك السابقة. يرجى المحاولة مرة أخرى",
+  "yes": "نعم",
+  "no": "لا",
+  "noInternetConnection": "لا يوجد اتصال بالإنترنت. يرجى التحقق من WiFi أو بيانات الجوال والمحاولة مرة أخرى.",
+  "backupNotFoundInCloud": "لم يتم العثور على نسخة احتياطية في التخزين السحابي",
+  "failedToRestoreBackup": "فشل استعادة النسخة الاحتياطية",
+  "cloudStorageNotAvailable": "التخزين السحابي غير متاح. يرجى تفعيل iCloud أو Google Drive.",
+  "failedToUploadBackup": "فشل رفع النسخة الاحتياطية إلى السحابة",
+  "backupFileNotFound": "لم يتم العثور على ملف النسخة الاحتياطية",
+  "deviceIdMismatch": "عدم تطابق معرف الجهاز - لا يمكن الاستعادة من جهاز مختلف",
+  "sameDeviceAndUser": "نفس الجهاز والمستخدم - لا حاجة للاستعادة",
+  "deviceOrUserMismatch": "عدم تطابق الجهاز أو المستخدم",
+  "customizeMonogram": "تخصيص الحرف الأول",
+  "colors": "الألوان",
+  "pairing": "الاقتران",
+  "pairingToYourScale": "الاقتران بميزانك",
+  "pairingToYourTapeMeasure": "الاقتران بشريط القياس الخاص بك",
+  "powerOnTapeMeasureToStartPairing": "قم بتشغيل شريط القياس لبدء الاقتران",
+  "turnTheTapeMeasureOn": "قم بتشغيل شريط القياس",
+  "scaleSuccessfullyPairedViaBluetooth": "تم إقران الميزان بنجاح عبر البلوتوث",
+  "tapeMeasureSuccessfullyPairedViaBluetooth": "تم إقران شريط القياس بنجاح عبر البلوتوث",
+  "startMeasuring": "ابدأ القياس",
+  "pairAnotherDevice": "إقران جهاز آخر",
+  "allowBluetoothPermission": "السماح بإذن البلوتوث",
+  "bluetoothPermissionRequired": "إذن البلوتوث مطلوب للاتصال بجهازك",
+  "grantPermission": "منح الإذن",
+  "connectingToDevice": "جارٍ الاتصال بالجهاز...",
+  "pleaseWait": "يرجى الانتظار",
+  "pairingSuccessful": "نجح الاقتران!",
+  "deviceSuccessfullyPaired": "تم إقران جهازك بنجاح عبر البلوتوث",
+  "devicePairingFailed": "فشل إقران الجهاز",
+  "tryAgain": "حاول مرة أخرى",
+  "bluetoothPermissionDenied": "تم رفض إذن البلوتوث",
+  "bluetoothPermissionPermanentlyDenied": "تم رفض إذن البلوتوث بشكل دائم. يرجى تمكينه في الإعدادات.",
+  "bluetoothPermissionRestricted": "إذن البلوتوث مقيد",
+  "goToSettings": "انتقل إلى الإعدادات",
+  "bluetoothNotPermitted": "البلوتوث غير مسموح",
+  "pairingFailedWithoutBluetooth": "فشل الاقتران بدون إذن البلوتوث.",
+  "pleaseAllowBluetoothToContinue": "يرجى السماح بالبلوتوث للمتابعة.",
+  "notNow": "ليس الآن",
+  "bluetoothPermissionRequiredToPair": "إذن البلوتوث مطلوب لإقران جهازك.",
+  "tapSettings": "1. انقر على الإعدادات",
+  "switchBluetoothOn": "2. قم بتشغيل البلوتوث",
+  "tapBluetoothNearbyDevices": "2. اضغط على البلوتوث (الأجهزة القريبة)",
+  "tapAllow": "3. اضغط على السماح",
+  "pleaseSelectADeviceType": "يرجى اختيار نوع الجهاز",
+  "failedToProceed": "فشل في المتابعة",
+  "failedToCheckPermission": "فشل في التحقق من الإذن",
+  "pairingToYourDevice": "الإقران بجهازك",
+  "connectToWiFiToSyncMeasurements": "اتصل بشبكة WiFi لمزامنة القياسات عندما لا يكون هاتفك قريبًا.",
+  "connectToWiFi": "الاتصال بشبكة Wi-Fi",
+  "connectToWiFiBtnTitle": "اتصل بشبكة WiFi",
+  "tryItOut": "جربه",
+  "illDoThisLater": "سأفعل هذا لاحقًا",
+  "menuAppleHealth": "صحة Apple",
+  "@menuAppleHealth": {
+    "description": "Apple Health menu item"
+  },
+  "menuGoogleHealth": "صحة Google",
+  "@menuGoogleHealth": {
+    "description": "Goqogle Health menu item"
+  },
+  "healthScreenTitleApple": "صحة Apple",
+  "@healthScreenTitleApple": {
+    "description": "Health screen title for iOS"
+  },
+  "healthScreenTitleGoogle": "صحة Google",
+  "@healthScreenTitleGoogle": {
+    "description": "Health screen title for Android"
+  },
+  "healthAllowAccessApple": "السماح بالوصول إلى صحة Apple",
+  "@healthAllowAccessApple": {
+    "description": "Health access toggle title for iOS"
+  },
+  "healthAllowAccessGoogle": "السماح بالوصول إلى صحة Google",
+  "@healthAllowAccessGoogle": {
+    "description": "Health access toggle title for Android"
+  },
+  "healthSyncDescriptionAppleShort": "مزامنة بيانات الوزن مع صحة Apple",
+  "@healthSyncDescriptionAppleShort": {
+    "description": "Short description for Apple Health sync"
+  },
+  "healthSyncDescriptionGoogleShort": "مزامنة بيانات الوزن مع صحة Google",
+  "@healthSyncDescriptionGoogleShort": {
+    "description": "Short description for Google Health sync"
+  },
+  "healthStopSharingTitleApple": "إيقاف المشاركة مع صحة Apple؟",
+  "@healthStopSharingTitleApple": {
+    "description": "Dialog title for stopping Apple Health sync"
+  },
+  "healthStopSharingMessageApple": "لن تتم مزامنة القراءات الجديدة مع صحة Apple. لإزالة الوصول بالكامل، انتقل إلى: تطبيق الصحة ← الملف الشخصي ← الخصوصية ← التطبيقات ← Braun Metra.",
+  "@healthStopSharingMessageApple": {
+    "description": "Dialog message for stopping Apple Health sync"
+  },
+  "healthStopSharingTitleGoogle": "إيقاف المشاركة مع صحة Google؟",
+  "@healthStopSharingTitleGoogle": {
+    "description": "Dialog title for stopping Google Health sync"
+  },
+  "healthStopSharingMessageGoogle": "سنقوم بقطع الاتصال من صحة Google وإيقاف مزامنة قراءاتك. إذا كنت تريد أيضًا إزالة أذونات Android، افتح إعدادات هاتفك.",
+  "@healthStopSharingMessageGoogle": {
+    "description": "Dialog message for stopping Google Health sync"
+  },
+  "ok": "موافق",
+  "@ok": {
+    "description": "OK button text"
+  },
+  "healthEnableSyncTitleApple": "المزامنة مع Apple Health؟",
+  "@healthEnableSyncTitleApple": {
+    "description": "Dialog title for enabling Apple Health sync"
+  },
+  "healthEnableSyncTitleGoogle": "المزامنة مع Google Health؟",
+  "@healthEnableSyncTitleGoogle": {
+    "description": "Dialog title for enabling Google Health sync"
+  },
+  "appleHealthEnableHealthkit": "تمكين مشاركة HealthKit",
+  "@appleHealthEnableHealthkit": {
+    "description": "Title for enabling HealthKit sharing dialog"
+  },
+  "appleHealthPermissionTurnOnSteps": "امنح الإذن لـ Braun Metra للاتصال بـ Apple Health. افتح تطبيق Health، حدد المشاركة > التطبيقات وقم بتشغيل \"Braun Metra\"",
+  "@appleHealthPermissionTurnOnSteps": {
+    "description": "Instructions for enabling HealthKit permissions"
+  },
+  "appleHealthHealthApp": "تطبيق Health",
+  "@appleHealthHealthApp": {
+    "description": "Health App button text"
+  },
+  "googleHealthPermissionSettingTitle": "تمكين مشاركة Google Health",
+  "@googleHealthPermissionSettingTitle": {
+    "description": "Title for enabling Google Health sharing dialog"
+  },
+  "googleHealthBloodPressureAndHeartRatePermissionsInHealthConnect": "امنح الإذن لـ Braun Metra للاتصال بـ Google Health. افتح تطبيق الإعدادات على هاتفك.",
+  "@googleHealthBloodPressureAndHeartRatePermissionsInHealthConnect": {
+    "description": "Instructions for enabling Google Health permissions"
+  },
+  "backupFound": "تم العثور على نسخة احتياطية",
+  "@backupFound": {
+    "description": "Title shown when a backup is found"
+  },
+  "backupFoundMessage": "لديك بالفعل نسخة احتياطية محفوظة. سيؤدي المتابعة إلى تحديثها ببياناتك الأحدث.",
+  "@backupFoundMessage": {
+    "description": "Message shown when a backup is found"
+  },
+  "unfortunatelyPairingFailed": "للأسف، فشل الاقتران!",
+  "troubleshooting": "استكشاف الأخطاء وإصلاحها",
+  "makeSurePhoneAndDeviceWithin5Feet": "1. تأكد من أن هاتفك والميزان على بعد 5 أقدام من بعضهما البعض.",
+  "makeSureBatteriesNotLowOrDead": "2. تأكد من أن بطاريات الميزان ليست منخفضة أو فارغة.",
+  "removeBatteriesAndTryAgain": "3. قم بإزالة البطاريات من الميزان، وأعد إدخالها وحاول الاقتران مرة أخرى.",
+  "contactCustomerService": "اتصل بخدمة العملاء",
+  "chooseANetwork": "اختر شبكة",
+  "selectYourWiFiNetwork": "حدد شبكة WiFi الخاصة بك",
+  "scanning": "جارٍ المسح...",
+  "noNetworksFound": "لم يتم العثور على شبكات",
+  "refreshNetworks": "تحديث",
+  "enterWiFiPassword": "أدخل كلمة مرور WiFi",
+  "passwordIncorrect": "كلمة المرور غير صحيحة",
+  "done": "تم",
+  "connecting": "جارٍ الاتصال...",
+  "connectionFailed": "فشل الاتصال",
+  "connectionSuccess": "تم الاتصال بنجاح",
+  "connectingToYourWiFi": "الاتصال بشبكة WiFi الخاصة بك",
+  "yourScaleIsConnectedToWiFi": "الميزان الخاص بك متصل بشبكة WiFi",
+  "next": "التالي",
+  "addAnotherDevice": "إضافة جهاز آخر",
+  "weightGoal": "هدف الوزن",
+  "setGoalWeight": "تحديد وزن الهدف",
+  "youCanAlwaysChangeThisLater": "يمكنك دائمًا تغيير هذا أو القيام بذلك لاحقًا في ملفك الشخصي!",
+  "yourCurrentGoalWeightIs": "وزن هدفك الحالي هو {weight} {unit}!",
+  "@yourCurrentGoalWeightIs": {
+    "placeholders": {
+      "weight": {
+        "type": "String"
+      },
+      "unit": {
+        "type": "String"
+      }
+    }
+  },
+  "illDoItLater": "سأفعل ذلك لاحقًا",
+  "stepOnTheScaleToTakeYourFirstReading": "اصعد على الميزان لأخذ قراءتك الأولى!",
+  "couldNotConnectToWiFi": "تعذر الاتصال بشبكة WiFi",
+  "reenterYourPassword": "أعد إدخال كلمة المرور",
+  "chooseAnotherWiFiNetwork": "اختر شبكة WiFi أخرى",
+  "networkNotFoundWeakSignal": "الشبكة غير موجودة / إشارة ضعيفة",
+  "makeSureYourScaleIsCloseToRouter": "تأكد من أن الميزان قريب من جهاز التوجيه",
+  "connectionTimedOut": "انتهت مهلة الاتصال",
+  "tryAgain": "حاول مرة أخرى",
+  "continueWithoutWiFi": "المتابعة بدون WiFi",
+  "graphicPersonOnScale": "رسم توضيحي: نوع من\nالشخص على الميزان",
+  "failedToSendCredentialsToDevice": "فشل في إرسال بيانات الاعتماد إلى الجهاز",
+  "failedToSendWiFiCredentialsViaBle": "فشل في إرسال بيانات اعتماد WiFi عبر BLE",
+   "goal": "الهدف",
+   "@goal": {
+      "description": "Goal label shown on dashboard"
+   },
+   "lbsUnit": "رطل",
+   "@lbsUnit": {
+      "description": "Weight unit label"
+   },
+   "myWeightTrend": "اتجاه وزني",
+   "@myWeightTrend": {
+      "description": "Weight trend section title"
+   },
+   "bodyMetrics": "مقاييس الجسم",
+   "@bodyMetrics": {
+      "description": "Body metrics section title"
+   },
+   "edit": "تعديل",
+   "@edit": {
+      "description": "Edit button text"
+  },
+  "profile": "الملف الشخصي",
+  "profiles": "الملفات الشخصية",
+  "child": "طفل",
+  "pet": "حيوان أليف",
+  "myWeightHistroy": "سجل وزني",
+  "histroy": "السجل",
+  "zeroStateWeightTrendMessage": "سيتشكل تقدمك هنا بمرور\nالوقت.",
+    "@zeroStateWeightTrendMessage": {
+      "description": "Message shown in weight trend section when no data is available"
+  },
+  "zeroStateBodyMetricsMessage": "يقيس ميزانك أكثر من الوزن.\nقف عليه لكشف تكوين جسمك.",
+    "@zeroStateBodyMetricsMessage": {
+      "description": "Message shown in body metrics section when no data is available"
+  },
+  "goal_weight": "الوزن المستهدف",
+  "kgUnit": "كجم",
+  "stUnit": "ست",
+  "deleteProfile": "حذف الملف الشخصي",
+  "baby": "طفل",
+  "@baby": {
+    "description": "Baby mode label"
+  },
+  "luggage": "أمتعة",
+  "@luggage": {
+    "description": "Luggage mode label"
+  },
+  "addProfile": "+ إضافة ملف شخصي",
+  "@addProfile": {
+    "description": "Add profile button text"
+  },
+  "weighNow": "وزن الآن",
+  "@weighNow": {
+    "description": "Weigh now button text for luggage mode"
+  },
+  "createBabyProfile": "إنشاء ملف الطفل",
+  "@createBabyProfile": {
+    "description": "Title shown when creating a baby profile"
+  },
+  "createPetProfile": "إنشاء ملف الحيوان الأليف",
+  "@createPetProfile": {
+    "description": "Title shown when creating a pet profile"
+  },
+  "babyProfile": "ملف الطفل",
+  "@babyProfile": {
+    "description": "App bar title for baby profile"
+  },
+  "petProfile": "ملف الحيوان الأليف",
+  "@petProfile": {
+    "description": "App bar title for pet profile"
+  },
+  "add": "إضافة",
+  "@add": {
+    "description": "Add button text for profile creation"
+  },
+  "editBodyMetricsTitle": "تعديل مقاييس الجسم",
+  "@editBodyMetricsTitle": {
+    "description": "Title of the Edit Body Metrics screen"
+  },
+  "editBodyMetricsInstruction": "اختر عدد المقاييس التي ترغب في عرضها على لوحة التحكم. يمكنك أيضًا إعادة الترتيب حسب تفضيلاتك.",
+  "@editBodyMetricsInstruction": {
+    "description": "Instructional text under the title"
+  },
+  "editBodyMetricsLimitError": "اختر حتى 5",
+  "@editBodyMetricsLimitError": {
+    "description": "Shown when the user tries to select a 6th metric"
+  },
+  "metricLabelWeight": "الوزن",
+  "metricLabelBmi": "مؤشر كتلة الجسم",
+  "metricLabelBodyFat": "دهون الجسم (٪) / الكتلة",
+  "metricLabelMuscleMass": "كتلة العضلات",
+  "metricLabelSkeletalMuscleMass": "كتلة العضلات الهيكلية",
+  "metricLabelProteinPercentage": "البروتين (٪)",
+  "metricLabelBmr": "معدل الأيض الأساسي",
+  "metricLabelFatFreeBodyWeight": "وزن الجسم الخالي من الدهون",
+  "metricLabelSubcutaneousFat": "الدهون تحت الجلد (٪)",
+  "metricLabelVisceralFatIndex": "مؤشر الدهون الحشوية",
+  "metricLabelBodyWater": "ماء الجسم (٪)",
+  "metricLabelBoneMass": "كتلة العظام",
+  "metricLabelStandingHeartRate": "معدل ضربات القلب أثناء الوقوف",
+  "metricLabelMetabolicAge": "العمر الأيضي",
+  "metricLabelIdealWeight": "الوزن المثالي",
+  "metricLabelProteinAmount": "كمية البروتين",
+  "metricLabelMuscleRate": "معدل العضلات",
+  "metricDescWeight": "وزن جسمك الكلي. أحد المؤشرات المهمة التي تعكس وتقيس الحالة الصحية للشخص.",
+  "metricDescBmi": "مؤشر عام لوزن الجسم بالنسبة للطول.",
+  "metricDescBodyFat": "يمكن عرض الدهون في جسمك كنسبة مئوية أو وزن. نسبة الأنسجة الدهنية في تكوين الجسم.",
+  "metricDescMuscleMass": "الكمية الإجمالية للعضلات في جسمك.",
+  "metricDescSkeletalMuscleMass": "العضلات التي تدعم الحركة والقوة البدنية.",
+  "metricDescProteinPercentage": "نسبة البروتين في جسمك، مهمة لبناء الأنسجة والحفاظ عليها.",
+  "metricDescBmr": "عدد السعرات الحرارية التي يحتاجها جسمك أثناء الراحة للعمل.",
+  "metricDescFatFreeBodyWeight": "وزن جسمك باستثناء الدهون (يشمل العضلات والعظام والماء).",
+  "metricDescSubcutaneousFat": "الدهون المخزنة تحت الجلد مباشرة.",
+  "metricDescVisceralFatIndex": "الدهون المخزنة حول أعضائك الداخلية.",
+  "metricDescBodyWater": "نسبة الماء في جسمك.",
+  "metricDescBoneMass": "ماء الجسم (٪) هو الوزن المقدر للمعادن في عظامك.",
+  "metricDescStandingHeartRate": "معدل ضربات قلبك (نبضة في الدقيقة) مقاسًا أثناء الوقوف.",
+  "metricDescMetabolicAge": "مقارنة عملية الأيض لديك بالمتوسطات النموذجية القائمة على العمر.",
+  "metricDescIdealWeight": "وزن مستهدف بناءً على تكوين جسمك.",
+  "metricDescProteinAmount": "الكمية الإجمالية للبروتين في جسمك.",
+  "metricDescMuscleRate": "نسبة جسمك المكونة من العضلات.",
+  "babyMode": "وضع الطفل",
+  "petMode": "وضع الحيوان الأليف",
+  "luggageMode": "وضع الأمتعة",
+  "stepOnYourScaleAlone": "قف على\nالميزان بمفردك",
+  "stepOnYourScaleAloneBaby": "زن نفسك أولاً قبل وزن طفلك!",
+  "stepOnYourScaleAlonePet": "زن نفسك أولاً قبل الوزن مع حيوانك الأليف!",
+  "stepOnYourScaleAloneLuggage": "زن نفسك أولاً قبل وزن أمتعتك!",
+  "yourWeight": "وزنك",
+  "weighWithBaby": "الوزن مع الطفل",
+  "weighWithPet": "الوزن مع الحيوان الأليف",
+  "weighWithLuggage": "الوزن مع الأمتعة",
+  "stepOnScaleWithBaby": "قف على الميزان\nمع الطفل",
+  "stepOnScaleWithPet": "قف على الميزان\nمع الحيوان الأليف",
+  "stepOnScaleWithLuggage": "قف على الميزان\nمع الأمتعة",
+  "weighYourselfAndBaby": "الآن زن نفسك وطفلك معًا!",
+  "weighYourselfAndPet": "الآن زن نفسك وحيوانك الأليف معًا!",
+  "weighYourselfAndLuggage": "زن نفسك وأنت تحمل أمتعتك!",
+  "yourBabysWeight": "وزن طفلك",
+  "yourPetsWeight": "وزن حيوانك الأليف",
+  "luggagesWeight": "وزن الأمتعة",
+  "weighAgain": "الوزن مرة أخرى",
+  "stepIndicatorLabel": "الخطوة {currentStep}/{totalSteps}",
+  "@stepIndicatorLabel": {
+    "description": "Step indicator label showing current step and total steps",
+    "placeholders": {
+      "currentStep": {
+        "type": "int"
+      },
+      "totalSteps": {
+        "type": "int"
+      }
+    }
+  },
+  "language": "اللغة",
+  "selectYourLanguage": "اختر لغتك",
+  "changeAppLanguage": "تغيير لغة التطبيق",
+  "changeAppLanguageMessage": "هل أنت متأكد من أنك تريد تغيير لغة التطبيق إلى {language}؟",
+  "failedToLoadProfile": "فشل تحميل الملف الشخصي",
+  "profileNotFound": "الملف الشخصي غير موجود",
+  "failedToDeleteProfile": "فشل حذف الملف الشخصي",
+  "noPrimaryProfileFound": "لم يتم العثور على ملف شخصي أساسي",
+  "failedToLoadSubProfiles": "فشل تحميل الملفات الشخصية الفرعية",
+  "deleteProfileConfirmation": "هل أنت متأكد من أنك تريد حذف هذا الملف الشخصي؟",
+  "delete": "حذف",
+  "noProfileFound": "لم يتم العثور على ملف شخصي"
+  "measurementUnits": "وحدات القياس",
+  "measurementUnitsDescription": "حدد وحدات القياس المفضلة لديك للمعلومات في التطبيق.",
+  "units": "الوحدات",
+  "connectedTo": "متصل بـ: {ssid}",
+  "@connectedTo": {
+    "description": "Subtitle showing which network the scale is currently connected to",
+    "placeholders": {
+      "ssid": {
+        "type": "String",
+        "example": "myoptimum 678Db"
+      }
+    }
+  },
+  "wifiNotConnected": "شبكة Wi-Fi غير متصلة",
+  "@wifiNotConnected": {
+    "description": "Header title shown when the scale has no active WiFi connection (settings/more-menu flow)"
+  },
+  "wifiNotConnectedDescription": "لا يزال بإمكان الميزان حفظ القياسات، ولكن يتيح Wi-Fi مزامنتها تلقائيًا عندما لا يكون هاتفك قريبًا.",
+  "@wifiNotConnectedDescription": {
+    "description": "Subtitle explaining that WiFi is optional when the scale isn't connected"
+  },
+  "useWithoutWiFi": "استخدام بدون Wi-Fi",
+  "@useWithoutWiFi": {
+    "description": "Button label to dismiss WiFi setup and continue without connecting (settings/more-menu flow)"
+  },
+  "scaleConnectedToWiFi": "الميزان متصل بشبكة Wi-Fi",
+  "@scaleConnectedToWiFi": {
+    "description": "Header title shown when the scale already has an active WiFi connection (settings/more-menu flow)"
+  }
+}

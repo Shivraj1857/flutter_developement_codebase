@@ -18,7 +18,8 @@ class NavigateScreen1State extends PetModeState {}
 class PetModeLoadedState extends PetModeState {
   final PetModeType selectedType;
   final DateFilter selectedFilter;
-  final String dateRange;
+  final String
+  dateRange;
 
    PetModeLoadedState({
     required this.selectedType,

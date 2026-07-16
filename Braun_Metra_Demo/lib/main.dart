@@ -33,7 +33,7 @@ class MyApp extends StatelessWidget {
       //home: const PetModeScreen2()
       //home: const PetModeScreen3(),
       //home: const PetModeScreen4(),
-      home: const PetModeScreen5(),
+      home: PetModeScreen5(),
 
     );
   }

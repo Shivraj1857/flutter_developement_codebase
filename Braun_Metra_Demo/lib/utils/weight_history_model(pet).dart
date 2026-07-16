@@ -52,4 +52,49 @@ List<WeightHistoryData> weightHistoryList = [
     weight: "13.6",
     isDown: false,
   ),
+
+  WeightHistoryData(
+    date: "18 APRIL",
+    time: "9:15 AM",
+    arrow: "▲",
+    change: "0.5 LBS",
+    weight: "13.6",
+    isDown: false,
+  ),
+
+  WeightHistoryData(
+    date: "18 APRIL",
+    time: "9:15 AM",
+    arrow: "▲",
+    change: "0.5 LBS",
+    weight: "13.6",
+    isDown: false,
+  ),
+
+  WeightHistoryData(
+    date: "18 APRIL",
+    time: "9:15 AM",
+    arrow: "▲",
+    change: "0.5 LBS",
+    weight: "13.6",
+    isDown: false,
+  ),
+
+  WeightHistoryData(
+    date: "18 APRIL",
+    time: "9:15 AM",
+    arrow: "▲",
+    change: "0.5 LBS",
+    weight: "13.6",
+    isDown: false,
+  ),
+
+  WeightHistoryData(
+    date: "18 APRIL",
+    time: "9:15 AM",
+    arrow: "▲",
+    change: "0.5 LBS",
+    weight: "13.6",
+    isDown: false,
+  ),
 ];

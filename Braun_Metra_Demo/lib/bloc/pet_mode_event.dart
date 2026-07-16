@@ -21,7 +21,7 @@ class ChangeMeasureTypeEvent extends PetModeEvent {
 }
 
 class ChangeDateFilterEvent extends PetModeEvent {
-  final DateFilter filter;
+  final int index;
 
-  ChangeDateFilterEvent(this.filter);
+  ChangeDateFilterEvent(this.index);
 }

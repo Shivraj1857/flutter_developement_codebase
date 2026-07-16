@@ -3,22 +3,13 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../utils/app_colors.dart';
 import '../utils/weight_history_model(pet).dart';
-import '../utils/data_filter.dart';
-import 'package:intl/intl.dart';
 
 import '../bloc/pet_mode_bloc.dart';
 import '../bloc/pet_mode_event.dart';
 import '../bloc/pet_mode_state.dart';
 import '../utils/pet_mode_type.dart';
 
-class PetModeScreen5 extends StatefulWidget {
-  const PetModeScreen5({super.key});
-
-  @override
-  State<PetModeScreen5> createState() => _PetModeScreen5State();
-}
-
-class _PetModeScreen5State extends State<PetModeScreen5> {
+class PetModeScreen5 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -40,7 +31,6 @@ class _PetModeScreen5State extends State<PetModeScreen5> {
             child: Column(
               children: [
                 //SizedBox(height: 15),
-
                 _CustomAppBar(),
 
                 SizedBox(height: 35),
@@ -84,64 +74,53 @@ class _PetModeScreen5State extends State<PetModeScreen5> {
 
                 const SizedBox(height: 35),
 
-                BlocBuilder<PetModeBloc, PetModeState>(
-                  builder: (context, state) {
-                    if (state is! PetModeLoadedState) {
-                      return const SizedBox();
-                    }
 
-                    if (state.selectedType == PetModeType.scale) {
-                      return Column(
-                        children: [
-                          DateRangeWidget(dateRange: state.dateRange),
+                Expanded(
+                  child: BlocBuilder<PetModeBloc, PetModeState>(
+                    builder: (context, state) {
+                      if (state is! PetModeLoadedState) {
+                        return const SizedBox();
+                      }
 
-                          const SizedBox(height: 10),
+                      if (state.selectedType == PetModeType.scale) {
+                        return SingleChildScrollView(
+                          child: Column(
+                            children: [
+                              DateRangeWidget(dateRange: state.dateRange),
 
-                          SegmentWidget(
-                            selectedIndex: state.selectedFilter.index,
-                            onChanged: (index) {
-                              DateFilter filter;
+                              const SizedBox(height: 10),
 
-                              switch (index) {
-                                case 0:
-                                  filter = DateFilter.daily;
-                                  break;
-                                case 1:
-                                  filter = DateFilter.weekly;
-                                  break;
-                                case 2:
-                                  filter = DateFilter.month30;
-                                  break;
-                                default:
-                                  filter = DateFilter.year1;
-                              }
+                              SegmentWidget(
+                                selectedIndex: state.selectedFilter.index,
+                                onChanged: (index) {
+                                  context.read<PetModeBloc>().add(
+                                    ChangeDateFilterEvent(index),
+                                  );
+                                },
+                              ),
 
-                              context.read<PetModeBloc>().add(
-                                ChangeDateFilterEvent(filter),
-                              );
-                            },
+                              const SizedBox(height: 300),
+
+                              const WeightButtons(),
+
+                              const SizedBox(height: 20),
+
+                              const HistoryContainer(),
+
+                              const SizedBox(height: 20),
+                            ],
                           ),
+                        );
+                      }
 
-                          //const Spacer(),
-
-                          const SizedBox(height: 300),
-
-                          const WeightButtons(),
-
-                          const SizedBox(height: 20),
-
-                          const HistoryContainer(),
-                        ],
+                      return const Center(
+                        child: Text(
+                          "Tape Measure is under development",
+                          style: TextStyle(color: Colors.white, fontSize: 20),
+                        ),
                       );
-                    }
-
-                    return const Center(
-                      child: Text(
-                        "Tape Measure is under development",
-                        style: TextStyle(color: Colors.white, fontSize: 20),
-                      ),
-                    );
-                  },
+                    },
+                  ),
                 ),
               ],
             ),

@@ -1,0 +1,723 @@
+{
+  "@@locale": "en",
+  "appName": "Weight Scale",
+  "login": "Login",
+  "logout": "Logout",
+  "email": "Email",
+  "password": "Password",
+  "weight": "Weight",
+  "connectScale": "Connect Scale",
+  "scanning": "Scanning for devices...",
+  "connected": "Connected",
+  "disconnected": "Disconnected",
+  "saveWeight": "Save Weight",
+  "weightHistory": "Weight History",
+  "syncInProgress": "Syncing data...",
+  "syncComplete": "Sync complete",
+  "noDataAvailable": "No data available",
+  "errorOccurred": "An error occurred",
+  "retry": "Retry",
+  "kg": "kg",
+  "lbs": "lbs",
+  "welcomeBack": "Welcome Back",
+  "home": "Home",
+  "settings": "Settings",
+  "enterYourEmail": "Enter your email",
+  "enterYourPassword": "Enter your password",
+  "pleaseEnterYourEmail": "Please enter your email",
+  "pleaseEnterValidEmail": "Please enter a valid email",
+  "pleaseEnterYourPassword": "Please enter your password",
+  "passwordMinLength": "Password must be at least 6 characters",
+  "welcomeToWeightScale": "Welcome to Weight Scale",
+  "youAreLoggedIn": "You are successfully logged in.",
+  "measureWeight": "Measure Weight",
+  "deviceConnection": "Device Connection",
+  "scanForDevices": "Scan for Devices",
+  "currentReading": "Current Reading",
+  "sync": "Sync",
+  "noWeightRecordsYet": "No weight records yet",
+  "weightSaved": "Weight saved: {weight} {unit}",
+  "@weightSaved": {
+    "placeholders": {
+      "weight": {
+        "type": "String"
+      },
+      "unit": {
+        "type": "String"
+      }
+    }
+  },
+  "syncedRecords": "Synced {count} records",
+  "@syncedRecords": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "connectedDevice": "Connected: {deviceId}",
+  "@connectedDevice": {
+    "placeholders": {
+      "deviceId": {
+        "type": "String"
+      }
+    }
+  },
+  "onboardingHeadline": "A clear view of\nyour body\nmetrics",
+  "getStarted": "Get started",
+  "beforeYouContinue": "Before you continue",
+  "agreeToThe": "I agree to the ",
+  "privacyPolicy": "Privacy Policy",
+  "termsAndConditions": "Terms and Conditions",
+  "onboardingDisclaimer": "You are in control of your own data. We will never\nhave access to your personal information.",
+  "selectYourDevice": "Select your device",
+  "scale": "Scale",
+  "stepOnScaleToStartPairing": "Step on the scale to start pairing",
+  "tapeMeasure": "Tape Measure",
+  "powerOnDeviceToStartPairing": "Power on the device to start pairing",
+  "both": "Both",
+  "weWillPairOneDeviceAtATime": "We will pair one device at a time",
+  "iDontHaveDevice": "I don't have a device",
+  "allowBluetoothSystemScreen": "Allow\nbluetooth\nsystem\nscreen",
+  "name": "NAME",
+  "height": "HEIGHT",
+  "confirm": "Confirm",
+  "inch": "INCH",
+  "cm": "CM",
+  "dateFormat": "MM/DD/YYYY",
+  "dateOfBirth": "DATE OF BIRTH",
+  "gender": "Gender",
+  "male": "MALE",
+  "female": "FEMALE",
+  "areYouPregnant": "Are you pregnant?",
+  "doYouUsePacemaker": "Do you use a pacemaker or\nimplanted device??",
+  "doYouUseImplantedDevice": "Do you use a pacemaker or\nimplanted device??",
+  "healthQuestionDescription": "Decriptions tktktk",
+  "yes": "YES",
+  "no": "NO",
+  "required": "Required",
+  "athleteMode": "ATHLETE MODE",
+  "athleteModeDescription": "Trains 10+ hours per week. Adjusts body composition algorithms.",
+  "preferNotToSay": "I PREFER NOT TO SAY",
+  "genderAtBirth": "GENDER AT BIRTH",
+  "enterTheMostAccurateHeight": "Enter the most accurate height for accurate body composition results.",
+  "createYourProfile": "Create your profile",
+  "failedToSaveProfile": "Failed to save profile",
+  "healthDetails": "Health Details",
+  "bodyCompositionReadingsInfo": "Body composition readings use a low-level bioelectrical signal from the scale. Health conditions affect whether it should be used.",
+  "electricImpedance": "ELECTRIC IMPEDANCE",
+  "electricImpedanceDescription": "Body composition measurements will be disabled. Weight tracking remains fully available.",
+  "electric": "ELECTRIC",
+  "pregnant": "PREGNANT",
+  "pacemaker": "PACEMAKER",
+  "iAmPregnant": "I AM PREGNANT",
+  "pregnancyDescription": "Body composition measurement will be disabled. Weight tracking remains fully available.",
+  "iHaveAPacemakerOrImplantedDevice": "I HAVE A PACEMAKER OR IMPLANTED DEVICE",
+  "pacemakerDescription": "Body composition measurement will be disabled. Weight tracking remains fully available.",
+  "healthSyncTitle": "Automatically sync your readings with {platform}.",
+  "@healthSyncTitle": {
+    "placeholders": {
+      "platform": {
+        "type": "String"
+      }
+    }
+  },
+  "healthSyncDescriptionGoogle": "Keep your health measurements in one place, track trends, and share insights. Set it up now or anytime from the MORE menu.",
+  "healthSyncDescriptionApple": "Keep your health measurements in one place, track trends, and share insights. Set it up now or anytime from the MORE menu.",
+  "continueButton": "Continue",
+  "googleHealthInstallTitle": "Health Connect Required",
+  "googleHealthInstallDescription": "To continue, please install or update Health Connect.",
+  "install": "Install",
+  "cancel": "Cancel",
+  "permissionDenied": "Permission Denied",
+  "permissionDeniedMessage": "You can enable health sync later in the app settings.",
+  "healthServiceUnavailable": "Health Service Unavailable",
+  "healthServiceUnavailableAndroid": "Google Health Connect is not supported on this device.",
+  "healthServiceUnavailableIos": "Apple Health is not available on this device.",
+  "permissionError": "Permission Error",
+  "permissionErrorAndroid": "Unable to request Health Connect permissions. Please ensure Health Connect is installed and try again.",
+  "permissionErrorIos": "Unable to request Apple Health permissions. Please try again.",
+  "skip": "Skip",
+  "googleHealth": "Google Health",
+  "appleHealth": "Apple Health",
+  "healthSyncHeadlineGoogle": "Sync your readings with Google Health.",
+  "healthSyncHeadlineApple": "Sync your readings with Apple Health.",
+  "healthDataBackup": "Health Data Backup",
+  "enableICloudBackup": "Enable iCloud Backup",
+  "enableGoogleDriveBackup": "Enable Google Drive Backup",
+  "backupPrivacyText": "Your data cannot be accessed by anyone, without your permission.",
+  "turnOnSyncingICloud": "Turn on syncing for Braun Family Care in iCloud Settings.",
+  "turnOnSyncingGoogleDrive": "Turn on syncing for Braun Family Care in Google Drive Settings.",
+  "createTestProfile": "Create Test Profile",
+  "viewBackupJson": "View Backup JSON",
+  "skipForNow": "Skip for now",
+  "continueText": "Continue",
+  "restoreData": "Restore data",
+  "importYourPreviousReadings": "Import your previous readings",
+  "youHavePreviouslySyncedHealthData": "You have previously synced health data",
+  "doYouWantToImportDataInApp": "Do you want to import the data in the app?",
+  "uploadBackup": "Upload Backup",
+  "restoreBackup": "Restore Backup",
+  "backupRestoredSuccessfully": "Backup restored successfully!",
+  "backupUploadedSuccessfully": "Backup uploaded successfully!",
+  "testProfileCreatedAt": "Test profile created at: {filePath}",
+  "@testProfileCreatedAt": {
+    "placeholders": {
+      "filePath": {
+        "type": "String"
+      }
+    }
+  },
+  "failedToCreateTestProfile": "Failed to create test profile: {error}",
+  "@failedToCreateTestProfile": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "backupJsonContent": "Backup JSON Content",
+  "noBackupDataAvailable": "No backup data available",
+  "close": "Close",
+  "noProfileDataFound": "No profile data found. Please create a profile first or tap \"Create Test Profile\" for testing.",
+  "cloudServiceUnavailable": "Cloud service unavailable. Please try again.",
+  "failedToCreateProfile": "Failed to create profile. Please try again.",
+  "failedToUploadBackup": "Failed to upload backup",
+  "uploadFailed": "Upload failed: {error}",
+  "@uploadFailed": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "restoredFileCorrupted": "Restored file is corrupted or invalid",
+  "restoredFileNotFound": "Restored file not found",
+  "noBackupFoundInCloud": "No backup found in cloud storage",
+  "restoreFailed": "Restore failed: {error}",
+  "@restoreFailed": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "failedToSkip": "Failed to skip: {error}",
+  "@failedToSkip": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "failedToSignIn": "Failed to sign in: {error}",
+  "@failedToSignIn": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "failedToReadBackup": "Failed to read backup: {error}",
+  "@failedToReadBackup": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "noBackupFileFound": "No backup file found",
+  "stepOnScale": "Step on Scale",
+  "waitingForMeasurement": "Please wait while we measure your weight...",
+  "weightReceived": "Weight Received",
+  "addManualWeight": "Add Manual Weight",
+  "enterWeight": "Enter Weight",
+  "enterWeightHint": "e.g. 75.5",
+  "pleaseEnterWeight": "Please enter a weight value",
+  "invalidWeight": "Please enter a valid weight",
+  "save": "Save",
+  "update": "Update",
+  "tabHome": "Home",
+  "@tabHome": {
+    "description": "Bottom navigation tab label for Home"
+  },
+  "tabTrends": "Trends",
+  "@tabTrends": {
+    "description": "Bottom navigation tab label for Trends"
+  },
+  "tabModes": "Modes",
+  "@tabModes": {
+    "description": "Bottom navigation tab label for Modes"
+  },
+  "tabMenu": "Menu",
+  "@tabMenu": {
+    "description": "Bottom navigation tab label for Menu"
+  },
+  "menuMore": "More",
+  "@menuMore": {
+    "description": "Title for the More menu screen"
+  },
+  "menuAccount": "Account",
+  "@menuAccount": {
+    "description": "Account section header in More menu"
+  },
+  "menuDevices": "Devices",
+  "@menuDevices": {
+    "description": "Devices section header in More menu"
+  },
+  "menuDeviceSettings": "Device Settings",
+  "@menuDeviceSettings": {
+    "description": "Manage Device menu item"
+  },
+  "menuMeasurementUnits": "Measurement Units",
+  "@menuMeasurementUnits": {
+    "description": "Measurement Units menu item"
+  },
+  "menuWifiSettings": "WiFi Settings",
+  "@menuWifiSettings": {
+    "description": "WiFi Settings menu item"
+  },
+  "menuTheme": "Theme",
+  "@menuTheme": {
+    "description": "Theme menu item"
+  },
+  "menuMyProfile": "My Profile",
+  "@menuMyProfile": {
+    "description": "My Profile menu item"
+  },
+  "menuLanguage": "Languages",
+  "@menuLanguage": {
+    "description": "Language menu item"
+  },
+  "menuSupport": "Support",
+  "@menuSupport": {
+    "description": "Support section header in More menu"
+  },
+  "menuHelp": "Help",
+  "@menuHelp": {
+    "description": "Help menu item"
+  },
+  "menuDataBackup": "Backup Data",
+  "@menuDataBackup": {
+    "description": "Data & Backup menu item"
+  },
+  "menuLegal": "Legal",
+  "@menuLegal": {
+    "description": "Legal section header in More menu"
+  },
+  "menuAppVersion": "App Version",
+  "@menuAppVersion": {
+    "description": "App Version label in More menu"
+  },
+  "termsConditions": "Terms & Conditions",
+  "@termsConditions": {
+    "description": "Terms and Conditions menu item label"
+  },
+  "menuAppleHealth": "Apple Health",
+  "@menuAppleHealth": {
+    "description": "Apple Health menu item"
+  },
+  "menuGoogleHealth": "Google Health",
+  "@menuGoogleHealth": {
+    "description": "Google Health menu item"
+  },
+  "healthScreenTitleApple": "Apple Health",
+  "@healthScreenTitleApple": {
+    "description": "Health screen title for iOS"
+  },
+  "healthScreenTitleGoogle": "Google Health",
+  "@healthScreenTitleGoogle": {
+    "description": "Health screen title for Android"
+  },
+  "healthAllowAccessApple": "Allow Access to Apple Health",
+  "@healthAllowAccessApple": {
+    "description": "Health access toggle title for iOS"
+  },
+  "healthAllowAccessGoogle": "Allow Access to Google Health",
+  "@healthAllowAccessGoogle": {
+    "description": "Health access toggle title for Android"
+  },
+  "healthSyncDescriptionAppleShort": "Sync your weight data with Apple Health",
+  "@healthSyncDescriptionAppleShort": {
+    "description": "Short description for Apple Health sync"
+  },
+  "healthSyncDescriptionGoogleShort": "Sync your weight data with Google Health",
+  "@healthSyncDescriptionGoogleShort": {
+    "description": "Short description for Google Health sync"
+  },
+  "healthStopSharingTitleApple": "Stop sharing with Apple Health?",
+  "@healthStopSharingTitleApple": {
+    "description": "Dialog title for stopping Apple Health sync"
+  },
+  "healthStopSharingMessageApple": "New readings will not sync with Apple Health. To fully remove access, go to: Health app → Profile → Privacy → Apps → Braun Metra.",
+  "@healthStopSharingMessageApple": {
+    "description": "Dialog message for stopping Apple Health sync"
+  },
+  "healthStopSharingTitleGoogle": "Stop sharing with Google Health?",
+  "@healthStopSharingTitleGoogle": {
+    "description": "Dialog title for stopping Google Health sync"
+  },
+  "healthStopSharingMessageGoogle": "We'll disconnect from Google Health and stop syncing your readings. If you also want to remove Android permissions, open your phone's Settings.",
+  "@healthStopSharingMessageGoogle": {
+    "description": "Dialog message for stopping Google Health sync"
+  },
+  "ok": "OK",
+  "@ok": {
+    "description": "OK button text"
+  },
+  "healthEnableSyncTitleApple": "Sync with Apple Health?",
+  "@healthEnableSyncTitleApple": {
+    "description": "Dialog title for enabling Apple Health sync"
+  },
+  "healthEnableSyncTitleGoogle": "Sync with Google Health?",
+  "@healthEnableSyncTitleGoogle": {
+    "description": "Dialog title for enabling Google Health sync"
+  },
+  "appleHealthEnableHealthkit": "Enable HealthKit Sharing",
+  "@appleHealthEnableHealthkit": {
+    "description": "Title for enabling HealthKit sharing dialog"
+  },
+  "appleHealthPermissionTurnOnSteps": "Grant permission to Braun Metra to connect to Apple Health. Open the Health app, select Sharing > Apps and turn on \"Braun Metra\"",
+  "@appleHealthPermissionTurnOnSteps": {
+    "description": "Instructions for enabling HealthKit permissions"
+  },
+  "appleHealthHealthApp": "Health App",
+  "@appleHealthHealthApp": {
+    "description": "Health App button text"
+  },
+  "googleHealthPermissionSettingTitle": "Enable Google Health Sharing",
+  "@googleHealthPermissionSettingTitle": {
+    "description": "Title for enabling Google Health sharing dialog"
+  },
+  "googleHealthBloodPressureAndHeartRatePermissionsInHealthConnect": "Grant permission to Braun Metra to connect to Google Health. Open the Settings App on your phone.",
+  "@googleHealthBloodPressureAndHeartRatePermissionsInHealthConnect": {
+    "description": "Instructions for enabling Google Health permissions"
+  },
+  "settings": "Settings",
+  "@settings": {
+    "description": "Settings button text"
+  },
+  "healthDataBackupTitle": "Health data backup",
+  "storeHealthDataInICloud": "Store your health data in your iCloud account",
+  "storeHealthDataInGoogleDrive": "Store your health data in your Google Drive account",
+  "dataCannotBeAccessed": "Your data cannot be accessed by anyone, without your permission.",
+  "turnOnSyncingInICloudSettings": "Turn on syncing for in iCloud Settings",
+  "turnOnSyncingInGoogleDriveSettings": "Turn on syncing for in Google Drive Settings",
+  "openSettings": "Open Settings",
+  "backupWarningTitle": "Warning!",
+  "backupWarningMessage": "Your data will not be backed up to your iCloud.",
+  "backupWarningDescription": "If you wish to back up in the future, you will need to allow syncing from your iCloud Settings.",
+  "backupWarningMessageAndroid": "Your data will not be backed up to your Google Drive.",
+  "backupWarningDescriptionAndroid": "If you wish to back up in the future, you will need to allow syncing from your Google Drive Settings.",
+  "success": "Success!",
+  "previousReadingsImported": "Your previous readings are imported into the app",
+  "accessPreviousIllnessJourneys": "You can now access previous illness journeys in the app.",
+  "couldNotImportReadings": "Could not import readings",
+  "errorImportingHealthData": "An error occurred while importing your previous health data.",
+  "doYouWantToTryAgain": "Do you want to try again?",
+  "somethingWentWrong": "Something went wrong",
+  "couldNotImportYourPreviousReadingsPleaseRetry": "Could not import your previous readings. Please try again",
+  "yes": "Yes",
+  "no": "No",
+  "noInternetConnection": "No internet connection. Please check your WiFi or mobile data and try again.",
+  "backupNotFoundInCloud": "No backup found in cloud storage",
+  "failedToRestoreBackup": "Failed to restore backup",
+  "cloudStorageNotAvailable": "Cloud storage is not available. Please enable iCloud or Google Drive.",
+  "failedToUploadBackup": "Failed to upload backup to cloud",
+  "backupFileNotFound": "Backup file not found",
+  "deviceIdMismatch": "Device ID mismatch - cannot restore from different device",
+  "sameDeviceAndUser": "Same device and user - no restore needed",
+  "deviceOrUserMismatch": "Device or user mismatch",
+  "customizeMonogram": "Customize monogram",
+  "colors": "COLORS",
+  "pairing": "Pairing",
+  "pairingToYourScale": "Pairing to your scale",
+  "pairingToYourTapeMeasure": "Pairing to your tape measure",
+  "powerOnTapeMeasureToStartPairing": "Power on the tape measure to start pairing",
+  "turnTheTapeMeasureOn": "Turn the tape measure on",
+  "scaleSuccessfullyPairedViaBluetooth": "Scale successfully paired via Bluetooth",
+  "tapeMeasureSuccessfullyPairedViaBluetooth": "Tape Measure successfully paired via Bluetooth",
+  "startMeasuring": "Start measuring",
+  "pairAnotherDevice": "Pair another device",
+  "allowBluetoothPermission": "Allow Bluetooth Permission",
+  "bluetoothPermissionRequired": "Bluetooth permission is required to connect to your device",
+  "grantPermission": "Grant Permission",
+  "connectingToDevice": "Connecting to device...",
+  "pleaseWait": "Please wait",
+  "pairingSuccessful": "Pairing successful!",
+  "deviceSuccessfullyPaired": "Your device has been successfully paired via Bluetooth",
+  "devicePairingFailed": "Device pairing failed",
+  "tryAgain": "Try Again",
+  "bluetoothPermissionDenied": "Bluetooth permission denied",
+  "bluetoothPermissionPermanentlyDenied": "Bluetooth permission permanently denied. Please enable it in settings.",
+  "bluetoothPermissionRestricted": "Bluetooth permission restricted",
+  "goToSettings": "Go to Settings",
+  "bluetoothNotPermitted": "Bluetooth not permitted",
+  "pairingFailedWithoutBluetooth": "Pairing failed without Bluetooth permission.",
+  "pleaseAllowBluetoothToContinue": "Please allow Bluetooth to continue.",
+  "notNow": "Not now",
+  "bluetoothPermissionRequiredToPair": "Bluetooth permission is required to pair your device.",
+  "tapSettings": "1. Tap Settings",
+  "switchBluetoothOn": "2. Switch Bluetooth on",
+  "tapBluetoothNearbyDevices": "2. Tap Bluetooth (nearby devices)",
+  "tapAllow": "3. Tap Allow",
+  "pleaseSelectADeviceType": "Please select a device type",
+  "failedToProceed": "Failed to proceed",
+  "failedToCheckPermission": "Failed to check permission",
+  "pairingToYourDevice": "Pairing to your device",
+  "connectToWiFiToSyncMeasurements": "Connect to WiFi to sync measurements when your phone isn't nearby.",
+  "connectToWiFi": "Connect to Wi-Fi",
+  "connectToWiFiBtnTitle": "Connect to WiFi",
+  "tryItOut": "Try it out",
+  "illDoThisLater": "I'll do this later",
+  "backupFound": "Backup Found",
+  "@backupFound": {
+    "description": "Title shown when a backup is found"
+  },
+  "backupFoundMessage": "A backup was found for this device. Would you like to restore it?",
+  "@backupFoundMessage": {
+    "description": "Message shown when a backup is found"
+  },
+  "unfortunatelyPairingFailed": "Unfortunately, pairing failed!",
+  "troubleshooting": "Troubleshooting",
+  "makeSurePhoneAndDeviceWithin5Feet": "1. Make sure your phone and scale are within 5 feet of each other.",
+  "makeSureBatteriesNotLowOrDead": "2. Make sure your scale batteries are not low or dead.",
+  "removeBatteriesAndTryAgain": "3. Remove the batteries from your scale, re-insert them and try pairing again.",
+  "contactCustomerService": "Contact customer service",
+  "chooseANetwork": "Choose a Network",
+  "selectYourWiFiNetwork": "Select your WiFi network",
+  "scanning": "Scanning...",
+  "noNetworksFound": "No networks found",
+  "refreshNetworks": "Refresh",
+  "enterWiFiPassword": "Enter WiFi password",
+  "passwordIncorrect": "Password incorrect",
+  "done": "Done",
+  "connecting": "Connecting...",
+  "connectionFailed": "Connection failed",
+  "connectionSuccess": "Connected successfully",
+  "connectingToYourWiFi": "Connecting to your WiFi",
+  "yourScaleIsConnectedToWiFi": "Your scale is connected to WiFi",
+  "next": "Next",
+  "addAnotherDevice": "Add another device",
+  "weightGoal": "Weight Goal",
+  "setGoalWeight": "Set goal weight",
+  "youCanAlwaysChangeThisLater": "You can always change this or do this later in your profile!",
+  "yourCurrentGoalWeightIs": "Your current goal weight is {weight} {unit}!",
+  "@yourCurrentGoalWeightIs": {
+    "placeholders": {
+      "weight": {
+        "type": "String"
+      },
+      "unit": {
+        "type": "String"
+      }
+    }
+  },
+  "illDoItLater": "I'll do it later",
+  "stepOnTheScaleToTakeYourFirstReading": "Step on the scale to take your first reading!",
+  "couldNotConnectToWiFi": "Could not connect to WiFi",
+  "reenterYourPassword": "Reenter your password",
+  "chooseAnotherWiFiNetwork": "Choose another WiFi network",
+  "networkNotFoundWeakSignal": "Network not found / weak signal",
+  "makeSureYourScaleIsCloseToRouter": "Make sure your scale is close to your router",
+  "connectionTimedOut": "Connection timed out",
+  "tryAgain": "Try again",
+  "continueWithoutWiFi": "Continue without WiFi",
+  "graphicPersonOnScale": "GRAPHIC: Some sort of\nperson on scale",
+  "failedToSendCredentialsToDevice": "Failed to send credentials to device",
+  "failedToSendWiFiCredentialsViaBle": "Failed to send WiFi credentials via BLE",
+  "goal": "GOAL",
+    "@goal": {
+    "description": "Goal label shown on dashboard"
+  },
+  "lbsUnit": "LBs",
+    "@lbsUnit": {
+      "description": "Weight unit label"
+  },
+  "myWeightTrend": "MY WEIGHT TREND",
+    "@myWeightTrend": {
+      "description": "Weight trend section title"
+  },
+  "bodyMetrics": "BODY METRICS",
+    "@bodyMetrics": {
+      "description": "Body metrics section title"
+  },
+  "edit": "Edit",
+    "@edit": {
+      "description": "Edit button text"
+  },
+  "profile": "Profile",
+  "profiles": "Profiles",
+  "child": "Child",
+  "pet": "Pet",
+  "myWeightHistroy": "My Weight History",
+  "histroy": "History",
+  "zeroStateWeightTrendMessage": "Your progress will take shape\nhere over time.",
+    "@zeroStateWeightTrendMessage": {
+      "description": "Message shown in weight trend section when no data is available"
+  },
+  "zeroStateBodyMetricsMessage": "Your scale measures more than weight.\nStep on to reveal your body composition.",
+    "@zeroStateBodyMetricsMessage": {
+      "description": "Message shown in body metrics section when no data is available"
+  },
+  "goal_weight": "GOAL WEIGHT",
+  "kgUnit": "KG",
+  "stUnit": "St",
+  "deleteProfile": "Delete Profile",
+  "baby": "BABY",
+  "@baby": {
+    "description": "Baby mode label"
+  },
+  "luggage": "LUGGAGE",
+  "@luggage": {
+    "description": "Luggage mode label"
+  },
+  "addProfile": "+ Add Profile",
+  "@addProfile": {
+    "description": "Add profile button text"
+  },
+  "weighNow": "Weigh Now",
+  "@weighNow": {
+    "description": "Weigh now button text for luggage mode"
+  },
+  "createBabyProfile": "Create baby profile",
+  "@createBabyProfile": {
+    "description": "Title shown when creating a baby profile"
+  },
+  "createPetProfile": "Create pet profile",
+  "@createPetProfile": {
+    "description": "Title shown when creating a pet profile"
+  },
+  "babyProfile": "Baby Profile",
+  "@babyProfile": {
+    "description": "App bar title for baby profile"
+  },
+  "petProfile": "Pet Profile",
+  "@petProfile": {
+    "description": "App bar title for pet profile"
+  },
+  "add": "Add",
+  "@add": {
+    "description": "Add button text for profile creation"
+  },
+  "editBodyMetricsTitle": "Edit Body Metrics",
+  "@editBodyMetricsTitle": {
+    "description": "Title of the Edit Body Metrics screen"
+  },
+  "editBodyMetricsInstruction": "Choose up to as many metrics you'd like to display on your dashboard. You can also reorder to your preference.",
+  "@editBodyMetricsInstruction": {
+    "description": "Instructional text under the title"
+  },
+  "editBodyMetricsLimitError": "Choose up to 5",
+  "@editBodyMetricsLimitError": {
+    "description": "Shown when the user tries to select a 6th metric"
+  },
+  "metricLabelWeight": "Weight",
+  "metricLabelBmi": "BMI (Body Mass Index)",
+  "metricLabelBodyFat": "Body Fat (%) / Mass",
+  "metricLabelMuscleMass": "Muscle Mass",
+  "metricLabelSkeletalMuscleMass": "Skeletal Muscle Mass",
+  "metricLabelProteinPercentage": "Protein (%)",
+  "metricLabelBmr": "BMR (Basal Metabolic Rate)",
+  "metricLabelFatFreeBodyWeight": "Fat-Free Body Weight",
+  "metricLabelSubcutaneousFat": "Subcutaneous Fat (%)",
+  "metricLabelVisceralFatIndex": "Visceral Fat Index",
+  "metricLabelBodyWater": "Body Water (%)",
+  "metricLabelBoneMass": "Bone Mass",
+  "metricLabelStandingHeartRate": "Standing Heart Rate",
+  "metricLabelMetabolicAge": "Metabolic Age",
+  "metricLabelIdealWeight": "Ideal Weight",
+  "metricLabelProteinAmount": "Protein Amount",
+  "metricLabelMuscleRate": "Muscle Rate",
+  "metricDescWeight": "Your total body weight. One of the important indicators reflecting and measuring a person's health status.",
+  "metricDescBmi": "A general indicator of body weight relative to height.",
+  "metricDescBodyFat": "The fat in your body can be shown as the percentage or weight. The percentage of adipose tissue in body composition.",
+  "metricDescMuscleMass": "The total amount of muscle in your body.",
+  "metricDescSkeletalMuscleMass": "The muscles that support movement and physical strength.",
+  "metricDescProteinPercentage": "The proportion of protein in your body, important for building and maintaining tissue.",
+  "metricDescBmr": "The number of calories your body needs at rest to function.",
+  "metricDescFatFreeBodyWeight": "Your body weight excluding fat (includes muscle, bone, and water).",
+  "metricDescSubcutaneousFat": "The fat stored just beneath your skin.",
+  "metricDescVisceralFatIndex": "Fat stored around your internal organs.",
+  "metricDescBodyWater": "The percentage of water in your body.",
+  "metricDescBoneMass": "Body Water (%) is estimated weight of minerals in your bones.",
+  "metricDescStandingHeartRate": "Your heart rate (beats per minute) measured while standing.",
+  "metricDescMetabolicAge": "A comparison of your metabolism to typical age-based averages.",
+  "metricDescIdealWeight": "A target weight based on your body composition.",
+  "metricDescProteinAmount": "The total amount of protein in your body.",
+  "metricDescMuscleRate": "The percentage of your body made up of muscle.",
+  "babyMode": "Baby Mode",
+  "petMode": "Pet Mode",
+  "luggageMode": "Luggage Mode",
+  "stepOnYourScaleAlone": "Step on your\nscale alone",
+  "stepOnYourScaleAloneBaby": "Weigh yourself first before weighing your baby!",
+  "stepOnYourScaleAlonePet": "Weigh yourself first before weighing with your pet!",
+  "stepOnYourScaleAloneLuggage": "Weigh yourself first before weighing your luggage!",
+  "yourWeight": "Your Weight",
+  "weighWithBaby": "Weigh with Baby",
+  "weighWithPet": "Weigh with Pet",
+  "weighWithLuggage": "Weigh with Luggage",
+  "stepOnScaleWithBaby": "Step on scale\nwith baby",
+  "stepOnScaleWithPet": "Step on scale\nwith pet",
+  "stepOnScaleWithLuggage": "Step on scale\nwith luggage",
+  "weighYourselfAndBaby": "Now weigh yourself and your baby together!",
+  "weighYourselfAndPet": "Now weigh yourself and your pet together!",
+  "weighYourselfAndLuggage": "Weigh yourself along, holding your luggage!",
+  "yourBabysWeight": "Your Baby's\nWeight",
+  "yourPetsWeight": "Your Pet's\nWeight",
+  "luggagesWeight": "Luggage's\nWeight",
+  "weighAgain": "Weigh Again",
+  "stepIndicatorLabel": "STEP {currentStep}/{totalSteps}",
+  "@stepIndicatorLabel": {
+    "description": "Step indicator label showing current step and total steps",
+    "placeholders": {
+      "currentStep": {
+        "type": "int"
+      },
+      "totalSteps": {
+        "type": "int"
+      }
+    }
+  },
+  "language": "Language",
+  "selectYourLanguage": "Select your language",
+  "changeAppLanguage": "Change App Language",
+  "changeAppLanguageMessage": "Are you sure you want to change the app language to {language}?",
+  "failedToLoadProfile": "Failed to load profile",
+  "profileNotFound": "Profile not found",
+  "failedToDeleteProfile": "Failed to delete profile",
+  "noPrimaryProfileFound": "No primary profile found",
+  "failedToLoadSubProfiles": "Failed to load sub-profiles",
+  "deleteProfileConfirmation": "Are you sure you want to delete this profile?",
+  "delete": "Delete",
+  "noProfileFound": "No profile found"
+  "measurementUnits": "Measurement units",
+  "measurementUnitsDescription": "Set your preferred units of measurement for information in the app.",
+  "units": "Units",
+  "connectedTo": "Connected to: {ssid}",
+    "@connectedTo": {
+      "description": "Subtitle showing which network the scale is currently connected to",
+      "placeholders": {
+        "ssid": {
+          "type": "String",
+          "example": "myoptimum 678Db"
+        }
+      }
+    },
+  "wifiNotConnected": "Wi-Fi not connected",
+    "@wifiNotConnected": {
+      "description": "Header title shown when the scale has no active WiFi connection (settings/more-menu flow)"
+    },
+  "wifiNotConnectedDescription": "Your scale can still save measurements, but Wi-Fi lets it sync automatically when your phone isn't nearby.",
+    "@wifiNotConnectedDescription": {
+      "description": "Subtitle explaining that WiFi is optional when the scale isn't connected"
+    },
+  "useWithoutWiFi": "Use without WiFi",
+    "@useWithoutWiFi": {
+      "description": "Button label to dismiss WiFi setup and continue without connecting (settings/more-menu flow)"
+    },
+  "scaleConnectedToWiFi": "Scale is connected to WiFi",
+     "@scaleConnectedToWiFi": {
+        "description": "Header title shown when the scale already has an active WiFi connection (settings/more-menu flow)"
+     }
+}

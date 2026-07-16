@@ -61,12 +61,32 @@ class PetModeBloc extends Bloc<PetModeEvent, PetModeState> {
   }
 
   Future<void> _changeFilter(
-    ChangeDateFilterEvent event,
-    Emitter<PetModeState> emit,
-  ) async {
-    selectedFilter = event.filter;
+      ChangeDateFilterEvent event,
+      Emitter<PetModeState> emit,
+      ) async {
 
-    updateDateRange(selectedFilter);
+    DateFilter filter;
+
+    switch (event.index) {
+      case 0:
+        filter = DateFilter.daily;
+        break;
+
+      case 1:
+        filter = DateFilter.weekly;
+        break;
+
+      case 2:
+        filter = DateFilter.month30;
+        break;
+
+      default:
+        filter = DateFilter.year1;
+    }
+
+    selectedFilter = filter;
+
+    updateDateRange(filter);
 
     emit(
       PetModeLoadedState(
