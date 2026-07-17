@@ -1,0 +1,723 @@
+{
+  "@@locale": "it",
+  "appName": "Bilancia",
+  "login": "Accedi",
+  "logout": "Disconnetti",
+  "email": "Email",
+  "password": "Password",
+  "weight": "Peso",
+  "connectScale": "Connetti Bilancia",
+  "scanning": "Ricerca dispositivi...",
+  "connected": "Connesso",
+  "disconnected": "Disconnesso",
+  "saveWeight": "Salva Peso",
+  "weightHistory": "Cronologia Peso",
+  "syncInProgress": "Sincronizzazione dati...",
+  "syncComplete": "Sincronizzazione completata",
+  "noDataAvailable": "Nessun dato disponibile",
+  "errorOccurred": "Si è verificato un errore",
+  "retry": "Riprova",
+  "kg": "kg",
+  "lbs": "lbs",
+  "welcomeBack": "Bentornato",
+  "home": "Home",
+  "settings": "Impostazioni",
+  "enterYourEmail": "Inserisci la tua email",
+  "enterYourPassword": "Inserisci la tua password",
+  "pleaseEnterYourEmail": "Inserisci la tua email",
+  "pleaseEnterValidEmail": "Inserisci un'email valida",
+  "pleaseEnterYourPassword": "Inserisci la tua password",
+  "passwordMinLength": "La password deve contenere almeno 6 caratteri",
+  "welcomeToWeightScale": "Benvenuto in Bilancia",
+  "youAreLoggedIn": "Accesso effettuato con successo.",
+  "measureWeight": "Misura Peso",
+  "deviceConnection": "Connessione Dispositivo",
+  "scanForDevices": "Cerca Dispositivi",
+  "currentReading": "Lettura Attuale",
+  "sync": "Sincronizza",
+  "noWeightRecordsYet": "Ancora nessun dato sul peso",
+  "weightSaved": "Peso salvato: {weight} {unit}",
+  "@weightSaved": {
+    "placeholders": {
+      "weight": {
+        "type": "String"
+      },
+      "unit": {
+        "type": "String"
+      }
+    }
+  },
+  "syncedRecords": "{count} record sincronizzati",
+  "@syncedRecords": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "connectedDevice": "Connesso: {deviceId}",
+  "@connectedDevice": {
+    "placeholders": {
+      "deviceId": {
+        "type": "String"
+      }
+    }
+  },
+  "onboardingHeadline": "Una visione chiara\ndei tuoi parametri\ncorporei",
+  "getStarted": "Inizia",
+  "beforeYouContinue": "Prima di continuare",
+  "agreeToThe": "Accetto i ",
+  "privacyPolicy": "Informativa sulla Privacy",
+  "termsAndConditions": "Termini e Condizioni",
+  "onboardingDisclaimer": "Hai il pieno controllo dei tuoi dati. Non avremo mai accesso alle tue informazioni personali.",
+  "selectYourDevice": "Seleziona il tuo dispositivo",
+  "scale": "Bilancia",
+  "stepOnScaleToStartPairing": "Sali sulla bilancia per avviare l'associazione",
+  "tapeMeasure": "Metro a nastro",
+  "powerOnDeviceToStartPairing": "Accendi il dispositivo per avviare l'associazione",
+  "both": "Entrambi",
+  "weWillPairOneDeviceAtATime": "Associeremo un dispositivo alla volta",
+  "iDontHaveDevice": "Non ho un dispositivo",
+  "allowBluetoothSystemScreen": "Consenti\nschermata\nsistema\nBluetooth",
+  "name": "NOME",
+  "height": "ALTEZZA",
+  "confirm": "Conferma",
+  "inch": "POLLICI",
+  "cm": "CM",
+  "dateFormat": "DD/MM/YYYY",
+  "dateOfBirth": "DATA DI NASCITA",
+  "gender": "Genere",
+  "male": "MASCHIO",
+  "female": "FEMMINA",
+  "areYouPregnant": "Sei in gravidanza?",
+  "doYouUsePacemaker": "Utilizzi un pacemaker o un dispositivo impiantato?",
+  "doYouUseImplantedDevice": "Utilizzi un pacemaker o un dispositivo impiantato?",
+  "healthQuestionDescription": "Descrizioni tktktk",
+  "yes": "SÌ",
+  "no": "NO",
+  "required": "Obbligatorio",
+  "athleteMode": "MODALITÀ ATLETA",
+  "athleteModeDescription": "Si allena più di 10 ore a settimana. Regola gli algoritmi di composizione corporea.",
+  "preferNotToSay": "PREFERISCO NON SPECIFICARE",
+  "genderAtBirth": "GENRE ALLA NASCITA",
+  "enterTheMostAccurateHeight": "Inserisci l'altezza più accurata per ottenere risultati precisi sulla composizione corporea.",
+  "createYourProfile": "Crea il tuo profilo",
+  "failedToSaveProfile": "Impossibile salvare il profilo",
+  "healthDetails": "Dettagli Sanitari",
+  "bodyCompositionReadingsInfo": "Le letture della composizione corporea utilizzano un segnale bioelettrico a bassa intensità proveniente dalla bilancia. Le condizioni di salute influiscono sul fatto che debba essere utilizzato o meno.",
+  "electricImpedance": "IMPEDENZA ELETTRICA",
+  "electricImpedanceDescription": "Le misurazioni della composizione corporea saranno disabilitate. Il tracciamento del peso rimane pienamente disponibile.",
+  "electric": "ELETTRICO",
+  "pregnant": "IN GRAVIDANZA",
+  "pacemaker": "PACEMAKER",
+  "iAmPregnant": "SONO IN GRAVIDANZA",
+  "pregnancyDescription": "La misurazione della composizione corporea sarà disabilitata. Il tracciamento del peso rimane pienamente disponibile.",
+  "iHaveAPacemakerOrImplantedDevice": "HO UN PACEMAKER O UN DISPOSITIVO IMPIANTATO",
+  "pacemakerDescription": "La misurazione della composizione corporea sarà disabilitata. Il tracciamento del peso rimane pienamente disponibile.",
+  "healthSyncTitle": "Sincronizza automaticamente le tue letture con {platform}.",
+  "@healthSyncTitle": {
+    "placeholders": {
+      "platform": {
+        "type": "String"
+      }
+    }
+  },
+  "healthSyncDescriptionGoogle": "Conserva le tue misurazioni sanitarie in un unico posto, traccia le tendenze e condividi approfondimenti. Configuralo ora o in qualsiasi momento dal menu ALTRO.",
+  "healthSyncDescriptionApple": "Conserva le tue misurazioni sanitarie in un unico posto, traccia le tendenze e condividi approfondimenti. Configuralo ora o in qualsiasi momento dal menu ALTRO.",
+  "continueButton": "Continua",
+  "googleHealthInstallTitle": "Health Connect Richiesto",
+  "googleHealthInstallDescription": "Per continuare, installa o aggiorna Health Connect.",
+  "install": "Installa",
+  "cancel": "Annulla",
+  "permissionDenied": "Autorizzazione Negata",
+  "permissionDeniedMessage": "Puoi abilitare la sincronizzazione sanitaria in seguito nelle impostazioni dell'app.",
+  "healthServiceUnavailable": "Servizio Sanitario Non Disponibile",
+  "healthServiceUnavailableAndroid": "Google Health Connect non è supportato su questo dispositivo.",
+  "healthServiceUnavailableIos": "Apple Health non è disponibile su questo dispositivo.",
+  "permissionError": "Errore di Autorizzazione",
+  "permissionErrorAndroid": "Impossibile richiedere le autorizzazioni per Health Connect. Assicurati che Health Connect sia installato e riprova.",
+  "permissionErrorIos": "Impossibile richiedere le autorizzazioni per Apple Health. Riprova.",
+  "skip": "Salta",
+  "googleHealth": "Google Health",
+  "appleHealth": "Apple Health",
+  "healthSyncHeadlineGoogle": "Sincronizza le tue letture con Google Health.",
+  "healthSyncHeadlineApple": "Sincronizza le tue letture con Apple Health.",
+  "healthDataBackup": "Backup dei Dati Sanitari",
+  "enableICloudBackup": "Abilita Backup iCloud",
+  "enableGoogleDriveBackup": "Abilita Backup Google Drive",
+  "backupPrivacyText": "Nessuno può accedere ai tuoi dati senza la tua autorizzazione.",
+  "turnOnSyncingICloud": "Attiva la sincronizzazione per Braun Family Care nelle Impostazioni di iCloud.",
+  "turnOnSyncingGoogleDrive": "Attiva la sincronizzazione per Braun Family Care nelle Impostazioni di Google Drive.",
+  "createTestProfile": "Crea Profilo di Test",
+  "viewBackupJson": "Visualizza JSON di Backup",
+  "skipForNow": "Salta per ora",
+  "continueText": "Continua",
+  "restoreData": "Ripristina dati",
+  "importYourPreviousReadings": "Importa le tue letture precedenti",
+  "youHavePreviouslySyncedHealthData": "Hai già sincronizzato i dati sanitari in precedenza",
+  "doYouWantToImportDataInApp": "Vuoi importare i dati nell'app?",
+  "uploadBackup": "Carica Backup",
+  "restoreBackup": "Ripristina Backup",
+  "backupRestoredSuccessfully": "Backup ripristinato con successo!",
+  "backupUploadedSuccessfully": "Backup caricato con successo!",
+  "testProfileCreatedAt": "Profilo di test creato in: {filePath}",
+  "@testProfileCreatedAt": {
+    "placeholders": {
+      "filePath": {
+        "type": "String"
+      }
+    }
+  },
+  "failedToCreateTestProfile": "Impossibile creare il profilo di test: {error}",
+  "@failedToCreateTestProfile": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "backupJsonContent": "Contenuto JSON di Backup",
+  "noBackupDataAvailable": "Nessun dato di backup disponibile",
+  "close": "Chiudi",
+  "noProfileDataFound": "Nessun dato del profilo trovato. Crea prima un profilo o tocca \"Crea Profilo di Test\" per il test.",
+  "cloudServiceUnavailable": "Servizio cloud non disponibile. Riprova.",
+  "failedToCreateProfile": "Impossibile creare il profilo. Riprova.",
+  "failedToUploadBackup": "Impossibile caricare il backup",
+  "uploadFailed": "Caricamento fallito: {error}",
+  "@uploadFailed": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "restoredFileCorrupted": "Il file ripristinato è danneggiato o non valido",
+  "restoredFileNotFound": "File ripristinato non trovato",
+  "noBackupFoundInCloud": "Nessun backup trovato nello spazio di archiviazione cloud",
+  "restoreFailed": "Ripristino fallito: {error}",
+  "@restoreFailed": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "failedToSkip": "Impossibile saltare: {error}",
+  "@failedToSkip": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "failedToSignIn": "Accesso fallito: {error}",
+  "@failedToSignIn": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "failedToReadBackup": "Impossibile leggere il backup: {error}",
+  "@failedToReadBackup": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "noBackupFileFound": "Nessun file di backup trovato",
+  "stepOnScale": "Sali sulla Bilancia",
+  "waitingForMeasurement": "Attendi il calcolo del peso...",
+  "weightReceived": "Peso Ricevuto",
+  "addManualWeight": "Aggiungi Peso Manualmente",
+  "enterWeight": "Inserisci Peso",
+  "enterWeightHint": "es. 75.5",
+  "pleaseEnterWeight": "Inserisci un valore per il peso",
+  "invalidWeight": "Inserisci un peso valido",
+  "save": "Salva",
+  "update": "Aggiorna",
+  "tabHome": "Home",
+  "@tabHome": {
+    "description": "Bottom navigation tab label for Home"
+  },
+  "tabTrends": "Tendenze",
+  "@tabTrends": {
+    "description": "Bottom navigation tab label for Trends"
+  },
+  "tabModes": "Modalità",
+  "@tabModes": {
+    "description": "Bottom navigation tab label for Modes"
+  },
+  "tabMenu": "Menu",
+  "@tabMenu": {
+    "description": "Bottom navigation tab label for Menu"
+  },
+  "menuMore": "Altro",
+  "@menuMore": {
+    "description": "Title for the More menu screen"
+  },
+  "menuAccount": "Account",
+  "@menuAccount": {
+    "description": "Account section header in More menu"
+  },
+  "menuDevices": "Dispositivi",
+  "@menuDevices": {
+    "description": "Devices section header in More menu"
+  },
+  "menuDeviceSettings": "Impostazioni Dispositivo",
+  "@menuDeviceSettings": {
+    "description": "Manage Device menu item"
+  },
+  "menuMeasurementUnits": "Unità di Misura",
+  "@menuMeasurementUnits": {
+    "description": "Measurement Units menu item"
+  },
+  "menuWifiSettings": "Impostazioni WiFi",
+  "@menuWifiSettings": {
+    "description": "WiFi Settings menu item"
+  },
+  "menuTheme": "Tema",
+  "@menuTheme": {
+    "description": "Theme menu item"
+  },
+  "menuMyProfile": "Il mio Profilo",
+  "@menuMyProfile": {
+    "description": "My Profile menu item"
+  },
+  "menuLanguage": "Lingue",
+  "@menuLanguage": {
+    "description": "Language menu item"
+  },
+  "menuSupport": "Supporto",
+  "@menuSupport": {
+    "description": "Support section header in More menu"
+  },
+  "menuHelp": "Aiuto",
+  "@menuHelp": {
+    "description": "Help menu item"
+  },
+  "menuDataBackup": "Backup Dati",
+  "@menuDataBackup": {
+    "description": "Data & Backup menu item"
+  },
+  "menuLegal": "Note Legali",
+  "@menuLegal": {
+    "description": "Legal section header in More menu"
+  },
+  "menuAppVersion": "Versione App",
+  "@menuAppVersion": {
+    "description": "App Version label in More menu"
+  },
+  "termsConditions": "Termini e Condizioni",
+  "@termsConditions": {
+    "description": "Terms and Conditions menu item label"
+  },
+  "menuAppleHealth": "Apple Health",
+  "@menuAppleHealth": {
+    "description": "Apple Health menu item"
+  },
+  "menuGoogleHealth": "Google Health",
+  "@menuGoogleHealth": {
+    "description": "Google Health menu item"
+  },
+  "healthScreenTitleApple": "Apple Health",
+  "@healthScreenTitleApple": {
+    "description": "Health screen title for iOS"
+  },
+  "healthScreenTitleGoogle": "Google Health",
+  "@healthScreenTitleGoogle": {
+    "description": "Health screen title for Android"
+  },
+  "healthAllowAccessApple": "Consenti Accesso a Apple Health",
+  "@healthAllowAccessApple": {
+    "description": "Health access toggle title for iOS"
+  },
+  "healthAllowAccessGoogle": "Consenti Accesso a Google Health",
+  "@healthAllowAccessGoogle": {
+    "description": "Health access toggle title for Android"
+  },
+  "healthSyncDescriptionAppleShort": "Sincronizza i dati del tuo peso con Apple Health",
+  "@healthSyncDescriptionAppleShort": {
+    "description": "Short description for Apple Health sync"
+  },
+  "healthSyncDescriptionGoogleShort": "Sincronizza i dati del tuo peso con Google Health",
+  "@healthSyncDescriptionGoogleShort": {
+    "description": "Short description for Google Health sync"
+  },
+  "healthStopSharingTitleApple": "Interrompere la condivisione con Apple Health?",
+  "@healthStopSharingTitleApple": {
+    "description": "Dialog title for stopping Apple Health sync"
+  },
+  "healthStopSharingMessageApple": "Le nuove letture non verranno sincronizzate con Apple Health. Per rimuovere completamente l'accesso, vai su: App Salute → Profilo → Privacy → App → Braun Metra.",
+  "@healthStopSharingMessageApple": {
+    "description": "Dialog message for stopping Apple Health sync"
+  },
+  "healthStopSharingTitleGoogle": "Interrompere la condivisione con Google Health?",
+  "@healthStopSharingTitleGoogle": {
+    "description": "Dialog title for stopping Google Health sync"
+  },
+  "healthStopSharingMessageGoogle": "Ci disconnetteremo da Google Health e interromperemo la sincronizzazione delle tue letture. Se desideri rimuovere anche le autorizzazioni Android, apri le Impostazioni del telefono.",
+  "@healthStopSharingMessageGoogle": {
+    "description": "Dialog message for stopping Google Health sync"
+  },
+  "ok": "OK",
+  "@ok": {
+    "description": "OK button text"
+  },
+  "healthEnableSyncTitleApple": "Sincronizzare con Apple Health?",
+  "@healthEnableSyncTitleApple": {
+    "description": "Dialog title for enabling Apple Health sync"
+  },
+  "healthEnableSyncTitleGoogle": "Sincronizzare con Google Health?",
+  "@healthEnableSyncTitleGoogle": {
+    "description": "Dialog title for enabling Google Health sync"
+  },
+  "appleHealthEnableHealthkit": "Abilita Condivisione HealthKit",
+  "@appleHealthEnableHealthkit": {
+    "description": "Title for enabling HealthKit sharing dialog"
+  },
+  "appleHealthPermissionTurnOnSteps": "Concedi l'autorizzazione a Braun Metra per connettersi ad Apple Health. Apri l'app Salute, seleziona Condivisione > App e attiva \"Braun Metra\"",
+  "@appleHealthPermissionTurnOnSteps": {
+    "description": "Instructions for enabling HealthKit permissions"
+  },
+  "appleHealthHealthApp": "App Salute",
+  "@appleHealthHealthApp": {
+    "description": "Health App button text"
+  },
+  "googleHealthPermissionSettingTitle": "Abilita Condivisione Google Health",
+  "@googleHealthPermissionSettingTitle": {
+    "description": "Title for enabling Google Health sharing dialog"
+  },
+  "googleHealthBloodPressureAndHeartRatePermissionsInHealthConnect": "Concedi l'autorizzazione a Braun Metra per connettersi a Google Health. Apri l'app Impostazioni sul tuo telefono.",
+  "@googleHealthBloodPressureAndHeartRatePermissionsInHealthConnect": {
+    "description": "Instructions for enabling Google Health permissions"
+  },
+  "settings": "Impostazioni",
+  "@settings": {
+    "description": "Settings button text"
+  },
+  "healthDataBackupTitle": "Backup dei dati sanitari",
+  "storeHealthDataInICloud": "Memorizza i tuoi dati sanitari nel tuo account iCloud",
+  "storeHealthDataInGoogleDrive": "Memorizza i tuoi dati sanitari nel tuo account Google Drive",
+  "dataCannotBeAccessed": "Nessuno può accedere ai tuoi dati senza la tua autorizzazione.",
+  "turnOnSyncingInICloudSettings": "Attiva la sincronizzazione nelle Impostazioni di iCloud",
+  "turnOnSyncingInGoogleDriveSettings": "Attiva la sincronizzazione nelle Impostazioni di Google Drive",
+  "openSettings": "Apri Impostazioni",
+  "backupWarningTitle": "Attenzione!",
+  "backupWarningMessage": "Non verrà eseguito il backup dei tuoi dati su iCloud.",
+  "backupWarningDescription": "Se desideri eseguire il backup in futuro, dovrai consentire la sincronizzazione dalle Impostazioni di iCloud.",
+  "backupWarningMessageAndroid": "Non verrà eseguito il backup dei tuoi dati su Google Drive.",
+  "backupWarningDescriptionAndroid": "Se desideri eseguire il backup in futuro, dovrai consentire la sincronizzazione dalle Impostazioni di Google Drive.",
+  "success": "Operazione riuscita!",
+  "previousReadingsImported": "Le tue letture precedenti sono state importate nell'app",
+  "accessPreviousIllnessJourneys": "Ora puoi accedere ai precedenti percorsi di salute nell'app.",
+  "couldNotImportReadings": "Impossibile importare le letture",
+  "errorImportingHealthData": "Si è verificato un errore durante l'importazione dei tuoi dati sanitari precedenti.",
+  "doYouWantToTryAgain": "Vuoi riprovare?",
+  "somethingWentWrong": "Qualcosa è andato storto",
+  "couldNotImportYourPreviousReadingsPleaseRetry": "Impossibile importare le tue letture precedenti. Riprova",
+  "yes": "Sì",
+  "no": "No",
+  "noInternetConnection": "Nessuna connessione Internet. Controlla il WiFi o i dati mobili e riprova.",
+  "backupNotFoundInCloud": "Nessun backup trovato nello spazio di archiviazione cloud",
+  "failedToRestoreBackup": "Impossibile ripristinare il backup",
+  "cloudStorageNotAvailable": "L'archiviazione cloud non è disponibile. Abilita iCloud o Google Drive.",
+  "failedToUploadBackup": "Impossibile caricare il backup sul cloud",
+  "backupFileNotFound": "File di backup non trovato",
+  "deviceIdMismatch": "Mancata corrispondenza dell'ID dispositivo - impossibile ripristinare da un dispositivo diverso",
+  "sameDeviceAndUser": "Stesso dispositivo e stesso utente - ripristino non necessario",
+  "deviceOrUserMismatch": "Mancata corrispondenza del dispositivo o dell'utente",
+  "customizeMonogram": "Personalizza monogramma",
+  "colors": "COLORI",
+  "pairing": "Associazione",
+  "pairingToYourScale": "Associazione alla tua bilancia",
+  "pairingToYourTapeMeasure": "Associazione al tuo metro a nastro",
+  "powerOnTapeMeasureToStartPairing": "Accendi il metro a nastro per avviare l'associazione",
+  "turnTheTapeMeasureOn": "Accendi il metro a nastro",
+  "scaleSuccessfullyPairedViaBluetooth": "Bilancia associata con successo via Bluetooth",
+  "tapeMeasureSuccessfullyPairedViaBluetooth": "Metro a nastro associato con successo via Bluetooth",
+  "startMeasuring": "Inizia a misurare",
+  "pairAnotherDevice": "Associa un altro dispositivo",
+  "allowBluetoothPermission": "Consenti Autorizzazione Bluetooth",
+  "bluetoothPermissionRequired": "L'autorizzazione Bluetooth è necessaria per connettersi al dispositivo",
+  "grantPermission": "Concedi Autorizzazione",
+  "connectingToDevice": "Connessione al dispositivo...",
+  "pleaseWait": "Attendi",
+  "pairingSuccessful": "Associazione riuscita!",
+  "deviceSuccessfullyPaired": "Il tuo dispositivo è stato associato con successo tramite Bluetooth",
+  "devicePairingFailed": "Associazione dispositivo fallita",
+  "tryAgain": "Riprova",
+  "bluetoothPermissionDenied": "Autorizzazione Bluetooth negata",
+  "bluetoothPermissionPermanentlyDenied": "Autorizzazione Bluetooth negata permanentemente. Abilitala nelle impostazioni.",
+  "bluetoothPermissionRestricted": "Autorizzazione Bluetooth limitata",
+  "goToSettings": "Vai a Impostazioni",
+  "bluetoothNotPermitted": "Bluetooth non consentito",
+  "pairingFailedWithoutBluetooth": "Associazione fallita senza l'autorizzazione Bluetooth.",
+  "pleaseAllowBluetoothToContinue": "Consenti il Bluetooth per continuare.",
+  "notNow": "Non ora",
+  "bluetoothPermissionRequiredToPair": "L'autorizzazione Bluetooth è richiesta per associare il dispositivo.",
+  "tapSettings": "1. Tocca Impostazioni",
+  "switchBluetoothOn": "2. Attiva il Bluetooth",
+  "tapBluetoothNearbyDevices": "2. Tocca Bluetooth (dispositivi vicini)",
+  "tapAllow": "3. Tocca Consenti",
+  "pleaseSelectADeviceType": "Seleziona un tipo di dispositivo",
+  "failedToProceed": "Impossibile procedere",
+  "failedToCheckPermission": "Impossibile verificare l'autorizzazione",
+  "pairingToYourDevice": "Associazione al tuo dispositivo",
+  "connectToWiFiToSyncMeasurements": "Connettiti al WiFi per sincronizzare le misurazioni quando il telefono non è nelle vicinanze.",
+  "connectToWiFi": "Connettiti al Wi-Fi",
+  "connectToWiFiBtnTitle": "Connettiti al WiFi",
+  "tryItOut": "Provalo subito",
+  "illDoThisLater": "Lo farò più tardi",
+  "backupFound": "Backup Trovato",
+  "@backupFound": {
+    "description": "Title shown when a backup is found"
+  },
+  "backupFoundMessage": "È stato trovato un backup per questo dispositivo. Vuoi ripristinarlo?",
+  "@backupFoundMessage": {
+    "description": "Message shown when a backup is found"
+  },
+  "unfortunatelyPairingFailed": "Purtroppo l'associazione è fallita!",
+  "troubleshooting": "Risoluzione problemi",
+  "makeSurePhoneAndDeviceWithin5Feet": "1. Assicurati che il telefono e la bilancia si trovino a meno di 1,5 metri di distanza.",
+  "makeSureBatteriesNotLowOrDead": "2. Assicurati che le batterie della bilancia non siano scariche o quasi scariche.",
+  "removeBatteriesAndTryAgain": "3. Rimuovi le batterie dalla bilancia, reinseriscile e riprova l'associazione.",
+  "contactCustomerService": "Contatta il servizio clienti",
+  "chooseANetwork": "Scegli una Rete",
+  "selectYourWiFiNetwork": "Seleziona la tua rete WiFi",
+  "scanning": "Ricerca...",
+  "noNetworksFound": "Nessuna rete trovata",
+  "refreshNetworks": "Aggiorna",
+  "enterWiFiPassword": "Inserisci password WiFi",
+  "passwordIncorrect": "Password errata",
+  "done": "Fatto",
+  "connecting": "Connessione...",
+  "connectionFailed": "Connessione fallita",
+  "connectionSuccess": "Connesso con successo",
+  "connectingToYourWiFi": "Connessione al tuo WiFi",
+  "yourScaleIsConnectedToWiFi": "La tua bilancia è connessa al WiFi",
+  "next": "Avanti",
+  "addAnotherDevice": "Aggiungi un altro dispositivo",
+  "weightGoal": "Obiettivo Peso",
+  "setGoalWeight": "Imposta peso obiettivo",
+  "youCanAlwaysChangeThisLater": "Puoi sempre modificarlo o farlo in seguito nel tuo profilo!",
+  "yourCurrentGoalWeightIs": "Il tuo peso obiettivo attuale è {weight} {unit}!",
+  "@yourCurrentGoalWeightIs": {
+    "placeholders": {
+      "weight": {
+        "type": "String"
+      },
+      "unit": {
+        "type": "String"
+      }
+    }
+  },
+  "illDoItLater": "Lo farò più tardi",
+  "stepOnTheScaleToTakeYourFirstReading": "Sali sulla bilancia per effettuare la tua prima lettura!",
+  "couldNotConnectToWiFi": "Impossibile connettersi al WiFi",
+  "reenterYourPassword": "Reinserisci la password",
+  "chooseAnotherWiFiNetwork": "Scegli un'altra rete WiFi",
+  "networkNotFoundWeakSignal": "Rete non trovata / segnale debole",
+  "makeSureYourScaleIsCloseToRouter": "Assicurati che la bilancia sia vicina al router",
+  "connectionTimedOut": "Connessione scaduta",
+  "tryAgain": "Riprova",
+  "continueWithoutWiFi": "Continua senza WiFi",
+  "graphicPersonOnScale": "GRAFICA: Una specie di persona sulla bilancia",
+  "failedToSendCredentialsToDevice": "Impossibile inviare le credenziali al dispositivo",
+  "failedToSendWiFiCredentialsViaBle": "Impossibile inviare le credenziali WiFi tramite BLE",
+  "goal": "OBIETTIVO",
+  "@goal": {
+    "description": "Goal label shown on dashboard"
+  },
+  "lbsUnit": "LBs",
+  "@lbsUnit": {
+    "description": "Weight unit label"
+  },
+  "myWeightTrend": "IL MIO ANDAMENTO DEL PESO",
+  "@myWeightTrend": {
+    "description": "Weight trend section title"
+  },
+  "bodyMetrics": "PARAMETRI CORPOREI",
+  "@bodyMetrics": {
+    "description": "Body metrics section title"
+  },
+  "edit": "Modifica",
+  "@edit": {
+    "description": "Edit button text"
+  },
+  "profile": "Profilo",
+  "profiles": "Profili",
+  "child": "Bambino",
+  "pet": "Animale domestico",
+  "myWeightHistroy": "La mia cronologia peso",
+  "histroy": "Cronologia",
+  "zeroStateWeightTrendMessage": "I tuoi progressi prenderanno forma\nqui nel corso del tempo.",
+  "@zeroStateWeightTrendMessage": {
+    "description": "Message shown in weight trend section when no data is available"
+  },
+  "zeroStateBodyMetricsMessage": "La tua bilancia misura molto più del peso.\nSali per scoprire la tua composizione corporea.",
+  "@zeroStateBodyMetricsMessage": {
+    "description": "Message shown in body metrics section when no data is available"
+  },
+  "goal_weight": "PESO OBIETTIVO",
+  "kgUnit": "KG",
+  "stUnit": "St",
+  "deleteProfile": "Elimina Profilo",
+  "baby": "BAMBINO",
+  "@baby": {
+    "description": "Baby mode label"
+  },
+  "luggage": "BAGAGLIO",
+  "@luggage": {
+    "description": "Luggage mode label"
+  },
+  "addProfile": "+ Aggiungi Profilo",
+  "@addProfile": {
+    "description": "Add profile button text"
+  },
+  "weighNow": "Pesa Ora",
+  "@weighNow": {
+    "description": "Weigh now button text for luggage mode"
+  },
+  "createBabyProfile": "Crea profilo bambino",
+  "@createBabyProfile": {
+    "description": "Title shown when creating a baby profile"
+  },
+  "createPetProfile": "Crea profilo animale domestico",
+  "@createPetProfile": {
+    "description": "Title shown when creating a pet profile"
+  },
+  "babyProfile": "Profilo Bambino",
+  "@babyProfile": {
+    "description": "App bar title for baby profile"
+  },
+  "petProfile": "Profilo Animale Domestico",
+  "@petProfile": {
+    "description": "App bar title for pet profile"
+  },
+  "add": "Aggiungi",
+  "@add": {
+    "description": "Add button text for profile creation"
+  },
+  "editBodyMetricsTitle": "Modifica Parametri Corporei",
+  "@editBodyMetricsTitle": {
+    "description": "Title of the Edit Body Metrics screen"
+  },
+  "editBodyMetricsInstruction": "Scegli le metriche che desideri visualizzare sulla tua dashboard. Puoi anche riordinarle in base alle tue preferenze.",
+  "@editBodyMetricsInstruction": {
+    "description": "Instructional text under the title"
+  },
+  "editBodyMetricsLimitError": "Scegli fino a 5",
+  "@editBodyMetricsLimitError": {
+    "description": "Shown when the user tries to select a 6th metric"
+  },
+  "metricLabelWeight": "Peso",
+  "metricLabelBmi": "IMC (Indice di Massa Corporea)",
+  "metricLabelBodyFat": "Grasso Corporeo (%) / Massa",
+  "metricLabelMuscleMass": "Massa Muscolare",
+  "metricLabelSkeletalMuscleMass": "Massa Muscolare Scheletrica",
+  "metricLabelProteinPercentage": "Proteine (%)",
+  "metricLabelBmr": "BMR (Metabolismo Basale)",
+  "metricLabelFatFreeBodyWeight": "Massa Magra Corporea",
+  "metricLabelSubcutaneousFat": "Grasso Sottocutaneo (%)",
+  "metricLabelVisceralFatIndex": "Indice di Grasso Viscerale",
+  "metricLabelBodyWater": "Acqua Corporea (%)",
+  "metricLabelBoneMass": "Massa Ossea",
+  "metricLabelStandingHeartRate": "Frequenza Cardiaca da In piedi",
+  "metricLabelMetabolicAge": "Età Metabolica",
+  "metricLabelIdealWeight": "Peso Ideale",
+  "metricLabelProteinAmount": "Quantità Proteica",
+  "metricLabelMuscleRate": "Percentuale Muscolare",
+  "metricDescWeight": "Il tuo peso corporeo totale. Uno degli indicatori importanti che riflette e misura lo stato di salute di una persona.",
+  "metricDescBmi": "Un indicatore generale del peso corporeo rispetto all'altezza.",
+  "metricDescBodyFat": "Il grasso nel tuo corpo può essere mostrato come percentuale o peso. La percentuale di tessuto adiposo nella composizione corporea.",
+  "metricDescMuscleMass": "La quantità totale di muscoli nel tuo corpo.",
+  "metricDescSkeletalMuscleMass": "I muscoli che supportano il movimento e la forza fisica.",
+  "metricDescProteinPercentage": "La proporzione di proteine nel tuo corpo, importante per la costruzione e il mantenimento dei tessuti.",
+  "metricDescBmr": "Il numero di calorie di cui il tuo corpo ha bisogno a riposo per funzionare.",
+  "metricDescFatFreeBodyWeight": "Il tuo peso corporeo esclusi i grassi (include muscoli, ossa e acqua).",
+  "metricDescSubcutaneousFat": "Il grasso immagazzinato appena sotto la pelle.",
+  "metricDescVisceralFatIndex": "Il grasso immagazzinato attorno ai tuoi organi interni.",
+  "metricDescBodyWater": "La percentuale di acqua nel tuo corpo.",
+  "metricDescBoneMass": "Il peso stimato dei minerali presenti nelle tue ossa.",
+  "metricDescStandingHeartRate": "La tua frequenza cardiaca (battiti al minuto) misurata da in piedi.",
+  "metricDescMetabolicAge": "Un confronto del tuo metabolismo rispetto alle medie tipiche basate sull'età.",
+  "metricDescIdealWeight": "Un peso obiettivo basato sulla tua composizione corporea.",
+  "metricDescProteinAmount": "La quantità totale di proteine nel tuo corpo.",
+  "metricDescMuscleRate": "La percentuale del tuo corpo costituita da muscoli.",
+  "babyMode": "Modalità Bambino",
+  "petMode": "Modalità Animale Domestico",
+  "luggageMode": "Modalità Bagaglio",
+  "stepOnYourScaleAlone": "Sali sulla\nbilancia da solo",
+  "stepOnYourScaleAloneBaby": "Pesati prima da solo prima di pesare il tuo bambino!",
+  "stepOnYourScaleAlonePet": "Pesati prima da solo prima di pesare il tuo animale domestico!",
+  "stepOnYourScaleAloneLuggage": "Pesati prima da solo prima di pesare il tuo bagaglio!",
+  "yourWeight": "Il tuo Peso",
+  "weighWithBaby": "Pesati con Bambino",
+  "weighWithPet": "Pesati con Animale Domestico",
+  "weighWithLuggage": "Pesati con Bagaglio",
+  "stepOnScaleWithBaby": "Sali sulla bilancia\ncon il bambino",
+  "stepOnScaleWithPet": "Sali sulla bilancia\ncon l'animale domestico",
+  "stepOnScaleWithLuggage": "Sali sulla bilancia\ncon il bagaglio",
+  "weighYourselfAndBaby": "Ora pesati insieme al tuo bambino!",
+  "weighYourselfAndPet": "Ora pesati insieme al tuo animale domestico!",
+  "weighYourselfAndLuggage": "Pesati da solo, tenendo in mano il tuo bagaglio!",
+  "yourBabysWeight": "Peso del tuo\nBambino",
+  "yourPetsWeight": "Peso del tuo\nAnimale Domestico",
+  "luggagesWeight": "Peso del\nBagaglio",
+  "weighAgain": "Pesati di Nuovo",
+  "stepIndicatorLabel": "PASSO {currentStep}/{totalSteps}",
+  "@stepIndicatorLabel": {
+    "description": "Step indicator label showing current step and total steps",
+    "placeholders": {
+      "currentStep": {
+        "type": "int"
+      },
+      "totalSteps": {
+        "type": "int"
+      }
+    }
+  },
+  "language": "Lingua",
+  "selectYourLanguage": "Seleziona la tua lingua",
+  "changeAppLanguage": "Cambia Lingua dell'App",
+  "changeAppLanguageMessage": "Sei sicuro di voler cambiare la lingua dell'app in {language}?",
+  "failedToLoadProfile": "Impossibile caricare il profilo",
+  "profileNotFound": "Profilo non trovato",
+  "failedToDeleteProfile": "Impossibile eliminare il profilo",
+  "noPrimaryProfileFound": "Nessun profilo principale trovato",
+  "failedToLoadSubProfiles": "Impossibile caricare i sotto-profili",
+  "deleteProfileConfirmation": "Sei sicuro di voler eliminare questo profilo?",
+  "delete": "Elimina",
+  "noProfileFound": "Nessun profilo trovato",
+  "measurementUnits": "Unità di misura",
+  "measurementUnitsDescription": "Imposta le tue unità di misura preferite per le informazioni nell'app.",
+  "units": "Unità",
+  "connectedTo": "Connesso a: {ssid}",
+  "@connectedTo": {
+    "description": "Subtitle showing which network the scale is currently connected to",
+    "placeholders": {
+      "ssid": {
+        "type": "String",
+        "example": "myoptimum 678Db"
+      }
+    }
+  },
+  "wifiNotConnected": "Wi-Fi non connesso",
+  "@wifiNotConnected": {
+    "description": "Header title shown when the scale has no active WiFi connection (settings/more-menu flow)"
+  },
+  "wifiNotConnectedDescription": "La tua bilancia può comunque salvare le misurazioni, ma il Wi-Fi le consente di sincronizzarsi automaticamente quando il telefono non è nelle vicinanze.",
+  "@wifiNotConnectedDescription": {
+    "description": "Subtitle explaining that WiFi is optional when the scale isn't connected"
+  },
+  "useWithoutWiFi": "Usa senza WiFi",
+  "@useWithoutWiFi": {
+    "description": "Button label to dismiss WiFi setup and continue without connecting (settings/more-menu flow)"
+  },
+  "scaleConnectedToWiFi": "La bilancia è connessa al WiFi",
+  "@scaleConnectedToWiFi": {
+    "description": "Header title shown when the scale already has an active WiFi connection (settings/more-menu flow)"
+  }
+}

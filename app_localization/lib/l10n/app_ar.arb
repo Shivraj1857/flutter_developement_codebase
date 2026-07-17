@@ -687,7 +687,7 @@
   "failedToLoadSubProfiles": "فشل تحميل الملفات الشخصية الفرعية",
   "deleteProfileConfirmation": "هل أنت متأكد من أنك تريد حذف هذا الملف الشخصي؟",
   "delete": "حذف",
-  "noProfileFound": "لم يتم العثور على ملف شخصي"
+  "noProfileFound": "لم يتم العثور على ملف شخصي",
   "measurementUnits": "وحدات القياس",
   "measurementUnitsDescription": "حدد وحدات القياس المفضلة لديك للمعلومات في التطبيق.",
   "units": "الوحدات",
