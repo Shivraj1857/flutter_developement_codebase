@@ -1352,4 +1352,28 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get scaleConnectedToWiFi => 'الميزان متصل بشبكة Wi-Fi';
+
+  @override
+  String get invalidWeightValue => 'قيمة الوزن غير صالحة';
+
+  @override
+  String weightRangeErrorLbs(String min, String max) {
+    return 'يجب أن يكون الوزن بين $min و $max رطل';
+  }
+
+  @override
+  String weightRangeErrorKg(String min, String max) {
+    return 'يجب أن يكون الوزن بين $min و $max كجم';
+  }
+
+  @override
+  String weightRangeErrorSt(String min, String max) {
+    return 'يجب أن يكون الوزن بين $min و $max ستون';
+  }
+
+  @override
+  String get noProfileIdAvailable => 'معرف الملف الشخصي غير متوفر';
+
+  @override
+  String get failedToSaveWeightGoal => 'فشل حفظ هدف الوزن';
 }

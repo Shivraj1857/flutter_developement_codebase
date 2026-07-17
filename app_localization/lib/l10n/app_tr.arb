@@ -719,5 +719,57 @@
   "scaleConnectedToWiFi": "Tartı WiFi'ye bağlı",
   "@scaleConnectedToWiFi": {
     "description": "Header title shown when the scale already has an active WiFi connection (settings/more-menu flow)"
+  },
+  "invalidWeightValue": "Geçersiz kilo değeri",
+  "@invalidWeightValue": {
+    "description": "Error message when weight value is invalid or zero"
+  },
+  "weightRangeErrorLbs": "Kilo {min} ile {max} lbs arasında olmalıdır",
+  "@weightRangeErrorLbs": {
+    "description": "Error message for weight out of range in pounds",
+    "placeholders": {
+      "min": {
+        "type": "String"
+      },
+      "max": {
+        "type": "String"
+      }
+    }
+  },
+  "weightRangeErrorKg": "Kilo {min} ile {max} kg arasında olmalıdır",
+  "@weightRangeErrorKg": {
+    "description": "Error message for weight out of range in kilograms",
+    "placeholders": {
+      "min": {
+        "type": "String"
+      },
+      "max": {
+        "type": "String"
+      }
+    }
+  },
+  "weightRangeErrorSt": "Kilo {min} ile {max} st arasında olmalıdır",
+  "@weightRangeErrorSt": {
+    "description": "Error message for weight out of range in stone",
+    "placeholders": {
+      "min": {
+        "type": "String"
+      },
+      "max": {
+        "type": "String"
+      }
+    }
+  },
+  "noProfileIdAvailable": "Kullanılabilir profil kimliği yok",
+  "@noProfileIdAvailable": {
+    "description": "Error message when profile ID is missing"
+  },
+  "failedToSaveWeightGoal": "Kilo hedefi kaydedilemedi",
+  "@failedToSaveWeightGoal": {
+    "description": "Error message when weight goal save operation fails"
+  },
+  "noPrimaryProfileFound": "Birincil profil bulunamadı",
+  "@noPrimaryProfileFound": {
+    "description": "Error message when no primary profile exists"
   }
 }

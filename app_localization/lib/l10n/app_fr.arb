@@ -719,5 +719,57 @@
   "scaleConnectedToWiFi": "Le pèse-personne est connecté au Wi-Fi",
   "@scaleConnectedToWiFi": {
     "description": "Header title shown when the scale already has an active WiFi connection (settings/more-menu flow)"
+  },
+  "invalidWeightValue": "Valeur de poids invalide",
+  "@invalidWeightValue": {
+    "description": "Error message when weight value is invalid or zero"
+  },
+  "weightRangeErrorLbs": "Le poids doit être compris entre {min} et {max} lbs",
+  "@weightRangeErrorLbs": {
+    "description": "Error message for weight out of range in pounds",
+    "placeholders": {
+      "min": {
+        "type": "String"
+      },
+      "max": {
+        "type": "String"
+      }
+    }
+  },
+  "weightRangeErrorKg": "Le poids doit être compris entre {min} et {max} kg",
+  "@weightRangeErrorKg": {
+    "description": "Error message for weight out of range in kilograms",
+    "placeholders": {
+      "min": {
+        "type": "String"
+      },
+      "max": {
+        "type": "String"
+      }
+    }
+  },
+  "weightRangeErrorSt": "Le poids doit être compris entre {min} et {max} st",
+  "@weightRangeErrorSt": {
+    "description": "Error message for weight out of range in stone",
+    "placeholders": {
+      "min": {
+        "type": "String"
+      },
+      "max": {
+        "type": "String"
+      }
+    }
+  },
+  "noProfileIdAvailable": "Aucun identifiant de profil disponible",
+  "@noProfileIdAvailable": {
+    "description": "Error message when profile ID is missing"
+  },
+  "failedToSaveWeightGoal": "Échec de l'enregistrement de l'objectif de poids",
+  "@failedToSaveWeightGoal": {
+    "description": "Error message when weight goal save operation fails"
+  },
+  "noPrimaryProfileFound": "Aucun profil principal trouvé",
+  "@noPrimaryProfileFound": {
+    "description": "Error message when no primary profile exists"
   }
 }

@@ -1378,4 +1378,29 @@ class AppLocalizationsIt extends AppLocalizations {
 
   @override
   String get scaleConnectedToWiFi => 'La bilancia è connessa al WiFi';
+
+  @override
+  String get invalidWeightValue => 'Valore del peso non valido';
+
+  @override
+  String weightRangeErrorLbs(String min, String max) {
+    return 'Il peso deve essere compreso tra $min e $max lbs';
+  }
+
+  @override
+  String weightRangeErrorKg(String min, String max) {
+    return 'Il peso deve essere compreso tra $min e $max kg';
+  }
+
+  @override
+  String weightRangeErrorSt(String min, String max) {
+    return 'Il peso deve essere compreso tra $min e $max st';
+  }
+
+  @override
+  String get noProfileIdAvailable => 'ID profilo non disponibile';
+
+  @override
+  String get failedToSaveWeightGoal =>
+      'Impossibile salvare l\'obiettivo di peso';
 }
