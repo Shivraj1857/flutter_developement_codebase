@@ -1371,4 +1371,28 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String get scaleConnectedToWiFi => 'Tartı WiFi\'ye bağlı';
+
+  @override
+  String get invalidWeightValue => 'Geçersiz kilo değeri';
+
+  @override
+  String weightRangeErrorLbs(String min, String max) {
+    return 'Kilo $min ile $max lbs arasında olmalıdır';
+  }
+
+  @override
+  String weightRangeErrorKg(String min, String max) {
+    return 'Kilo $min ile $max kg arasında olmalıdır';
+  }
+
+  @override
+  String weightRangeErrorSt(String min, String max) {
+    return 'Kilo $min ile $max st arasında olmalıdır';
+  }
+
+  @override
+  String get noProfileIdAvailable => 'Kullanılabilir profil kimliği yok';
+
+  @override
+  String get failedToSaveWeightGoal => 'Kilo hedefi kaydedilemedi';
 }

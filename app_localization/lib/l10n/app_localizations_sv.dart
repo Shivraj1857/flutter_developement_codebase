@@ -1375,4 +1375,28 @@ class AppLocalizationsSv extends AppLocalizations {
 
   @override
   String get scaleConnectedToWiFi => 'Vågen är ansluten till WiFi';
+
+  @override
+  String get invalidWeightValue => 'Ogiltigt viktvärde';
+
+  @override
+  String weightRangeErrorLbs(String min, String max) {
+    return 'Vikten måste vara mellan $min och $max lbs';
+  }
+
+  @override
+  String weightRangeErrorKg(String min, String max) {
+    return 'Vikten måste vara mellan $min och $max kg';
+  }
+
+  @override
+  String weightRangeErrorSt(String min, String max) {
+    return 'Vikten måste vara mellan $min och $max st';
+  }
+
+  @override
+  String get noProfileIdAvailable => 'Inget profil-ID tillgängligt';
+
+  @override
+  String get failedToSaveWeightGoal => 'Misslyckades med att spara viktmål';
 }

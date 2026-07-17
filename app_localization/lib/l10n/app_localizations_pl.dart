@@ -1376,4 +1376,28 @@ class AppLocalizationsPl extends AppLocalizations {
 
   @override
   String get scaleConnectedToWiFi => 'Waga jest połączona z WiFi';
+
+  @override
+  String get invalidWeightValue => 'Nieprawidłowa wartość wagi';
+
+  @override
+  String weightRangeErrorLbs(String min, String max) {
+    return 'Waga musi mieścić się w przedziale od $min do $max lbs';
+  }
+
+  @override
+  String weightRangeErrorKg(String min, String max) {
+    return 'Waga musi mieścić się w przedziale od $min do $max kg';
+  }
+
+  @override
+  String weightRangeErrorSt(String min, String max) {
+    return 'Waga musi mieścić się w przedziale od $min do $max st';
+  }
+
+  @override
+  String get noProfileIdAvailable => 'Brak dostępnego identyfikatora profilu';
+
+  @override
+  String get failedToSaveWeightGoal => 'Nie udało się zapisać celu wagi';
 }

@@ -1385,4 +1385,28 @@ class AppLocalizationsEs extends AppLocalizations {
 
   @override
   String get scaleConnectedToWiFi => 'Scale is connected to WiFi';
+
+  @override
+  String get invalidWeightValue => 'Valor de peso inválido';
+
+  @override
+  String weightRangeErrorLbs(String min, String max) {
+    return 'El peso debe estar entre $min y $max lbs';
+  }
+
+  @override
+  String weightRangeErrorKg(String min, String max) {
+    return 'El peso debe estar entre $min y $max kg';
+  }
+
+  @override
+  String weightRangeErrorSt(String min, String max) {
+    return 'El peso debe estar entre $min y $max st';
+  }
+
+  @override
+  String get noProfileIdAvailable => 'ID de perfil no disponible';
+
+  @override
+  String get failedToSaveWeightGoal => 'Error al guardar el objetivo de peso';
 }

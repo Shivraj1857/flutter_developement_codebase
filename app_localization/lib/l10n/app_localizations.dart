@@ -2490,7 +2490,7 @@ abstract class AppLocalizations {
   /// **'Failed to delete profile'**
   String get failedToDeleteProfile;
 
-  /// No description provided for @noPrimaryProfileFound.
+  /// Error message when no primary profile exists
   ///
   /// In en, this message translates to:
   /// **'No primary profile found'**
@@ -2567,6 +2567,42 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Scale is connected to WiFi'**
   String get scaleConnectedToWiFi;
+
+  /// Error message when weight value is invalid or zero
+  ///
+  /// In en, this message translates to:
+  /// **'Invalid weight value'**
+  String get invalidWeightValue;
+
+  /// Error message for weight out of range in pounds
+  ///
+  /// In en, this message translates to:
+  /// **'Weight must be between {min} and {max} lbs'**
+  String weightRangeErrorLbs(String min, String max);
+
+  /// Error message for weight out of range in kilograms
+  ///
+  /// In en, this message translates to:
+  /// **'Weight must be between {min} and {max} kg'**
+  String weightRangeErrorKg(String min, String max);
+
+  /// Error message for weight out of range in stone
+  ///
+  /// In en, this message translates to:
+  /// **'Weight must be between {min} and {max} st'**
+  String weightRangeErrorSt(String min, String max);
+
+  /// Error message when profile ID is missing
+  ///
+  /// In en, this message translates to:
+  /// **'No profile ID available'**
+  String get noProfileIdAvailable;
+
+  /// Error message when weight goal save operation fails
+  ///
+  /// In en, this message translates to:
+  /// **'Failed to save weight goal'**
+  String get failedToSaveWeightGoal;
 }
 
 class _AppLocalizationsDelegate

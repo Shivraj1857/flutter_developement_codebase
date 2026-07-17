@@ -719,5 +719,57 @@
   "scaleConnectedToWiFi": "Weegschaal is verbonden met wifi",
   "@scaleConnectedToWiFi": {
     "description": "Header title shown when the scale already has an active WiFi connection (settings/more-menu flow)"
+  },
+  "invalidWeightValue": "Ongeldige gewichtswaarde",
+  "@invalidWeightValue": {
+    "description": "Error message when weight value is invalid or zero"
+  },
+  "weightRangeErrorLbs": "Gewicht moet tussen {min} en {max} lbs liggen",
+  "@weightRangeErrorLbs": {
+    "description": "Error message for weight out of range in pounds",
+    "placeholders": {
+      "min": {
+        "type": "String"
+      },
+      "max": {
+        "type": "String"
+      }
+    }
+  },
+  "weightRangeErrorKg": "Gewicht moet tussen {min} en {max} kg liggen",
+  "@weightRangeErrorKg": {
+    "description": "Error message for weight out of range in kilograms",
+    "placeholders": {
+      "min": {
+        "type": "String"
+      },
+      "max": {
+        "type": "String"
+      }
+    }
+  },
+  "weightRangeErrorSt": "Gewicht moet tussen {min} en {max} st liggen",
+  "@weightRangeErrorSt": {
+    "description": "Error message for weight out of range in stone",
+    "placeholders": {
+      "min": {
+        "type": "String"
+      },
+      "max": {
+        "type": "String"
+      }
+    }
+  },
+  "noProfileIdAvailable": "Geen profiel-ID beschikbaar",
+  "@noProfileIdAvailable": {
+    "description": "Error message when profile ID is missing"
+  },
+  "failedToSaveWeightGoal": "Niet gelukt om gewichtsdoel op te slaan",
+  "@failedToSaveWeightGoal": {
+    "description": "Error message when weight goal save operation fails"
+  },
+  "noPrimaryProfileFound": "Geen primair profiel gevonden",
+  "@noPrimaryProfileFound": {
+    "description": "Error message when no primary profile exists"
   }
 }

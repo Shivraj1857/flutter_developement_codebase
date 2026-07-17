@@ -719,5 +719,57 @@
   "scaleConnectedToWiFi": "Vågen är ansluten till WiFi",
   "@scaleConnectedToWiFi": {
     "description": "Header title shown when the scale already has an active WiFi connection (settings/more-menu flow)"
+  },
+  "invalidWeightValue": "Ogiltigt viktvärde",
+  "@invalidWeightValue": {
+    "description": "Error message when weight value is invalid or zero"
+  },
+  "weightRangeErrorLbs": "Vikten måste vara mellan {min} och {max} lbs",
+  "@weightRangeErrorLbs": {
+    "description": "Error message for weight out of range in pounds",
+    "placeholders": {
+      "min": {
+        "type": "String"
+      },
+      "max": {
+        "type": "String"
+      }
+    }
+  },
+  "weightRangeErrorKg": "Vikten måste vara mellan {min} och {max} kg",
+  "@weightRangeErrorKg": {
+    "description": "Error message for weight out of range in kilograms",
+    "placeholders": {
+      "min": {
+        "type": "String"
+      },
+      "max": {
+        "type": "String"
+      }
+    }
+  },
+  "weightRangeErrorSt": "Vikten måste vara mellan {min} och {max} st",
+  "@weightRangeErrorSt": {
+    "description": "Error message for weight out of range in stone",
+    "placeholders": {
+      "min": {
+        "type": "String"
+      },
+      "max": {
+        "type": "String"
+      }
+    }
+  },
+  "noProfileIdAvailable": "Inget profil-ID tillgängligt",
+  "@noProfileIdAvailable": {
+    "description": "Error message when profile ID is missing"
+  },
+  "failedToSaveWeightGoal": "Misslyckades med att spara viktmål",
+  "@failedToSaveWeightGoal": {
+    "description": "Error message when weight goal save operation fails"
+  },
+  "noPrimaryProfileFound": "Ingen primärprofil hittades",
+  "@noPrimaryProfileFound": {
+    "description": "Error message when no primary profile exists"
   }
 }

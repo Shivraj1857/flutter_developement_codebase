@@ -1371,4 +1371,29 @@ class AppLocalizationsNl extends AppLocalizations {
 
   @override
   String get scaleConnectedToWiFi => 'Weegschaal is verbonden met wifi';
+
+  @override
+  String get invalidWeightValue => 'Ongeldige gewichtswaarde';
+
+  @override
+  String weightRangeErrorLbs(String min, String max) {
+    return 'Gewicht moet tussen $min en $max lbs liggen';
+  }
+
+  @override
+  String weightRangeErrorKg(String min, String max) {
+    return 'Gewicht moet tussen $min en $max kg liggen';
+  }
+
+  @override
+  String weightRangeErrorSt(String min, String max) {
+    return 'Gewicht moet tussen $min en $max st liggen';
+  }
+
+  @override
+  String get noProfileIdAvailable => 'Geen profiel-ID beschikbaar';
+
+  @override
+  String get failedToSaveWeightGoal =>
+      'Niet gelukt om gewichtsdoel op te slaan';
 }
