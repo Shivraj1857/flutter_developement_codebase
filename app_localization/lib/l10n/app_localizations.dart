@@ -6,8 +6,15 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:intl/intl.dart' as intl;
 
 import 'app_localizations_ar.dart';
+import 'app_localizations_de.dart';
 import 'app_localizations_en.dart';
 import 'app_localizations_es.dart';
+import 'app_localizations_fr.dart';
+import 'app_localizations_it.dart';
+import 'app_localizations_nl.dart';
+import 'app_localizations_pl.dart';
+import 'app_localizations_sv.dart';
+import 'app_localizations_tr.dart';
 
 // ignore_for_file: type=lint
 
@@ -96,8 +103,15 @@ abstract class AppLocalizations {
   /// A list of this localizations delegate's supported locales.
   static const List<Locale> supportedLocales = <Locale>[
     Locale('ar'),
+    Locale('de'),
     Locale('en'),
-    Locale('es')
+    Locale('es'),
+    Locale('fr'),
+    Locale('it'),
+    Locale('nl'),
+    Locale('pl'),
+    Locale('sv'),
+    Locale('tr')
   ];
 
   /// No description provided for @appName.
@@ -1933,7 +1947,7 @@ abstract class AppLocalizations {
   /// Weight unit label
   ///
   /// In en, this message translates to:
-  /// **'LBS'**
+  /// **'LBs'**
   String get lbsUnit;
 
   /// Weight trend section title
@@ -2505,6 +2519,7 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'No profile found'**
   String get noProfileFound;
+
   /// No description provided for @measurementUnits.
   ///
   /// In en, this message translates to:
@@ -2564,8 +2579,18 @@ class _AppLocalizationsDelegate
   }
 
   @override
-  bool isSupported(Locale locale) =>
-      <String>['ar', 'en', 'es'].contains(locale.languageCode);
+  bool isSupported(Locale locale) => <String>[
+        'ar',
+        'de',
+        'en',
+        'es',
+        'fr',
+        'it',
+        'nl',
+        'pl',
+        'sv',
+        'tr'
+      ].contains(locale.languageCode);
 
   @override
   bool shouldReload(_AppLocalizationsDelegate old) => false;
@@ -2576,10 +2601,24 @@ AppLocalizations lookupAppLocalizations(Locale locale) {
   switch (locale.languageCode) {
     case 'ar':
       return AppLocalizationsAr();
+    case 'de':
+      return AppLocalizationsDe();
     case 'en':
       return AppLocalizationsEn();
     case 'es':
       return AppLocalizationsEs();
+    case 'fr':
+      return AppLocalizationsFr();
+    case 'it':
+      return AppLocalizationsIt();
+    case 'nl':
+      return AppLocalizationsNl();
+    case 'pl':
+      return AppLocalizationsPl();
+    case 'sv':
+      return AppLocalizationsSv();
+    case 'tr':
+      return AppLocalizationsTr();
   }
 
   throw FlutterError(

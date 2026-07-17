@@ -1324,6 +1324,8 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get noProfileFound => 'لم يتم العثور على ملف شخصي';
+
+  @override
   String get measurementUnits => 'وحدات القياس';
 
   @override

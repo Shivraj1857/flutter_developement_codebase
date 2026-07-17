@@ -690,7 +690,7 @@
   "failedToLoadSubProfiles": "Failed to load sub-profiles",
   "deleteProfileConfirmation": "Are you sure you want to delete this profile?",
   "delete": "Delete",
-  "noProfileFound": "No profile found"
+  "noProfileFound": "No profile found",
   "measurementUnits": "Measurement units",
   "measurementUnitsDescription": "Set your preferred units of measurement for information in the app.",
   "units": "Units",

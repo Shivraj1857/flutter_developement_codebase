@@ -1333,6 +1333,8 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get noProfileFound => 'No profile found';
+
+  @override
   String get measurementUnits => 'Measurement units';
 
   @override

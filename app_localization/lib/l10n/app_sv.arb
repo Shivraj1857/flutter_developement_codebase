@@ -1,0 +1,723 @@
+{
+  "@@locale": "sv",
+  "appName": "Våg",
+  "login": "Logga in",
+  "logout": "Logga ut",
+  "email": "E-post",
+  "password": "Lösenord",
+  "weight": "Vikt",
+  "connectScale": "Anslut våg",
+  "scanning": "Söker efter enheter...",
+  "connected": "Ansluten",
+  "disconnected": "Frånkopplad",
+  "saveWeight": "Spara vikt",
+  "weightHistory": "Vikthistorik",
+  "syncInProgress": "Synkroniserar data...",
+  "syncComplete": "Synkronisering klar",
+  "noDataAvailable": "Ingen data tillgänglig",
+  "errorOccurred": "Ett fel uppstod",
+  "retry": "Försök igen",
+  "kg": "kg",
+  "lbs": "lbs",
+  "welcomeBack": "Välkommen tillbaka",
+  "home": "Hem",
+  "settings": "Inställningar",
+  "enterYourEmail": "Ange din e-postadress",
+  "enterYourPassword": "Ange ditt lösenord",
+  "pleaseEnterYourEmail": "Vänligen ange din e-postadress",
+  "pleaseEnterValidEmail": "Vänligen ange en giltig e-postadress",
+  "pleaseEnterYourPassword": "Vänligen ange ditt lösenord",
+  "passwordMinLength": "Lösenordet måste vara minst 6 tecken",
+  "welcomeToWeightScale": "Välkommen till Våg",
+  "youAreLoggedIn": "Du har loggats in framgångsrikt.",
+  "measureWeight": "Mät vikt",
+  "deviceConnection": "Enhetsanslutning",
+  "scanForDevices": "Sök efter enheter",
+  "currentReading": "Aktuellt mätvärde",
+  "sync": "Synkronisera",
+  "noWeightRecordsYet": "Inga viktregistreringar ännu",
+  "weightSaved": "Vikt sparad: {weight} {unit}",
+  "@weightSaved": {
+    "placeholders": {
+      "weight": {
+        "type": "String"
+      },
+      "unit": {
+        "type": "String"
+      }
+    }
+  },
+  "syncedRecords": "Synkroniserade {count} poster",
+  "@syncedRecords": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "connectedDevice": "Ansluten: {deviceId}",
+  "@connectedDevice": {
+    "placeholders": {
+      "deviceId": {
+        "type": "String"
+      }
+    }
+  },
+  "onboardingHeadline": "En tydlig vy\növer dina\nkroppsvärden",
+  "getStarted": "Kom igång",
+  "beforeYouContinue": "Innan du fortsätter",
+  "agreeToThe": "Jag godkänner ",
+  "privacyPolicy": "Integritetspolicyn",
+  "termsAndConditions": "Användarvillkoren",
+  "onboardingDisclaimer": "Du har kontroll över dina egna data. Vi kommer aldrig att ha tillgång till din personliga information.",
+  "selectYourDevice": "Välj din enhet",
+  "scale": "Våg",
+  "stepOnScaleToStartPairing": "Ställ dig på vågen för att starta parkoppling",
+  "tapeMeasure": "Måttband",
+  "powerOnDeviceToStartPairing": "Starta enheten för att påbörja parkoppling",
+  "both": "Båda",
+  "weWillPairOneDeviceAtATime": "Vi parkopplar en enhet i taget",
+  "iDontHaveDevice": "Jag har ingen enhet",
+  "allowBluetoothSystemScreen": "Tillåt\nBluetooth i\nsystem-\nskärmen",
+  "name": "NAMN",
+  "height": "HÖJD",
+  "confirm": "Bekräfta",
+  "inch": "TUM",
+  "cm": "CM",
+  "dateFormat": "YYYY-MM-DD",
+  "dateOfBirth": "FÖDELSEDATUM",
+  "gender": "Kön",
+  "male": "MAN",
+  "female": "KVINNA",
+  "areYouPregnant": "Är du gravid?",
+  "doYouUsePacemaker": "Använder du pacemaker eller annan implanterad enhet?",
+  "doYouUseImplantedDevice": "Använder du pacemaker eller annan implanterad enhet?",
+  "healthQuestionDescription": "Beskrivningar tktktk",
+  "yes": "JA",
+  "no": "NEJ",
+  "required": "Obligatorisk",
+  "athleteMode": "ATLETLÄGE",
+  "athleteModeDescription": "Tränar 10+ timmar per vecka. Justerar algoritmerna för kroppssammansättning.",
+  "preferNotToSay": "JAG VILL INTE UPPGE",
+  "genderAtBirth": "KÖN VID FÖDSELN",
+  "enterTheMostAccurateHeight": "Ange så exakt höjd som möjligt för korrekta resultat av kroppssammansättningen.",
+  "createYourProfile": "Skapa din profil",
+  "failedToSaveProfile": "Misslyckades med att spara profil",
+  "healthDetails": "Hälsodetaljer",
+  "bodyCompositionReadingsInfo": "Mätningar av kroppssammansättning använder en svag bioelektrisk signal från vågen. Hälsotillstånd påverkar om den bör användas.",
+  "electricImpedance": "ELEKTRISK IMPEDANS",
+  "electricImpedanceDescription": "Mätningar av kroppssammansättning kommer att inaktiveras. Viktspårning förblir fullt tillgänglig.",
+  "electric": "ELEKTRISK",
+  "pregnant": "GRAVID",
+  "pacemaker": "PACEMAKER",
+  "iAmPregnant": "JAG ÄR GRAVID",
+  "pregnancyDescription": "Mätning av kroppssammansättning kommer att inaktiveras. Viktspårning förblir fullt tillgänglig.",
+  "iHaveAPacemakerOrImplantedDevice": "JAG HAR PACEMAKER ELLER IMPLANTERAD ENHET",
+  "pacemakerDescription": "Mätning av kroppssammansättning kommer att inaktiveras. Viktspårning förblir fullt tillgänglig.",
+  "healthSyncTitle": "Synkronisera dina mätningar automatiskt med {platform}.",
+  "@healthSyncTitle": {
+    "placeholders": {
+      "platform": {
+        "type": "String"
+      }
+    }
+  },
+  "healthSyncDescriptionGoogle": "Spara dina hälsomätningar på ett ställe, spåra trender och dela insikter. Ställ in det nu eller när som helst från MER-menyn.",
+  "healthSyncDescriptionApple": "Spara dina hälsomätningar på ett ställe, spåra trender och dela insikter. Ställ in det nu eller när som helst från MER-menyn.",
+  "continueButton": "Fortsätt",
+  "googleHealthInstallTitle": "Health Connect krävs",
+  "googleHealthInstallDescription": "För att fortsätta, vänligen installera eller uppdatera Health Connect.",
+  "install": "Installera",
+  "cancel": "Avbryt",
+  "permissionDenied": "Åtkomst nekad",
+  "permissionDeniedMessage": "Du kan aktivera hälsosynkronisering senare i appens inställningar.",
+  "healthServiceUnavailable": "Hälsotjänsten är inte tillgänglig",
+  "healthServiceUnavailableAndroid": "Google Health Connect stöds inte på denna enhet.",
+  "healthServiceUnavailableIos": "Apple Health är inte tillgängligt på denna enhet.",
+  "permissionError": "Behörighetsfel",
+  "permissionErrorAndroid": "Det gick inte att begära behörigheter för Health Connect. Se till att Health Connect är installerat och försök igen.",
+  "permissionErrorIos": "Det gick inte att begära behörigheter för Apple Health. Försök igen.",
+  "skip": "Hoppa över",
+  "googleHealth": "Google Health",
+  "appleHealth": "Apple Health",
+  "healthSyncHeadlineGoogle": "Synkronisera dina värden med Google Health.",
+  "healthSyncHeadlineApple": "Synkronisera dina värden med Apple Health.",
+  "healthDataBackup": "Säkerhetskopiering av hälsodata",
+  "enableICloudBackup": "Aktivera iCloud-säkerhetskopiering",
+  "enableGoogleDriveBackup": "Aktivera Google Drive-säkerhetskopiering",
+  "backupPrivacyText": "Dina data kan inte nås av någon utan din tillåtelse.",
+  "turnOnSyncingICloud": "Slå på synkronisering för Braun Family Care i iCloud-inställningarna.",
+  "turnOnSyncingGoogleDrive": "Slå på synkronisering för Braun Family Care i Google Drive-inställningarna.",
+  "createTestProfile": "Skapa testprofil",
+  "viewBackupJson": "Visa backup-JSON",
+  "skipForNow": "Hoppa över så länge",
+  "continueText": "Fortsätt",
+  "restoreData": "Återställ data",
+  "importYourPreviousReadings": "Importera dina tidigare mätningar",
+  "youHavePreviouslySyncedHealthData": "Du har synkroniserat hälsodata tidigare",
+  "doYouWantToImportDataInApp": "Vill du importera data till appen?",
+  "uploadBackup": "Ladda upp säkerhetskopia",
+  "restoreBackup": "Återställ säkerhetskopia",
+  "backupRestoredSuccessfully": "Säkerhetskopian har återställts!",
+  "backupUploadedSuccessfully": "Säkerhetskopian har laddats upp!",
+  "testProfileCreatedAt": "Testprofil skapad vid: {filePath}",
+  "@testProfileCreatedAt": {
+    "placeholders": {
+      "filePath": {
+        "type": "String"
+      }
+    }
+  },
+  "failedToCreateTestProfile": "Misslyckades med att skapa testprofil: {error}",
+  "@failedToCreateTestProfile": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "backupJsonContent": "Innehåll i backup-JSON",
+  "noBackupDataAvailable": "Ingen säkerhetskopierad data tillgänglig",
+  "close": "Stäng",
+  "noProfileDataFound": "Ingen profildata hittades. Skapa en profil först eller tryck på \"Skapa testprofil\" för att testa.",
+  "cloudServiceUnavailable": "Molntjänsten är otillgänglig. Försök igen.",
+  "failedToCreateProfile": "Misslyckades med att skapa profil. Försök igen.",
+  "failedToUploadBackup": "Misslyckades med att ladda upp säkerhetskopia",
+  "uploadFailed": "Uppladdning misslyckades: {error}",
+  "@uploadFailed": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "restoredFileCorrupted": "Den återställda filen är skadad eller ogiltig",
+  "restoredFileNotFound": "Den återställda filen hittades inte",
+  "noBackupFoundInCloud": "Ingen säkerhetskopia hittades i molnlagringen",
+  "restoreFailed": "Återställning misslyckades: {error}",
+  "@restoreFailed": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "failedToSkip": "Misslyckades med att hoppa över: {error}",
+  "@failedToSkip": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "failedToSignIn": "Misslyckades med att logga in: {error}",
+  "@failedToSignIn": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "failedToReadBackup": "Misslyckades med att läsa säkerhetskopia: {error}",
+  "@failedToReadBackup": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "noBackupFileFound": "Ingen säkerhetskopiefil hittades",
+  "stepOnScale": "Ställ dig på vågen",
+  "waitingForMeasurement": "Vänligen vänta medan vi mäter din vikt...",
+  "weightReceived": "Vikt mottagen",
+  "addManualWeight": "Lägg till manuell vikt",
+  "enterWeight": "Ange vikt",
+  "enterWeightHint": "t.ex. 75.5",
+  "pleaseEnterWeight": "Vänligen ange ett viktvärde",
+  "invalidWeight": "Vänligen ange en giltig vikt",
+  "save": "Spara",
+  "update": "Uppdatera",
+  "tabHome": "Hem",
+  "@tabHome": {
+    "description": "Bottom navigation tab label for Home"
+  },
+  "tabTrends": "Trender",
+  "@tabTrends": {
+    "description": "Bottom navigation tab label for Trends"
+  },
+  "tabModes": "Lägen",
+  "@tabModes": {
+    "description": "Bottom navigation tab label for Modes"
+  },
+  "tabMenu": "Meny",
+  "@tabMenu": {
+    "description": "Bottom navigation tab label for Menu"
+  },
+  "menuMore": "Mer",
+  "@menuMore": {
+    "description": "Title for the More menu screen"
+  },
+  "menuAccount": "Konto",
+  "@menuAccount": {
+    "description": "Account section header in More menu"
+  },
+  "menuDevices": "Enheter",
+  "@menuDevices": {
+    "description": "Devices section header in More menu"
+  },
+  "menuDeviceSettings": "Enhetsinställningar",
+  "@menuDeviceSettings": {
+    "description": "Manage Device menu item"
+  },
+  "menuMeasurementUnits": "Måttenheter",
+  "@menuMeasurementUnits": {
+    "description": "Measurement Units menu item"
+  },
+  "menuWifiSettings": "WiFi-inställningar",
+  "@menuWifiSettings": {
+    "description": "WiFi Settings menu item"
+  },
+  "menuTheme": "Tema",
+  "@menuTheme": {
+    "description": "Theme menu item"
+  },
+  "menuMyProfile": "Min profil",
+  "@menuMyProfile": {
+    "description": "My Profile menu item"
+  },
+  "menuLanguage": "Språk",
+  "@menuLanguage": {
+    "description": "Language menu item"
+  },
+  "menuSupport": "Support",
+  "@menuSupport": {
+    "description": "Support section header in More menu"
+  },
+  "menuHelp": "Hjälp",
+  "@menuHelp": {
+    "description": "Help menu item"
+  },
+  "menuDataBackup": "Säkerhetskopiera data",
+  "@menuDataBackup": {
+    "description": "Data & Backup menu item"
+  },
+  "menuLegal": "Juridisk information",
+  "@menuLegal": {
+    "description": "Legal section header in More menu"
+  },
+  "menuAppVersion": "Appversion",
+  "@menuAppVersion": {
+    "description": "App Version label in More menu"
+  },
+  "termsConditions": "Användarvillkor",
+  "@termsConditions": {
+    "description": "Terms and Conditions menu item label"
+  },
+  "menuAppleHealth": "Apple Health",
+  "@menuAppleHealth": {
+    "description": "Apple Health menu item"
+  },
+  "menuGoogleHealth": "Google Health",
+  "@menuGoogleHealth": {
+    "description": "Google Health menu item"
+  },
+  "healthScreenTitleApple": "Apple Health",
+  "@healthScreenTitleApple": {
+    "description": "Health screen title for iOS"
+  },
+  "healthScreenTitleGoogle": "Google Health",
+  "@healthScreenTitleGoogle": {
+    "description": "Health screen title for Android"
+  },
+  "healthAllowAccessApple": "Tillåt åtkomst till Apple Health",
+  "@healthAllowAccessApple": {
+    "description": "Health access toggle title for iOS"
+  },
+  "healthAllowAccessGoogle": "Tillåt åtkomst till Google Health",
+  "@healthAllowAccessGoogle": {
+    "description": "Health access toggle title for Android"
+  },
+  "healthSyncDescriptionAppleShort": "Synkronisera dina viktdata med Apple Health",
+  "@healthSyncDescriptionAppleShort": {
+    "description": "Short description for Apple Health sync"
+  },
+  "healthSyncDescriptionGoogleShort": "Synkronisera dina viktdata med Google Health",
+  "@healthSyncDescriptionGoogleShort": {
+    "description": "Short description for Google Health sync"
+  },
+  "healthStopSharingTitleApple": "Sluta dela med Apple Health?",
+  "@healthStopSharingTitleApple": {
+    "description": "Dialog title for stopping Apple Health sync"
+  },
+  "healthStopSharingMessageApple": "Nya mätvärden kommer inte att synkroniseras med Apple Health. För att helt ta bort åtkomsten går du till: Hälsa-appen → Profil → Integritet → Appar → Braun Metra.",
+  "@healthStopSharingMessageApple": {
+    "description": "Dialog message for stopping Apple Health sync"
+  },
+  "healthStopSharingTitleGoogle": "Sluta dela med Google Health?",
+  "@healthStopSharingTitleGoogle": {
+    "description": "Dialog title for stopping Google Health sync"
+  },
+  "healthStopSharingMessageGoogle": "Vi kommer att koppla från Google Health och sluta synkronisera dina mätningar. Om du även vill ta bort Android-behörigheter öppnar du telefonens inställningar.",
+  "@healthStopSharingMessageGoogle": {
+    "description": "Dialog message for stopping Google Health sync"
+  },
+  "ok": "OK",
+  "@ok": {
+    "description": "OK button text"
+  },
+  "healthEnableSyncTitleApple": "Synkronisera med Apple Health?",
+  "@healthEnableSyncTitleApple": {
+    "description": "Dialog title for enabling Apple Health sync"
+  },
+  "healthEnableSyncTitleGoogle": "Synkronisera med Google Health?",
+  "@healthEnableSyncTitleGoogle": {
+    "description": "Dialog title for enabling Google Health sync"
+  },
+  "appleHealthEnableHealthkit": "Aktivera HealthKit-delning",
+  "@appleHealthEnableHealthkit": {
+    "description": "Title for enabling HealthKit sharing dialog"
+  },
+  "appleHealthPermissionTurnOnSteps": "Ge tillåtelse till Braun Metra att ansluta till Apple Health. Öppna Hälsa-appen, välj Delning > Appar och slå på \"Braun Metra\"",
+  "@appleHealthPermissionTurnOnSteps": {
+    "description": "Instructions for enabling HealthKit permissions"
+  },
+  "appleHealthHealthApp": "Hälsa-appen",
+  "@appleHealthHealthApp": {
+    "description": "Health App button text"
+  },
+  "googleHealthPermissionSettingTitle": "Aktivera Google Health-delning",
+  "@googleHealthPermissionSettingTitle": {
+    "description": "Title for enabling Google Health sharing dialog"
+  },
+  "googleHealthBloodPressureAndHeartRatePermissionsInHealthConnect": "Ge tillåtelse till Braun Metra att ansluta till Google Health. Öppna inställningsappen på din telefon.",
+  "@googleHealthBloodPressureAndHeartRatePermissionsInHealthConnect": {
+    "description": "Instructions for enabling Google Health permissions"
+  },
+  "settings": "Inställningar",
+  "@settings": {
+    "description": "Settings button text"
+  },
+  "healthDataBackupTitle": "Säkerhetskopiering av hälsodata",
+  "storeHealthDataInICloud": "Lagra dina hälsodata på ditt iCloud-konto",
+  "storeHealthDataInGoogleDrive": "Lagra dina hälsodata på ditt Google Drive-konto",
+  "dataCannotBeAccessed": "Dina data kan inte nås av någon utan din tillåtelse.",
+  "turnOnSyncingInICloudSettings": "Slå på synkronisering under iCloud-inställningar",
+  "turnOnSyncingInGoogleDriveSettings": "Slå på synkronisering under Google Drive-inställningar",
+  "openSettings": "Öppna inställningar",
+  "backupWarningTitle": "Varning!",
+  "backupWarningMessage": "Dina data kommer inte att säkerhetskopieras till iCloud.",
+  "backupWarningDescription": "Om du vill säkerhetskopiera i framtiden måste du tillåta synkronisering från dina iCloud-inställningar.",
+  "backupWarningMessageAndroid": "Dina data kommer inte att säkerhetskopieras till Google Drive.",
+  "backupWarningDescriptionAndroid": "Om du vill säkerhetskopiera i framtiden måste du tillåta synkronisering från dina Google Drive-inställningar.",
+  "success": "Klart!",
+  "previousReadingsImported": "Dina tidigare mätningar har importerats till appen",
+  "accessPreviousIllnessJourneys": "Du kan nu komma åt tidigare hälsohistorik i appen.",
+  "couldNotImportReadings": "Kunde inte importera mätningar",
+  "errorImportingHealthData": "Ett fel inträffade vid import av dina tidigare hälsodata.",
+  "doYouWantToTryAgain": "Vill du försöker igen?",
+  "somethingWentWrong": "Något gick fel",
+  "couldNotImportYourPreviousReadingsPleaseRetry": "Kunde inte importera dina tidigare mätningar. Vänligen försök igen",
+  "yes": "Ja",
+  "no": "Nej",
+  "noInternetConnection": "Ingen internetanslutning. Kontrollera din WiFi- eller mobildataanslutning och försök igen.",
+  "backupNotFoundInCloud": "Ingen säkerhetskopia hittades i molnlagringen",
+  "failedToRestoreBackup": "Misslyckades med att återställa säkerhetskopia",
+  "cloudStorageNotAvailable": "Molnlagring är inte tillgänglig. Aktivera iCloud eller Google Drive.",
+  "failedToUploadBackup": "Misslyckades med att ladda upp säkerhetskopia till molnet",
+  "backupFileNotFound": "Säkerhetskopiefilen hittades inte",
+  "deviceIdMismatch": "Enhets-ID matchar inte - kan inte återställa från en annan enhet",
+  "sameDeviceAndUser": "Samma enhet och användare - ingen återställning behövs",
+  "deviceOrUserMismatch": "Enhets- eller användarmismatch",
+  "customizeMonogram": "Anpassa monogram",
+  "colors": "FÄRGER",
+  "pairing": "Parkoppling",
+  "pairingToYourScale": "Parkopplar till din våg",
+  "pairingToYourTapeMeasure": "Parkopplar till ditt måttband",
+  "powerOnTapeMeasureToStartPairing": "Starta måttbandet för att påbörja parkoppling",
+  "turnTheTapeMeasureOn": "Starta måttbandet",
+  "scaleSuccessfullyPairedViaBluetooth": "Vågen har parkopplats via Bluetooth",
+  "tapeMeasureSuccessfullyPairedViaBluetooth": "Måttbandet har parkopplats via Bluetooth",
+  "startMeasuring": "Börja mäta",
+  "pairAnotherDevice": "Parkoppla en till enhet",
+  "allowBluetoothPermission": "Tillåt Bluetooth-behörighet",
+  "bluetoothPermissionRequired": "Bluetooth-behörighet krävs för att ansluta till din enhet",
+  "grantPermission": "Bevilja behörighet",
+  "connectingToDevice": "Ansluter till enhet...",
+  "pleaseWait": "Vänligen vänta",
+  "pairingSuccessful": "Parkoppling klar!",
+  "deviceSuccessfullyPaired": "Din enhet har parkopplats via Bluetooth",
+  "devicePairingFailed": "Enhetsparkoppling misslyckades",
+  "tryAgain": "Försök igen",
+  "bluetoothPermissionDenied": "Bluetooth-behörighet nekad",
+  "bluetoothPermissionPermanentlyDenied": "Bluetooth-behörighet permanent nekad. Vänligen aktivera den i inställningarna.",
+  "bluetoothPermissionRestricted": "Bluetooth-behörighet begränsad",
+  "goToSettings": "Gå till Inställningar",
+  "bluetoothNotPermitted": "Bluetooth är inte tillåtet",
+  "pairingFailedWithoutBluetooth": "Parkoppling misslyckades utan Bluetooth-behörighet.",
+  "pleaseAllowBluetoothToContinue": "Vänligen tillåt Bluetooth för att fortsätta.",
+  "notNow": "Inte nu",
+  "bluetoothPermissionRequiredToPair": "Bluetooth-behörighet krävs för att parkoppla din enhet.",
+  "tapSettings": "1. Tryck på Inställningar",
+  "switchBluetoothOn": "2. Slå på Bluetooth",
+  "tapBluetoothNearbyDevices": "2. Tryck på Bluetooth (enheter i närheten)",
+  "tapAllow": "3. Tryck på Tillåt",
+  "pleaseSelectADeviceType": "Vänligen välj en enhetstyp",
+  "failedToProceed": "Misslyckades med att fortsätta",
+  "failedToCheckPermission": "Misslyckades med att kontrollera behörighet",
+  "pairingToYourDevice": "Parkopplar till din enhet",
+  "connectToWiFiToSyncMeasurements": "Anslut till WiFi för att synkronisera mätningar när din telefon inte är i närheten.",
+  "connectToWiFi": "Anslut till Wi-Fi",
+  "connectToWiFiBtnTitle": "Anslut till WiFi",
+  "tryItOut": "Testa det",
+  "illDoThisLater": "Jag gör detta senare",
+  "backupFound": "Säkerhetskopia hittades",
+  "@backupFound": {
+    "description": "Title shown when a backup is found"
+  },
+  "backupFoundMessage": "En säkerhetskopia hittades för denna enhet. Vill du återställa den?",
+  "@backupFoundMessage": {
+    "description": "Message shown when a backup is found"
+  },
+  "unfortunatelyPairingFailed": "Tyvärr misslyckades parkopplingen!",
+  "troubleshooting": "Felsökning",
+  "makeSurePhoneAndDeviceWithin5Feet": "1. Se till att din telefon och våg är inom 1,5 meters avstånd från varandra.",
+  "makeSureBatteriesNotLowOrDead": "2. Kontrollera att vågens batterier inte är svaga eller slut.",
+  "removeBatteriesAndTryAgain": "3. Ta ut batterierna ur vågen, sätt i dem igen och försök parkoppla på nytt.",
+  "contactCustomerService": "Kontakta kundtjänst",
+  "chooseANetwork": "Välj ett nätverk",
+  "selectYourWiFiNetwork": "Välj ditt WiFi-nätverk",
+  "scanning": "Söker...",
+  "noNetworksFound": "Inga nätverk hittades",
+  "refreshNetworks": "Uppdatera",
+  "enterWiFiPassword": "Ange WiFi-lösenord",
+  "passwordIncorrect": "Felaktigt lösenord",
+  "done": "Klar",
+  "connecting": "Ansluter...",
+  "connectionFailed": "Anslutning misslyckades",
+  "connectionSuccess": "Ansluten framgångsrikt",
+  "connectingToYourWiFi": "Ansluter till ditt WiFi",
+  "yourScaleIsConnectedToWiFi": "Din våg är ansluten till WiFi",
+  "next": "Nästa",
+  "addAnotherDevice": "Lägg till en enhet till",
+  "weightGoal": "Viktmål",
+  "setGoalWeight": "Ställ in målvikt",
+  "youCanAlwaysChangeThisLater": "Du kan alltid ändra detta eller göra det senare i din profil!",
+  "yourCurrentGoalWeightIs": "Din nuvarande målvikt är {weight} {unit}!",
+  "@yourCurrentGoalWeightIs": {
+    "placeholders": {
+      "weight": {
+        "type": "String"
+      },
+      "unit": {
+        "type": "String"
+      }
+    }
+  },
+  "illDoItLater": "Jag gör det senare",
+  "stepOnTheScaleToTakeYourFirstReading": "Ställ dig på vågen för att göra din första mätning!",
+  "couldNotConnectToWiFi": "Kunde inte ansluta till WiFi",
+  "reenterYourPassword": "Ange ditt lösenord igen",
+  "chooseAnotherWiFiNetwork": "Välj ett annat WiFi-nätverk",
+  "networkNotFoundWeakSignal": "Nätverk hittades inte / svag signal",
+  "makeSureYourScaleIsCloseToRouter": "Se till att din våg är nära din router",
+  "connectionTimedOut": "Anslutningen avbröts (timeout)",
+  "tryAgain": "Försök igen",
+  "continueWithoutWiFi": "Fortsätt utan WiFi",
+  "graphicPersonOnScale": "GRAFIK: En person på en våg",
+  "failedToSendCredentialsToDevice": "Misslyckades med att skicka inloggningsuppgifter till enheten",
+  "failedToSendWiFiCredentialsViaBle": "Misslyckades med att skicka WiFi-uppgifter via BLE",
+  "goal": "MÅL",
+  "@goal": {
+    "description": "Goal label shown on dashboard"
+  },
+  "lbsUnit": "LBs",
+  "@lbsUnit": {
+    "description": "Weight unit label"
+  },
+  "myWeightTrend": "MIN VIKTTREND",
+  "@myWeightTrend": {
+    "description": "Weight trend section title"
+  },
+  "bodyMetrics": "KROPPSVÄRDEN",
+  "@bodyMetrics": {
+    "description": "Body metrics section title"
+  },
+  "edit": "Redigera",
+  "@edit": {
+    "description": "Edit button text"
+  },
+  "profile": "Profil",
+  "profiles": "Profiler",
+  "child": "Barn",
+  "pet": "Husdjur",
+  "myWeightHistroy": "Min vikthistorik",
+  "histroy": "Historik",
+  "zeroStateWeightTrendMessage": "Dina framsteg kommer att visas\nhär över tid.",
+  "@zeroStateWeightTrendMessage": {
+    "description": "Message shown in weight trend section when no data is available"
+  },
+  "zeroStateBodyMetricsMessage": "Din våg mäter mer än bara vikt.\nStäll dig på den för att se din kroppssammansättning.",
+  "@zeroStateBodyMetricsMessage": {
+    "description": "Message shown in body metrics section when no data is available"
+  },
+  "goal_weight": "MÅLVIKT",
+  "kgUnit": "KG",
+  "stUnit": "St",
+  "deleteProfile": "Ta bort profil",
+  "baby": "BEBIS",
+  "@baby": {
+    "description": "Baby mode label"
+  },
+  "luggage": "BAGAGE",
+  "@luggage": {
+    "description": "Luggage mode label"
+  },
+  "addProfile": "+ Lägg till profil",
+  "@addProfile": {
+    "description": "Add profile button text"
+  },
+  "weighNow": "Väg nu",
+  "@weighNow": {
+    "description": "Weigh now button text for luggage mode"
+  },
+  "createBabyProfile": "Skapa bebisprofil",
+  "@createBabyProfile": {
+    "description": "Title shown when creating a baby profile"
+  },
+  "createPetProfile": "Skapa husdjursprofil",
+  "@createPetProfile": {
+    "description": "Title shown when creating a pet profile"
+  },
+  "babyProfile": "Bebisprofil",
+  "@babyProfile": {
+    "description": "App bar title for baby profile"
+  },
+  "petProfile": "Husdjursprofil",
+  "@petProfile": {
+    "description": "App bar title for pet profile"
+  },
+  "add": "Lägg till",
+  "@add": {
+    "description": "Add button text for profile creation"
+  },
+  "editBodyMetricsTitle": "Redigera kroppsvärden",
+  "@editBodyMetricsTitle": {
+    "description": "Title of the Edit Body Metrics screen"
+  },
+  "editBodyMetricsInstruction": "Välj de mätvärden du vill visa på din instrumentpanel. Du kan också ändra ordningen enligt dina önskemål.",
+  "@editBodyMetricsInstruction": {
+    "description": "Instructional text under the title"
+  },
+  "editBodyMetricsLimitError": "Välj upp till 5",
+  "@editBodyMetricsLimitError": {
+    "description": "Shown when the user tries to select a 6th metric"
+  },
+  "metricLabelWeight": "Vikt",
+  "metricLabelBmi": "BMI (Body Mass Index)",
+  "metricLabelBodyFat": "Kroppsfett (%) / Massa",
+  "metricLabelMuscleMass": "Muskelmassa",
+  "metricLabelSkeletalMuscleMass": "Skelettmuskelmassa",
+  "metricLabelProteinPercentage": "Protein (%)",
+  "metricLabelBmr": "BMR (Basalomsättning)",
+  "metricLabelFatFreeBodyWeight": "Fettfri kroppsvikt",
+  "metricLabelSubcutaneousFat": "Underhudsfett (%)",
+  "metricLabelVisceralFatIndex": "Visceral fettindex",
+  "metricLabelBodyWater": "Vätskemängd (%)",
+  "metricLabelBoneMass": "Benmassa",
+  "metricLabelStandingHeartRate": "Stående puls",
+  "metricLabelMetabolicAge": "Metabolisk ålder",
+  "metricLabelIdealWeight": "Idealvikt",
+  "metricLabelProteinAmount": "Proteinmängd",
+  "metricLabelMuscleRate": "Muskelprocent",
+  "metricDescWeight": "Din totala kroppsvikt. En av de viktiga indikatorerna som speglar och mäter en persons hälsostatus.",
+  "metricDescBmi": "En allmän indikator på kroppsvikt i förhållande till höjd.",
+  "metricDescBodyFat": "Fettet i din kropp kan visas som procent eller vikt. Andelen fettvävnad i kroppssammansättningen.",
+  "metricDescMuscleMass": "Den totala mängden muskler i din kropp.",
+  "metricDescSkeletalMuscleMass": "Musklerna som stöder rörelse och fysisk styrka.",
+  "metricDescProteinPercentage": "Andelen protein i din kropp, viktigt för att bygga och underhålla vävnad.",
+  "metricDescBmr": "Antalet kalorier din kropp behöver i vila för att fungera.",
+  "metricDescFatFreeBodyWeight": "Din kroppsvikt exklusive fett (inkluderar muskler, ben och vatten).",
+  "metricDescSubcutaneousFat": "Fettet som lagras precis under huden.",
+  "metricDescVisceralFatIndex": "Fett som lagras runt dina inre organ.",
+  "metricDescBodyWater": "Procentandelen vatten i din kropp.",
+  "metricDescBoneMass": "Den uppskattade vikten av mineraler i dina ben.",
+  "metricDescStandingHeartRate": "Din hjärtfrekvens (slag per minut) mätt när du står upp.",
+  "metricDescMetabolicAge": "En jämförelse av din ämnesomsättning med typiska åldersbaserade genomsnitt.",
+  "metricDescIdealWeight": "En målvikt baserad på din kroppssammansättning.",
+  "metricDescProteinAmount": "Den totala mängden protein i din kropp.",
+  "metricDescMuscleRate": "Procentandelen av din kropp som består av muskler.",
+  "babyMode": "Bebisläge",
+  "petMode": "Husdjursläge",
+  "luggageMode": "Bagageläge",
+  "stepOnYourScaleAlone": "Ställ dig på\nvågen själv",
+  "stepOnYourScaleAloneBaby": "Väg dig själv först innan du väger din bebis!",
+  "stepOnYourScaleAlonePet": "Väg dig själv först innan du väger ditt husdjur!",
+  "stepOnYourScaleAloneLuggage": "Väg dig själv först innan du väger ditt bagage!",
+  "yourWeight": "Din vikt",
+  "weighWithBaby": "Väg med bebis",
+  "weighWithPet": "Väg med husdjur",
+  "weighWithLuggage": "Väg med bagage",
+  "stepOnScaleWithBaby": "Ställ dig på vågen\nmed bebis",
+  "stepOnScaleWithPet": "Ställ dig på vågen\nmed husdjur",
+  "stepOnScaleWithLuggage": "Ställ dig på vågen\nmed bagage",
+  "weighYourselfAndBaby": "Väg nu dig själv och din bebis tillsammans!",
+  "weighYourselfAndPet": "Väg nu dig själv och ditt husdjur tillsammans!",
+  "weighYourselfAndLuggage": "Väg dig själv medan du håller i ditt bagage!",
+  "yourBabysWeight": "Din bebis\nvikt",
+  "yourPetsWeight": "Ditt husdjurs\nvikt",
+  "luggagesWeight": "Bagagets\nvikt",
+  "weighAgain": "Väg igen",
+  "stepIndicatorLabel": "STEG {currentStep}/{totalSteps}",
+  "@stepIndicatorLabel": {
+    "description": "Step indicator label showing current step and total steps",
+    "placeholders": {
+      "currentStep": {
+        "type": "int"
+      },
+      "totalSteps": {
+        "type": "int"
+      }
+    }
+  },
+  "language": "Språk",
+  "selectYourLanguage": "Välj ditt språk",
+  "changeAppLanguage": "Ändra appens språk",
+  "changeAppLanguageMessage": "Är du säker på att du vill ändra appens språk till {language}?",
+  "failedToLoadProfile": "Misslyckades med att ladda profil",
+  "profileNotFound": "Profilen hittades inte",
+  "failedToDeleteProfile": "Misslyckades med att ta bort profil",
+  "noPrimaryProfileFound": "Ingen primärprofil hittades",
+  "failedToLoadSubProfiles": "Misslyckades med att ladda underprofiler",
+  "deleteProfileConfirmation": "Är du säker på att du vill ta bort den här profilen?",
+  "delete": "Ta bort",
+  "noProfileFound": "Ingen profil hittades",
+  "measurementUnits": "Måttenheter",
+  "measurementUnitsDescription": "Ställ in dina föredragna måttenheter för information i appen.",
+  "units": "Enheter",
+  "connectedTo": "Ansluten till: {ssid}",
+  "@connectedTo": {
+    "description": "Subtitle showing which network the scale is currently connected to",
+    "placeholders": {
+      "ssid": {
+        "type": "String",
+        "example": "myoptimum 678Db"
+      }
+    }
+  },
+  "wifiNotConnected": "WiFi ej anslutet",
+  "@wifiNotConnected": {
+    "description": "Header title shown when the scale has no active WiFi connection (settings/more-menu flow)"
+  },
+  "wifiNotConnectedDescription": "Din våg kan fortfarande spara mätningar, men WiFi gör att den synkroniserar automatiskt när din telefon inte är i närheten.",
+  "@wifiNotConnectedDescription": {
+    "description": "Subtitle explaining that WiFi is optional when the scale isn't connected"
+  },
+  "useWithoutWiFi": "Använd utan WiFi",
+  "@useWithoutWiFi": {
+    "description": "Button label to dismiss WiFi setup and continue without connecting (settings/more-menu flow)"
+  },
+  "scaleConnectedToWiFi": "Vågen är ansluten till WiFi",
+  "@scaleConnectedToWiFi": {
+    "description": "Header title shown when the scale already has an active WiFi connection (settings/more-menu flow)"
+  }
+}

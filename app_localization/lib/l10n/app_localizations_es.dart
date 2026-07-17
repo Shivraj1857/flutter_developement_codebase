@@ -1357,6 +1357,8 @@ class AppLocalizationsEs extends AppLocalizations {
 
   @override
   String get noProfileFound => 'No se encontró perfil';
+
+  @override
   String get measurementUnits => 'Unidades de medida';
 
   @override

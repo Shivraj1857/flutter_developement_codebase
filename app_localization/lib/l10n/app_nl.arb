@@ -1,0 +1,723 @@
+{
+  "@@locale": "nl",
+  "appName": "Weegschaal",
+  "login": "Inloggen",
+  "logout": "Uitloggen",
+  "email": "E-mailadres",
+  "password": "Wachtwoord",
+  "weight": "Gewicht",
+  "connectScale": "Weegschaal verbinden",
+  "scanning": "Scannen naar apparaten...",
+  "connected": "Verbonden",
+  "disconnected": "Verbinding verbroken",
+  "saveWeight": "Gewicht opslaan",
+  "weightHistory": "Gewichtsgeschiedenis",
+  "syncInProgress": "Gegevens synchroniseren...",
+  "syncComplete": "Synchronisatie voltooid",
+  "noDataAvailable": "Geen gegevens beschikbaar",
+  "errorOccurred": "Er is een fout opgetreden",
+  "retry": "Opnieuw proberen",
+  "kg": "kg",
+  "lbs": "lbs",
+  "welcomeBack": "Welkom terug",
+  "home": "Home",
+  "settings": "Instellingen",
+  "enterYourEmail": "Vul je e-mailadres in",
+  "enterYourPassword": "Vul je wachtwoord in",
+  "pleaseEnterYourEmail": "Vul je e-mailadres in",
+  "pleaseEnterValidEmail": "Vul een geldig e-mailadres in",
+  "pleaseEnterYourPassword": "Vul je wachtwoord in",
+  "passwordMinLength": "Wachtwoord moet minimaal 6 tekens bevatten",
+  "welcomeToWeightScale": "Welkom bij Weegschaal",
+  "youAreLoggedIn": "Je bent succesvol ingelogd.",
+  "measureWeight": "Gewicht meten",
+  "deviceConnection": "Apparaatverbinding",
+  "scanForDevices": "Scannen naar apparaten",
+  "currentReading": "Huidige meting",
+  "sync": "Synchroniseren",
+  "noWeightRecordsYet": "Nog geen gewichtsmetingen",
+  "weightSaved": "Gewicht opgeslagen: {weight} {unit}",
+  "@weightSaved": {
+    "placeholders": {
+      "weight": {
+        "type": "String"
+      },
+      "unit": {
+        "type": "String"
+      }
+    }
+  },
+  "syncedRecords": "{count} metingen gesynchroniseerd",
+  "@syncedRecords": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "connectedDevice": "Verbonden: {deviceId}",
+  "@connectedDevice": {
+    "placeholders": {
+      "deviceId": {
+        "type": "String"
+      }
+    }
+  },
+  "onboardingHeadline": "Een duidelijk zicht op\nje lichaams-\nwaarden",
+  "getStarted": "Aan de slag",
+  "beforeYouContinue": "Voordat je verdergaat",
+  "agreeToThe": "Ik ga akkoord met de ",
+  "privacyPolicy": "Privacybeleid",
+  "termsAndConditions": "Algemene voorwaarden",
+  "onboardingDisclaimer": "Je hebt de volledige controle over je eigen gegevens. We zullen nooit toegang hebben tot je persoonlijke informatie.",
+  "selectYourDevice": "Selecteer je apparaat",
+  "scale": "Weegschaal",
+  "stepOnScaleToStartPairing": "Stap op de weegschaal om het koppelen te starten",
+  "tapeMeasure": "Meetlint",
+  "powerOnDeviceToStartPairing": "Zet het apparaat aan om het koppelen te starten",
+  "both": "Beide",
+  "weWillPairOneDeviceAtATime": "We koppelen één apparaat tegelijk",
+  "iDontHaveDevice": "Ik heb geen apparaat",
+  "allowBluetoothSystemScreen": "Sta\nBluetooth\nsysteemscherm\ntoe",
+  "name": "NAAM",
+  "height": "HOOGTE",
+  "confirm": "Bevestigen",
+  "inch": "INCH",
+  "cm": "CM",
+  "dateFormat": "DD-MM-YYYY",
+  "dateOfBirth": "GEBOORTEDATUM",
+  "gender": "Geslacht",
+  "male": "MAN",
+  "female": "VROUW",
+  "areYouPregnant": "Ben je zwanger?",
+  "doYouUsePacemaker": "Gebruik je een pacemaker of een geïmplanteerd apparaat?",
+  "doYouUseImplantedDevice": "Gebruik je een pacemaker of een geïmplanteerd apparaat?",
+  "healthQuestionDescription": "Beschrijvingen tktktk",
+  "yes": "JA",
+  "no": "NEE",
+  "required": "Verplicht",
+  "athleteMode": "ATLEETMODUS",
+  "athleteModeDescription": "Traint 10+ uur per week. Past de algoritmen voor lichaamssamenstelling aan.",
+  "preferNotToSay": "IK ZEG DIT LIEVER NIET",
+  "genderAtBirth": "GESLACHT BIJ GEBOORTE",
+  "enterTheMostAccurateHeight": "Voer de meest nauwkeurige hoogte in voor nauwkeurige resultaten van de lichaamssamenstelling.",
+  "createYourProfile": "Profiel aanmaken",
+  "failedToSaveProfile": "Profiel opslaan mislukt",
+  "healthDetails": "Gezondheidsdetails",
+  "bodyCompositionReadingsInfo": "Metingen van de lichaamssamenstelling maken gebruik van een zwak bio-elektrisch signaal van de weegschaal. Gezondheidsomstandigheden zijn van invloed op de vraag of dit gebruikt mag worden.",
+  "electricImpedance": "ELEKTRISCHE IMPEDANTIE",
+  "electricImpedanceDescription": "Metingen van de lichaamssamenstelling worden uitgeschakeld. Gewichtsregistratie blijft volledig beschikbaar.",
+  "electric": "ELEKTRISCH",
+  "pregnant": "ZWANGER",
+  "pacemaker": "PACEMAKER",
+  "iAmPregnant": "IK BEN ZWANGER",
+  "pregnancyDescription": "Meting van de lichaamssamenstelling wordt uitgeschakeld. Gewichtsregistratie blijft volledig beschikbaar.",
+  "iHaveAPacemakerOrImplantedDevice": "IK HEB EEN PACEMAKER OF GEÏMPLANTEERD APPARAAT",
+  "pacemakerDescription": "Meting van de lichaamssamenstelling wordt uitgeschakeld. Gewichtsregistratie blijft volledig beschikbaar.",
+  "healthSyncTitle": "Synchroniseer je metingen automatisch met {platform}.",
+  "@healthSyncTitle": {
+    "placeholders": {
+      "platform": {
+        "type": "String"
+      }
+    }
+  },
+  "healthSyncDescriptionGoogle": "Bewaar je gezondheidsmetingen op één plek, volg trends en deel inzichten. Stel het nu in of op elk gewenst moment via het menu MEER.",
+  "healthSyncDescriptionApple": "Bewaar je gezondheidsmetingen op één plek, volg trends en deel inzichten. Stel het nu in of op elk gewenst moment via het menu MEER.",
+  "continueButton": "Doorgaan",
+  "googleHealthInstallTitle": "Health Connect vereist",
+  "googleHealthInstallDescription": "Installeer of update Health Connect om door te gaan.",
+  "install": "Installeren",
+  "cancel": "Annuleren",
+  "permissionDenied": "Toegang geweigerd",
+  "permissionDeniedMessage": "Je kunt gezondheidssynchronisatie later inschakelen in de app-instellingen.",
+  "healthServiceUnavailable": "Gezondheidsservice niet beschikbaar",
+  "healthServiceUnavailableAndroid": "Google Health Connect wordt niet ondersteund op dit apparaat.",
+  "healthServiceUnavailableIos": "Apple Health is niet beschikbaar op dit apparaat.",
+  "permissionError": "Toestemmingsfout",
+  "permissionErrorAndroid": "Kan geen Health Connect-toestemmingen aanvragen. Controleer of Health Connect is geïnstalleerd en probeer het opnieuw.",
+  "permissionErrorIos": "Kan geen Apple Health-toestemmingen aanvragen. Probeer het opnieuw.",
+  "skip": "Overslaan",
+  "googleHealth": "Google Health",
+  "appleHealth": "Apple Health",
+  "healthSyncHeadlineGoogle": "Synchroniseer je metingen met Google Health.",
+  "healthSyncHeadlineApple": "Synchroniseer je metingen met Apple Health.",
+  "healthDataBackup": "Back-up van gezondheidsgegevens",
+  "enableICloudBackup": "iCloud-back-up inschakelen",
+  "enableGoogleDriveBackup": "Google Drive-back-up inschakelen",
+  "backupPrivacyText": "Je gegevens zijn voor niemand toegankelijk zonder jouw toestemming.",
+  "turnOnSyncingICloud": "Schakel synchronisatie in voor Braun Family Care in de iCloud-instellingen.",
+  "turnOnSyncingGoogleDrive": "Schakel synchronisatie in voor Braun Family Care in de Google Drive-instellingen.",
+  "createTestProfile": "Testprofiel aanmaken",
+  "viewBackupJson": "Bekijk back-up-JSON",
+  "skipForNow": "Nu overslaan",
+  "continueText": "Doorgaan",
+  "restoreData": "Gegevens herstellen",
+  "importYourPreviousReadings": "Importeer je eerdere metingen",
+  "youHavePreviouslySyncedHealthData": "Je hebt eerder gezondheidsgegevens gesynchroniseerd",
+  "doYouWantToImportDataInApp": "Wil je de gegevens in de app importeren?",
+  "uploadBackup": "Back-up uploaden",
+  "restoreBackup": "Back-up herstellen",
+  "backupRestoredSuccessfully": "Back-up succesvol hersteld!",
+  "backupUploadedSuccessfully": "Back-up succesvol geüpload!",
+  "testProfileCreatedAt": "Testprofiel aangemaakt op: {filePath}",
+  "@testProfileCreatedAt": {
+    "placeholders": {
+      "filePath": {
+        "type": "String"
+      }
+    }
+  },
+  "failedToCreateTestProfile": "Aanmaken van testprofiel mislukt: {error}",
+  "@failedToCreateTestProfile": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "backupJsonContent": "Inhoud back-up-JSON",
+  "noBackupDataAvailable": "Geen back-upgegevens beschikbaar",
+  "close": "Sluiten",
+  "noProfileDataFound": "Geen profielgegevens gevonden. Maak eerst een profiel aan of tik op \"Testprofiel aanmaken\" om te testen.",
+  "cloudServiceUnavailable": "Clouddienst niet beschikbaar. Probeer het opnieuw.",
+  "failedToCreateProfile": "Profiel aanmaken mislukt. Probeer het opnieuw.",
+  "failedToUploadBackup": "Uploaden van back-up mislukt",
+  "uploadFailed": "Uploaden mislukt: {error}",
+  "@uploadFailed": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "restoredFileCorrupted": "Bestaand herstelbestand is beschadigd of ongeldig",
+  "restoredFileNotFound": "Herstelbestand niet gevonden",
+  "noBackupFoundInCloud": "Geen back-up gevonden in cloudopslag",
+  "restoreFailed": "Herstel mislukt: {error}",
+  "@restoreFailed": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "failedToSkip": "Overslaan mislukt: {error}",
+  "@failedToSkip": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "failedToSignIn": "Inloggen mislukt: {error}",
+  "@failedToSignIn": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "failedToReadBackup": "Lezen van back-up mislukt: {error}",
+  "@failedToReadBackup": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "noBackupFileFound": "Geen back-upbestand gevonden",
+  "stepOnScale": "Stap op de weegschaal",
+  "waitingForMeasurement": "Wacht even terwijl we je gewicht meten...",
+  "weightReceived": "Gewicht ontvangen",
+  "addManualWeight": "Handmatig gewicht toevoegen",
+  "enterWeight": "Gewicht invoeren",
+  "enterWeightHint": "bijv. 75.5",
+  "pleaseEnterWeight": "Voer een gewichtswaarde in",
+  "invalidWeight": "Voer een geldig gewicht in",
+  "save": "Opslaan",
+  "update": "Bijwerken",
+  "tabHome": "Home",
+  "@tabHome": {
+    "description": "Bottom navigation tab label for Home"
+  },
+  "tabTrends": "Trends",
+  "@tabTrends": {
+    "description": "Bottom navigation tab label for Trends"
+  },
+  "tabModes": "Modi",
+  "@tabModes": {
+    "description": "Bottom navigation tab label for Modes"
+  },
+  "tabMenu": "Menu",
+  "@tabMenu": {
+    "description": "Bottom navigation tab label for Menu"
+  },
+  "menuMore": "Meer",
+  "@menuMore": {
+    "description": "Title for the More menu screen"
+  },
+  "menuAccount": "Account",
+  "@menuAccount": {
+    "description": "Account section header in More menu"
+  },
+  "menuDevices": "Apparaten",
+  "@menuDevices": {
+    "description": "Devices section header in More menu"
+  },
+  "menuDeviceSettings": "Apparaatinstellingen",
+  "@menuDeviceSettings": {
+    "description": "Manage Device menu item"
+  },
+  "menuMeasurementUnits": "Meeteenheden",
+  "@menuMeasurementUnits": {
+    "description": "Measurement Units menu item"
+  },
+  "menuWifiSettings": "Wifi-instellingen",
+  "@menuWifiSettings": {
+    "description": "WiFi Settings menu item"
+  },
+  "menuTheme": "Thema",
+  "@menuTheme": {
+    "description": "Theme menu item"
+  },
+  "menuMyProfile": "Mijn profiel",
+  "@menuMyProfile": {
+    "description": "My Profile menu item"
+  },
+  "menuLanguage": "Talen",
+  "@menuLanguage": {
+    "description": "Language menu item"
+  },
+  "menuSupport": "Ondersteuning",
+  "@menuSupport": {
+    "description": "Support section header in More menu"
+  },
+  "menuHelp": "Hulp",
+  "@menuHelp": {
+    "description": "Help menu item"
+  },
+  "menuDataBackup": "Back-up van gegevens",
+  "@menuDataBackup": {
+    "description": "Data & Backup menu item"
+  },
+  "menuLegal": "Juridisch",
+  "@menuLegal": {
+    "description": "Legal section header in More menu"
+  },
+  "menuAppVersion": "App-versie",
+  "@menuAppVersion": {
+    "description": "App Version label in More menu"
+  },
+  "termsConditions": "Algemene voorwaarden",
+  "@termsConditions": {
+    "description": "Terms and Conditions menu item label"
+  },
+  "menuAppleHealth": "Apple Health",
+  "@menuAppleHealth": {
+    "description": "Apple Health menu item"
+  },
+  "menuGoogleHealth": "Google Health",
+  "@menuGoogleHealth": {
+    "description": "Google Health menu item"
+  },
+  "healthScreenTitleApple": "Apple Health",
+  "@healthScreenTitleApple": {
+    "description": "Health screen title for iOS"
+  },
+  "healthScreenTitleGoogle": "Google Health",
+  "@healthScreenTitleGoogle": {
+    "description": "Health screen title for Android"
+  },
+  "healthAllowAccessApple": "Toegang tot Apple Health toestaan",
+  "@healthAllowAccessApple": {
+    "description": "Health access toggle title for iOS"
+  },
+  "healthAllowAccessGoogle": "Toegang tot Google Health toestaan",
+  "@healthAllowAccessGoogle": {
+    "description": "Health access toggle title for Android"
+  },
+  "healthSyncDescriptionAppleShort": "Synchroniseer je gewichtsgegevens met Apple Health",
+  "@healthSyncDescriptionAppleShort": {
+    "description": "Short description for Apple Health sync"
+  },
+  "healthSyncDescriptionGoogleShort": "Synchroniseer je gewichtsgegevens met Google Health",
+  "@healthSyncDescriptionGoogleShort": {
+    "description": "Short description for Google Health sync"
+  },
+  "healthStopSharingTitleApple": "Stoppen met delen met Apple Health?",
+  "@healthStopSharingTitleApple": {
+    "description": "Dialog title for stopping Apple Health sync"
+  },
+  "healthStopSharingMessageApple": "Nieuwe metingen worden niet gesynchroniseerd met Apple Health. Om de toegang volledig in te trekken, ga naar: Gezondheid-app → Profiel → Privacy → Apps → Braun Metra.",
+  "@healthStopSharingMessageApple": {
+    "description": "Dialog message for stopping Apple Health sync"
+  },
+  "healthStopSharingTitleGoogle": "Stoppen met delen met Google Health?",
+  "@healthStopSharingTitleGoogle": {
+    "description": "Dialog title for stopping Google Health sync"
+  },
+  "healthStopSharingMessageGoogle": "We verbreken de verbinding met Google Health en stoppen met het synchroniseren van je metingen. Als je ook de Android-toestemmingen wilt verwijderen, open dan de instellingen van je telefoon.",
+  "@healthStopSharingMessageGoogle": {
+    "description": "Dialog message for stopping Google Health sync"
+  },
+  "ok": "OK",
+  "@ok": {
+    "description": "OK button text"
+  },
+  "healthEnableSyncTitleApple": "Synchroniseren met Apple Health?",
+  "@healthEnableSyncTitleApple": {
+    "description": "Dialog title for enabling Apple Health sync"
+  },
+  "healthEnableSyncTitleGoogle": "Synchroniseren met Google Health?",
+  "@healthEnableSyncTitleGoogle": {
+    "description": "Dialog title for enabling Google Health sync"
+  },
+  "appleHealthEnableHealthkit": "Delen met HealthKit inschakelen",
+  "@appleHealthEnableHealthkit": {
+    "description": "Title for enabling HealthKit sharing dialog"
+  },
+  "appleHealthPermissionTurnOnSteps": "Verleen toestemming aan Braun Metra om verbinding te maken met Apple Health. Open de Gezondheid-app, selecteer Delen > Apps en zet \"Braun Metra\" aan.",
+  "@appleHealthPermissionTurnOnSteps": {
+    "description": "Instructions for enabling HealthKit permissions"
+  },
+  "appleHealthHealthApp": "Gezondheid-app",
+  "@appleHealthHealthApp": {
+    "description": "Health App button text"
+  },
+  "googleHealthPermissionSettingTitle": "Delen met Google Health inschakelen",
+  "@googleHealthPermissionSettingTitle": {
+    "description": "Title for enabling Google Health sharing dialog"
+  },
+  "googleHealthBloodPressureAndHeartRatePermissionsInHealthConnect": "Verleen toestemming aan Braun Metra om verbinding te maken met Google Health. Open de Instellingen-app op je telefoon.",
+  "@googleHealthBloodPressureAndHeartRatePermissionsInHealthConnect": {
+    "description": "Instructions for enabling Google Health permissions"
+  },
+  "settings": "Instellingen",
+  "@settings": {
+    "description": "Settings button text"
+  },
+  "healthDataBackupTitle": "Back-up van gezondheidsgegevens",
+  "storeHealthDataInICloud": "Sla je gezondheidsgegevens op in je iCloud-account",
+  "storeHealthDataInGoogleDrive": "Sla je gezondheidsgegevens op in je Google Drive-account",
+  "dataCannotBeAccessed": "Je gegevens zijn voor niemand toegankelijk zonder jouw toestemming.",
+  "turnOnSyncingInICloudSettings": "Schakel synchronisatie in via de iCloud-instellingen",
+  "turnOnSyncingInGoogleDriveSettings": "Schakel synchronisatie in via de Google Drive-instellingen",
+  "openSettings": "Instellingen openen",
+  "backupWarningTitle": "Waarschuwing!",
+  "backupWarningMessage": "Er wordt geen back-up van je gegevens gemaakt naar je iCloud.",
+  "backupWarningDescription": "Als je in de toekomst een back-up wilt maken, moet je synchronisatie toestaan in je iCloud-instellingen.",
+  "backupWarningMessageAndroid": "Er wordt geen back-up van je gegevens gemaakt naar je Google Drive.",
+  "backupWarningDescriptionAndroid": "Als je in de toekomst een back-up wilt maken, moet je synchronisatie toestaan in je Google Drive-instellingen.",
+  "success": "Succes!",
+  "previousReadingsImported": "Je eerdere metingen zijn geïmporteerd in de app",
+  "accessPreviousIllnessJourneys": "Je hebt nu toegang tot eerdere ziekteverlopen in de app.",
+  "couldNotImportReadings": "Kon metingen niet importeren",
+  "errorImportingHealthData": "Er is een fout opgetreden bij het importeren van je eerdere gezondheidsgegevens.",
+  "doYouWantToTryAgain": "Wil je het opnieuw proberen?",
+  "somethingWentWrong": "Er is iets misgegaan",
+  "couldNotImportYourPreviousReadingsPleaseRetry": "Kon je eerdere metingen niet importeren. Probeer het opnieuw",
+  "yes": "Ja",
+  "no": "Nee",
+  "noInternetConnection": "Geen internetverbinding. Controleer je wifi of mobiele gegevens en probeer het opnieuw.",
+  "backupNotFoundInCloud": "Geen back-up gevonden in cloudopslag",
+  "failedToRestoreBackup": "Herstellen van back-up mislukt",
+  "cloudStorageNotAvailable": "Cloudopslag is niet beschikbaar. Schakel iCloud of Google Drive in.",
+  "failedToUploadBackup": "Uploaden van back-up naar cloud mislukt",
+  "backupFileNotFound": "Back-upbestand niet gevonden",
+  "deviceIdMismatch": "Apparaat-ID komt niet overeen - kan niet herstellen van een ander apparaat",
+  "sameDeviceAndUser": "Hetzelfde apparaat en dezelfde gebruiker - herstel niet nodig",
+  "deviceOrUserMismatch": "Apparaat- of gebruikersmismatch",
+  "customizeMonogram": "Monogram aanpassen",
+  "colors": "KLEUREN",
+  "pairing": "Koppelen",
+  "pairingToYourScale": "Koppelen met je weegschaal",
+  "pairingToYourTapeMeasure": "Koppelen met je meetlint",
+  "powerOnTapeMeasureToStartPairing": "Zet het meetlint aan om het koppelen te starten",
+  "turnTheTapeMeasureOn": "Zet het meetlint aan",
+  "scaleSuccessfullyPairedViaBluetooth": "Weegschaal succesvol gekoppeld via Bluetooth",
+  "tapeMeasureSuccessfullyPairedViaBluetooth": "Meetlint succesvol gekoppeld via Bluetooth",
+  "startMeasuring": "Beginnen met meten",
+  "pairAnotherDevice": "Nog een apparaat koppelen",
+  "allowBluetoothPermission": "Bluetooth-toestemming toestaan",
+  "bluetoothPermissionRequired": "Bluetooth-toestemming is vereist om verbinding te maken met je apparaat",
+  "grantPermission": "Toestemming verlenen",
+  "connectingToDevice": "Verbinden met apparaat...",
+  "pleaseWait": "Wacht even",
+  "pairingSuccessful": "Koppelen succesvol!",
+  "deviceSuccessfullyPaired": "Je apparaat is succesvol gekoppeld via Bluetooth",
+  "devicePairingFailed": "Koppelen van apparaat mislukt",
+  "tryAgain": "Opnieuw proberen",
+  "bluetoothPermissionDenied": "Bluetooth-toestemming geweigerd",
+  "bluetoothPermissionPermanentlyDenied": "Bluetooth-toestemming permanent geweigerd. Schakel dit in bij de instellingen.",
+  "bluetoothPermissionRestricted": "Bluetooth-toestemming beperkt",
+  "goToSettings": "Ga naar Instellingen",
+  "bluetoothNotPermitted": "Bluetooth niet toegestaan",
+  "pairingFailedWithoutBluetooth": "Koppelen mislukt zonder Bluetooth-toestemming.",
+  "pleaseAllowBluetoothToContinue": "Sta Bluetooth toe om door te gaan.",
+  "notNow": "Niet nu",
+  "bluetoothPermissionRequiredToPair": "Bluetooth-toestemming is vereist om je apparaat te koppelen.",
+  "tapSettings": "1. Tik op Instellingen",
+  "switchBluetoothOn": "2. Zet Bluetooth aan",
+  "tapBluetoothNearbyDevices": "2. Tik op Bluetooth (apparaten in de buurt)",
+  "tapAllow": "3. Tik op Toestaan",
+  "pleaseSelectADeviceType": "Selecteer een apparaattype",
+  "failedToProceed": "Verdergaan mislukt",
+  "failedToCheckPermission": "Toestemming controleren mislukt",
+  "pairingToYourDevice": "Koppelen met je apparaat",
+  "connectToWiFiToSyncMeasurements": "Maak verbinding met wifi om metingen te synchroniseren wanneer je telefoon niet in de buurt is.",
+  "connectToWiFi": "Verbinden met wifi",
+  "connectToWiFiBtnTitle": "Verbinden met wifi",
+  "tryItOut": "Probeer het uit",
+  "illDoThisLater": "Dit doe ik later",
+  "backupFound": "Back-up gevonden",
+  "@backupFound": {
+    "description": "Title shown when a backup is found"
+  },
+  "backupFoundMessage": "Er is een back-up gevonden voor dit apparaat. Wil je deze herstellen?",
+  "@backupFoundMessage": {
+    "description": "Message shown when a backup is found"
+  },
+  "unfortunatelyPairingFailed": "Helaas is het koppelen mislukt!",
+  "troubleshooting": "Probleemoplossing",
+  "makeSurePhoneAndDeviceWithin5Feet": "1. Zorg ervoor dat je telefoon en de weegschaal zich binnen 1,5 meter van elkaar bevinden.",
+  "makeSureBatteriesNotLowOrDead": "2. Zorg ervoor dat de batterijen van de weegschaal niet leeg of bijna leeg zijn.",
+  "removeBatteriesAndTryAgain": "3. Verwijder de batterijen uit de weegschaal, plaats ze terug en probeer opnieuw te koppelen.",
+  "contactCustomerService": "Neem contact op met de klantenservice",
+  "chooseANetwork": "Kies een netwerk",
+  "selectYourWiFiNetwork": "Selecteer je wifi-netwerk",
+  "scanning": "Scannen...",
+  "noNetworksFound": "Geen netwerken gevonden",
+  "refreshNetworks": "Vernieuwen",
+  "enterWiFiPassword": "Voer wifi-wachtwoord in",
+  "passwordIncorrect": "Wachtwoord onjuist",
+  "done": "Gereed",
+  "connecting": "Verbinden...",
+  "connectionFailed": "Verbinding mislukt",
+  "connectionSuccess": "Succesvol verbonden",
+  "connectingToYourWiFi": "Verbinden met je wifi",
+  "yourScaleIsConnectedToWiFi": "Je weegschaal is verbonden met wifi",
+  "next": "Volgende",
+  "addAnotherDevice": "Nog een apparaat toevoegen",
+  "weightGoal": "Gewichtsdoel",
+  "setGoalWeight": "Stel doelgewicht in",
+  "youCanAlwaysChangeThisLater": "Je kunt dit altijd later wijzigen in je profiel!",
+  "yourCurrentGoalWeightIs": "Je huidige doelgewicht is {weight} {unit}!",
+  "@yourCurrentGoalWeightIs": {
+    "placeholders": {
+      "weight": {
+        "type": "String"
+      },
+      "unit": {
+        "type": "String"
+      }
+    }
+  },
+  "illDoItLater": "Ik doe het later wel",
+  "stepOnTheScaleToTakeYourFirstReading": "Stap op de weegschaal om je eerste meting te doen!",
+  "couldNotConnectToWiFi": "Kon geen verbinding maken met wifi",
+  "reenterYourPassword": "Voer je wachtwoord opnieuw in",
+  "chooseAnotherWiFiNetwork": "Kies een ander wifi-netwerk",
+  "networkNotFoundWeakSignal": "Netwerk niet gevonden / zwak signaal",
+  "makeSureYourScaleIsCloseToRouter": "Zorg ervoor dat je weegschaal dicht bij je router staat",
+  "connectionTimedOut": "Verbinding telt af / time-out",
+  "tryAgain": "Opnieuw proberen",
+  "continueWithoutWiFi": "Doorgaan zonder wifi",
+  "graphicPersonOnScale": "GRAFISCH: Persoon op weegschaal",
+  "failedToSendCredentialsToDevice": "Inloggegevens verzenden naar apparaat mislukt",
+  "failedToSendWiFiCredentialsViaBle": "Wifi-inloggegevens verzenden via BLE mislukt",
+  "goal": "DOEL",
+  "@goal": {
+    "description": "Goal label shown on dashboard"
+  },
+  "lbsUnit": "LBs",
+  "@lbsUnit": {
+    "description": "Weight unit label"
+  },
+  "myWeightTrend": "MIJN GEWICHTSTREND",
+  "@myWeightTrend": {
+    "description": "Weight trend section title"
+  },
+  "bodyMetrics": "LICHAAMSWAARDEN",
+  "@bodyMetrics": {
+    "description": "Body metrics section title"
+  },
+  "edit": "Bewerken",
+  "@edit": {
+    "description": "Edit button text"
+  },
+  "profile": "Profiel",
+  "profiles": "Profielen",
+  "child": "Kind",
+  "pet": "Huisdier",
+  "myWeightHistroy": "Mijn gewichtsgeschiedenis",
+  "histroy": "Geschiedenis",
+  "zeroStateWeightTrendMessage": "Je voortgang krijgt hier\nna verloop van tijd vorm.",
+  "@zeroStateWeightTrendMessage": {
+    "description": "Message shown in weight trend section when no data is available"
+  },
+  "zeroStateBodyMetricsMessage": "Je weegschaal meet meer dan alleen gewicht.\nStap erop om je lichaamssamenstelling te ontdekken.",
+  "@zeroStateBodyMetricsMessage": {
+    "description": "Message shown in body metrics section when no data is available"
+  },
+  "goal_weight": "DOELGEWICHT",
+  "kgUnit": "KG",
+  "stUnit": "St",
+  "deleteProfile": "Profiel verwijderen",
+  "baby": "BABY",
+  "@baby": {
+    "description": "Baby mode label"
+  },
+  "luggage": "BAGAGE",
+  "@luggage": {
+    "description": "Luggage mode label"
+  },
+  "addProfile": "+ Profiel toevoegen",
+  "@addProfile": {
+    "description": "Add profile button text"
+  },
+  "weighNow": "Nu wegen",
+  "@weighNow": {
+    "description": "Weigh now button text for luggage mode"
+  },
+  "createBabyProfile": "Babyprofiel aanmaken",
+  "@createBabyProfile": {
+    "description": "Title shown when creating a baby profile"
+  },
+  "createPetProfile": "Huisdierprofiel aanmaken",
+  "@createPetProfile": {
+    "description": "Title shown when creating a pet profile"
+  },
+  "babyProfile": "Babyprofiel",
+  "@babyProfile": {
+    "description": "App bar title for baby profile"
+  },
+  "petProfile": "Huisdierprofiel",
+  "@petProfile": {
+    "description": "App bar title for pet profile"
+  },
+  "add": "Toevoegen",
+  "@add": {
+    "description": "Add button text for profile creation"
+  },
+  "editBodyMetricsTitle": "Lichaamswaarden bewerken",
+  "@editBodyMetricsTitle": {
+    "description": "Title of the Edit Body Metrics screen"
+  },
+  "editBodyMetricsInstruction": "Kies de waarden die je op je dashboard wilt weergeven. Je kunt ze ook in de gewenste volgorde zetten.",
+  "@editBodyMetricsInstruction": {
+    "description": "Instructional text under the title"
+  },
+  "editBodyMetricsLimitError": "Kies er maximaal 5",
+  "@editBodyMetricsLimitError": {
+    "description": "Shown when the user tries to select a 6th metric"
+  },
+  "metricLabelWeight": "Gewicht",
+  "metricLabelBmi": "BMI (Body Mass Index)",
+  "metricLabelBodyFat": "Lichaamsvet (%) / Massa",
+  "metricLabelMuscleMass": "Spiermassa",
+  "metricLabelSkeletalMuscleMass": "Skeletspiermassa",
+  "metricLabelProteinPercentage": "Eiwit (%)",
+  "metricLabelBmr": "BMR (Basal Metabolic Rate)",
+  "metricLabelFatFreeBodyWeight": "Vetvrije lichaamsmassa",
+  "metricLabelSubcutaneousFat": "Subcutaan vet (%)",
+  "metricLabelVisceralFatIndex": "Viscerale vetindex",
+  "metricLabelBodyWater": "Lichaamswater (%)",
+  "metricLabelBoneMass": "Botmassa",
+  "metricLabelStandingHeartRate": "Hartslag in stand",
+  "metricLabelMetabolicAge": "Metabolische leeftijd",
+  "metricLabelIdealWeight": "Ideaal gewicht",
+  "metricLabelProteinAmount": "Eiwithoeveelheid",
+  "metricLabelMuscleRate": "Spierpercentage",
+  "metricDescWeight": "Je totale lichaamsgewicht. Een van de belangrijkste indicatoren voor de gezondheidsstatus van een persoon.",
+  "metricDescBmi": "Een algemene indicator van het lichaamsgewicht in verhouding tot de lengte.",
+  "metricDescBodyFat": "Het vet in je lichaam kan worden weergegeven als percentage of gewicht. Het percentage vetweefsel in de lichaamssamenstelling.",
+  "metricDescMuscleMass": "De totale hoeveelheid spieren in je lichaam.",
+  "metricDescSkeletalMuscleMass": "De spieren die beweging en fysieke kracht ondersteunen.",
+  "metricDescProteinPercentage": "Het aandeel eiwitten in je lichaam, belangrijk voor de opbouw en het onderhoud van weefsel.",
+  "metricDescBmr": "Het aantal calorieën dat je lichaam in rust nodig heeft om te functioneren.",
+  "metricDescFatFreeBodyWeight": "Je lichaamsgewicht exclusief vet (inclusief spieren, botten en water).",
+  "metricDescSubcutaneousFat": "Het vet dat direct onder je huid is opgeslagen.",
+  "metricDescVisceralFatIndex": "Vet opgeslagen rond je interne organen.",
+  "metricDescBodyWater": "Het percentage water in je lichaam.",
+  "metricDescBoneMass": "Het geschatte gewicht van mineralen in je botten.",
+  "metricDescStandingHeartRate": "Je hartslag (slagen per minuut) gemeten terwijl je staat.",
+  "metricDescMetabolicAge": "Een vergelijking van je metabolisme met typische leeftijdsgemiddelden.",
+  "metricDescIdealWeight": "Een streefgewicht op basis van je lichaamssamenstelling.",
+  "metricDescProteinAmount": "De totale hoeveelheid eiwitten in je lichaam.",
+  "metricDescMuscleRate": "Het percentage van je lichaam dat uit spieren bestaat.",
+  "babyMode": "Babymodus",
+  "petMode": "Huisdiermodus",
+  "luggageMode": "Bagagemodus",
+  "stepOnYourScaleAlone": "Stap alleen op\nde weegschaal",
+  "stepOnYourScaleAloneBaby": "Weeg eerst jezelf voordat je je baby weegt!",
+  "stepOnYourScaleAlonePet": "Weeg eerst jezelf voordat je je huisdier weegt!",
+  "stepOnYourScaleAloneLuggage": "Weeg eerst jezelf voordat je je bagage weegt!",
+  "yourWeight": "Jouw gewicht",
+  "weighWithBaby": "Wegen met baby",
+  "weighWithPet": "Wegen met huisdier",
+  "weighWithLuggage": "Wegen met bagage",
+  "stepOnScaleWithBaby": "Stap op weegschaal\nmet baby",
+  "stepOnScaleWithPet": "Stap op weegschaal\nmet huisdier",
+  "stepOnScaleWithLuggage": "Stap op weegschaal\nmet bagage",
+  "weighYourselfAndBaby": "Weeg nu jezelf en je baby samen!",
+  "weighYourselfAndPet": "Weeg nu jezelf en je huisdier samen!",
+  "weighYourselfAndLuggage": "Weeg jezelf terwijl je je bagage vasthoudt!",
+  "yourBabysWeight": "Gewicht van\nje baby",
+  "yourPetsWeight": "Gewicht van\nje huisdier",
+  "luggagesWeight": "Gewicht van\nje bagage",
+  "weighAgain": "Opnieuw wegen",
+  "stepIndicatorLabel": "STAP {currentStep}/{totalSteps}",
+  "@stepIndicatorLabel": {
+    "description": "Step indicator label showing current step and total steps",
+    "placeholders": {
+      "currentStep": {
+        "type": "int"
+      },
+      "totalSteps": {
+        "type": "int"
+      }
+    }
+  },
+  "language": "Taal",
+  "selectYourLanguage": "Selecteer je taal",
+  "changeAppLanguage": "App-taal wijzigen",
+  "changeAppLanguageMessage": "Weet je zeker dat je de app-taal wilt wijzigen naar {language}?",
+  "failedToLoadProfile": "Laden van profiel mislukt",
+  "profileNotFound": "Profiel niet gevonden",
+  "failedToDeleteProfile": "Verwijderen van profiel mislukt",
+  "noPrimaryProfileFound": "Geen primair profiel gevonden",
+  "failedToLoadSubProfiles": "Laden van subprofielen mislukt",
+  "deleteProfileConfirmation": "Weet je zeker dat je dit profiel wilt verwijderen?",
+  "delete": "Verwijderen",
+  "noProfileFound": "Geen profiel gevonden",
+  "measurementUnits": "Meeteenheden",
+  "measurementUnitsDescription": "Stel je voorkeurseenheden in voor informatie in de app.",
+  "units": "Eenheden",
+  "connectedTo": "Verbonden met: {ssid}",
+  "@connectedTo": {
+    "description": "Subtitle showing which network the scale is currently connected to",
+    "placeholders": {
+      "ssid": {
+        "type": "String",
+        "example": "myoptimum 678Db"
+      }
+    }
+  },
+  "wifiNotConnected": "Wifi niet verbonden",
+  "@wifiNotConnected": {
+    "description": "Header title shown when the scale has no active WiFi connection (settings/more-menu flow)"
+  },
+  "wifiNotConnectedDescription": "Je weegschaal kan nog steeds metingen opslaan, maar dankzij wifi kan hij automatisch synchroniseren wanneer je telefoon niet in de buurt is.",
+  "@wifiNotConnectedDescription": {
+    "description": "Subtitle explaining that WiFi is optional when the scale isn't connected"
+  },
+  "useWithoutWiFi": "Gebruiken zonder wifi",
+  "@useWithoutWiFi": {
+    "description": "Button label to dismiss WiFi setup and continue without connecting (settings/more-menu flow)"
+  },
+  "scaleConnectedToWiFi": "Weegschaal is verbonden met wifi",
+  "@scaleConnectedToWiFi": {
+    "description": "Header title shown when the scale already has an active WiFi connection (settings/more-menu flow)"
+  }
+}

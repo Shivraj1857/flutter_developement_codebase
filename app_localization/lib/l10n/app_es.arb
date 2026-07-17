@@ -690,7 +690,7 @@
   "failedToLoadSubProfiles": "Error al cargar sub-perfiles",
   "deleteProfileConfirmation": "¿Estás seguro de que quieres eliminar este perfil?",
   "delete": "Eliminar",
-  "noProfileFound": "No se encontró perfil"
+  "noProfileFound": "No se encontró perfil",
   "measurementUnits": "Unidades de medida",
   "measurementUnitsDescription": "Establece tus unidades de medida preferidas para la información de la aplicación.",
   "units": "Unidades",
