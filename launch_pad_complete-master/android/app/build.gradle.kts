@@ -10,7 +10,7 @@ android {
     compileSdk = flutter.compileSdkVersion
     // Pin NDK version to satisfy plugins audioplayers_android and
     // path_provider_android which require NDK 27.0.12077973
-    ndkVersion = "27.0.12077973"
+    ndkVersion = "28.2.13676358"
 
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11
