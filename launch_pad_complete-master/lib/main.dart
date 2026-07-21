@@ -126,3 +126,5 @@ class _PadState extends State<Pad> {
     );
   }
 }
+
+//Uses a state managament efficiently
