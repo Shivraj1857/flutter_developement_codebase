@@ -1,16 +1,21 @@
 import '../../core/database/app_database.dart';
 import '../../domain/entities/weight_entry.dart';
 import '../../domain/repositories/weight_repository.dart';
+import '../datasources/weight_local_datasource.dart';
+import '../models/weight_entry_model.dart';
 
 class WeightRepositoryImpl implements WeightRepository {
-  final AppDatabase database;
+  final WeightLocalDataSource localDataSource;
 
-  WeightRepositoryImpl(this.database);
+  WeightRepositoryImpl(this.localDataSource);
 
   @override
   Future<List<WeightEntry>> getWeightEntries() async {
-    // Will implement in Step 12
-    return [];
+    final data = await localDataSource.getWeights();
+
+    return data
+        .map(WeightEntryModel.fromDrift)
+        .toList();
   }
 
   @override
@@ -20,17 +25,36 @@ class WeightRepositoryImpl implements WeightRepository {
   }
 
   @override
-  Future<void> addWeight(WeightEntry entry) async {
-    // Will implement in Step 12
+  Future<void> addWeight(
+      WeightEntry entry,
+      ) async {
+    final companion =
+    WeightEntriesTableCompanion.insert(
+      weight: entry.weight,
+      recordedAt: entry.recordedAt,
+    );
+
+    await localDataSource.insertWeight(companion);
   }
 
   @override
-  Future<void> updateWeight(WeightEntry entry) async {
-    // Will implement in Step 12
+  Future<void> updateWeight(
+      WeightEntry entry,
+      ) async {
+    final data = WeightEntriesTableData(
+      id: entry.id,
+      weight: entry.weight,
+      recordedAt: entry.recordedAt,
+      createdAt: entry.createdAt,
+    );
+
+    await localDataSource.updateWeight(data);
   }
 
   @override
-  Future<void> deleteWeight(int id) async {
-    // Will implement in Step 12
+  Future<void> deleteWeight(
+      int id,
+      ) async {
+    await localDataSource.deleteWeight(id);
   }
 }
