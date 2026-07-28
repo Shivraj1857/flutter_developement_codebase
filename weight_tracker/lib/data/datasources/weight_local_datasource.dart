@@ -11,6 +11,7 @@ class WeightLocalDataSource {
     return (database.select(database.weightEntriesTable)
       ..orderBy([
             (t) => OrderingTerm.desc(t.recordedAt),
+            (t) => OrderingTerm.desc(t.id),
       ]))
         .get();
   }

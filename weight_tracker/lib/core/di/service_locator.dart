@@ -4,6 +4,7 @@ import '../../data/repositories/weight_repository_impl.dart';
 import '../../domain/repositories/weight_repository.dart';
 import '../../domain/usecases/weight/add_weight.dart';
 import '../../domain/usecases/weight/delete_weight.dart';
+import '../../domain/usecases/weight/get_latest_weight.dart';
 import '../../domain/usecases/weight/get_weight_entries.dart';
 import '../../domain/usecases/weight/update_weight.dart';
 import '../../presentation/blocs/weight/weight_bloc.dart';
@@ -109,6 +110,12 @@ Future<void> setupDependencies() async {
 
   getIt.registerLazySingleton(
         () => GetWeightEntriesUseCase(
+      getIt<WeightRepository>(),
+    ),
+  );
+
+  getIt.registerLazySingleton(
+        () => GetLatestWeightUseCase(
       getIt<WeightRepository>(),
     ),
   );
