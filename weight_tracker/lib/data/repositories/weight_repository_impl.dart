@@ -1,4 +1,5 @@
 import '../../core/database/app_database.dart';
+import '../../core/enums/weight_filter.dart';
 import '../../domain/entities/weight_entry.dart';
 import '../../domain/repositories/weight_repository.dart';
 import '../datasources/weight_local_datasource.dart';
@@ -57,4 +58,16 @@ class WeightRepositoryImpl implements WeightRepository {
       ) async {
     await localDataSource.deleteWeight(id);
   }
+
+  @override
+  Future<List<WeightEntry>> getFilteredWeights(
+      WeightFilter filter,
+      ) async {
+    final data = await localDataSource.getFilteredWeights(filter);
+
+    return data
+        .map(WeightEntryModel.fromDrift)
+        .toList();
+  }
+
 }

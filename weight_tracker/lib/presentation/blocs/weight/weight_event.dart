@@ -1,5 +1,6 @@
 import 'package:equatable/equatable.dart';
 
+import '../../../core/enums/weight_filter.dart';
 import '../../../domain/entities/weight_entry.dart';
 
 abstract class WeightEvent extends Equatable {
@@ -38,4 +39,13 @@ class DeleteWeightEvent extends WeightEvent {
 
   @override
   List<Object?> get props => [id];
+}
+
+class LoadFilteredWeightsEvent extends WeightEvent {
+  final WeightFilter filter;
+
+  const LoadFilteredWeightsEvent(this.filter);
+
+  @override
+  List<Object?> get props => [filter];
 }

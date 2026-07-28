@@ -1,5 +1,7 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
 
+import '../../../core/enums/weight_filter.dart';
+import '../../../domain/usecases/get_filtered_weights_usecase.dart';
 import '../../../domain/usecases/weight/add_weight.dart';
 import '../../../domain/usecases/weight/delete_weight.dart';
 import '../../../domain/usecases/weight/get_weight_entries.dart';
@@ -12,9 +14,11 @@ class WeightBloc extends Bloc<WeightEvent, WeightState> {
   final AddWeightUseCase addWeight;
   final UpdateWeightUseCase updateWeight;
   final DeleteWeightUseCase deleteWeight;
+  final GetFilteredWeightsUseCase getFilteredWeights;
 
   WeightBloc({
     required this.getWeightEntries,
+    required this.getFilteredWeights,
     required this.addWeight,
     required this.updateWeight,
     required this.deleteWeight,
@@ -23,6 +27,7 @@ class WeightBloc extends Bloc<WeightEvent, WeightState> {
     on<AddWeightEvent>(_onAddWeight);
     on<UpdateWeightEvent>(_onUpdateWeight);
     on<DeleteWeightEvent>(_onDeleteWeight);
+    on<LoadFilteredWeightsEvent>(_onLoadFilteredWeights);
   }
 
   Future<void> _onLoadWeights(
@@ -33,9 +38,38 @@ class WeightBloc extends Bloc<WeightEvent, WeightState> {
 
     try {
       final weights = await getWeightEntries();
-      emit(WeightLoaded(weights));
+      emit(
+        WeightLoaded(
+          weights: weights,
+          selectedFilter: WeightFilter.all,
+        ),
+      );
     } catch (_) {
       emit(const WeightError('Failed to load weights'));
+    }
+  }
+
+  Future<void> _onLoadFilteredWeights(
+      LoadFilteredWeightsEvent event,
+      Emitter<WeightState> emit,
+      ) async {
+    emit(const WeightLoading());
+
+    try {
+      final weights = await getFilteredWeights(event.filter);
+
+      emit(
+        WeightLoaded(
+          weights: weights,
+          selectedFilter: event.filter,
+        ),
+      );
+    } catch (e) {
+      emit(
+        WeightError(
+          e.toString(),
+        ),
+      );
     }
   }
 
@@ -50,7 +84,12 @@ class WeightBloc extends Bloc<WeightEvent, WeightState> {
 
       final weights = await getWeightEntries();
 
-      emit(WeightLoaded(weights));
+      emit(
+        WeightLoaded(
+          weights: weights,
+          selectedFilter: WeightFilter.all,
+        ),
+      );
     } catch (_) {
       emit(const WeightError('Failed to add weight'));
     }
@@ -67,7 +106,12 @@ class WeightBloc extends Bloc<WeightEvent, WeightState> {
 
       final weights = await getWeightEntries();
 
-      emit(WeightLoaded(weights));
+      emit(
+        WeightLoaded(
+          weights: weights,
+          selectedFilter: WeightFilter.all,
+        ),
+      );
     } catch (_) {
       emit(const WeightError('Failed to update weight'));
     }
@@ -84,9 +128,15 @@ class WeightBloc extends Bloc<WeightEvent, WeightState> {
 
       final weights = await getWeightEntries();
 
-      emit(WeightLoaded(weights));
+      emit(
+        WeightLoaded(
+          weights: weights,
+          selectedFilter: WeightFilter.all,
+        ),
+      );
     } catch (_) {
       emit(const WeightError('Failed to delete weight'));
     }
   }
+
 }

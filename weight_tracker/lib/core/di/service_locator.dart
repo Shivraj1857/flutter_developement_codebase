@@ -2,6 +2,7 @@ import 'package:get_it/get_it.dart';
 import '../../data/datasources/weight_local_datasource.dart';
 import '../../data/repositories/weight_repository_impl.dart';
 import '../../domain/repositories/weight_repository.dart';
+import '../../domain/usecases/get_filtered_weights_usecase.dart';
 import '../../domain/usecases/weight/add_weight.dart';
 import '../../domain/usecases/weight/delete_weight.dart';
 import '../../domain/usecases/weight/get_latest_weight.dart';
@@ -71,6 +72,7 @@ Future<void> setupDependencies() async {
   getIt.registerFactory(
         () => WeightBloc(
       getWeightEntries: getIt(),
+      getFilteredWeights :getIt(),
       addWeight: getIt(),
       updateWeight: getIt(),
       deleteWeight: getIt(),
@@ -116,6 +118,12 @@ Future<void> setupDependencies() async {
 
   getIt.registerLazySingleton(
         () => GetLatestWeightUseCase(
+      getIt<WeightRepository>(),
+    ),
+  );
+
+  getIt.registerLazySingleton(
+        () => GetFilteredWeightsUseCase(
       getIt<WeightRepository>(),
     ),
   );

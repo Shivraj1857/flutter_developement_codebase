@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../core/di/service_locator.dart';
+import '../../core/enums/weight_filter.dart';
 import '../../domain/entities/weight_entry.dart';
 import '../blocs/weight/weight_bloc.dart';
 import '../blocs/weight/weight_event.dart';
@@ -45,6 +46,23 @@ class _WeightPageState extends State<WeightPage> {
         _selectedDate = pickedDate;
         _dateController.text = DateFormat('dd MMM yyyy').format(pickedDate);
       });
+    }
+  }
+
+  String _filterLabel(WeightFilter filter) {
+    switch (filter) {
+      case WeightFilter.today:
+        return 'Today';
+      case WeightFilter.week:
+        return 'This Week';
+      case WeightFilter.month:
+        return 'This Month';
+      case WeightFilter.sixMonths:
+        return '6 Months';
+      case WeightFilter.year:
+        return 'This Year';
+      case WeightFilter.all:
+        return 'All';
     }
   }
 
@@ -177,62 +195,87 @@ builder: (context) {
                 }
 
                 if (state is WeightLoaded) {
-                  if (state.weights.isEmpty) {
-                    return const Center(
-                      child: Text('No weight records found'),
-                    );
-                  }
-
-                  return ListView.builder(
-                    itemCount: state.weights.length,
-                    itemBuilder: (context, index) {
-                      final weight = state.weights[index];
-
-                      return Card(
-                        child: ListTile(
-                          title: Text('${weight.weight} kg'),
-                          subtitle: Text(
-                            DateFormat('dd MMM yyyy')
-                                .format(weight.recordedAt),
-                          ),
-                          trailing: Row(
-                            mainAxisSize: MainAxisSize.min,
-                            children: [
-                              IconButton(
-                                onPressed: () {
-                                  setState(() {
-                                    _editingWeight = weight;
-
-                                    _weightController.text =
-                                        weight.weight.toString();
-
-                                    _selectedDate = weight.recordedAt;
-
-                                    _dateController.text =
-                                        DateFormat('dd MMM yyyy')
-                                            .format(weight.recordedAt);
-                                  });
-                                },
-                                icon: const Icon(Icons.edit),
-                              ),
-                              IconButton(
-                                onPressed: () {
+                  return Column(
+                    children: [
+                      SingleChildScrollView(
+                        scrollDirection: Axis.horizontal,
+                        child: Row(
+                          children: WeightFilter.values.map((filter) {
+                            return Padding(
+                              padding: const EdgeInsets.only(right: 8),
+                              child: ChoiceChip(
+                                label: Text(_filterLabel(filter)),
+                                selected: state.selectedFilter == filter,
+                                onSelected: (_) {
                                   context.read<WeightBloc>().add(
-                                    DeleteWeightEvent(weight.id),
+                                    LoadFilteredWeightsEvent(filter),
                                   );
                                 },
-                                icon: const Icon(Icons.delete),
                               ),
-                            ],
-                          ),
+                            );
+                          }).toList(),
                         ),
-                      );
-                    },
+                      ),
+
+                      const SizedBox(height: 16),
+
+                      Expanded(
+                        child: state.weights.isEmpty
+                            ? const Center(
+                          child: Text('No weight records found'),
+                        )
+                            : ListView.builder(
+                          itemCount: state.weights.length,
+                          itemBuilder: (context, index) {
+                            final weight = state.weights[index];
+
+                            return Card(
+                              child: ListTile(
+                                title: Text('${weight.weight} kg'),
+                                subtitle: Text(
+                                  DateFormat('dd MMM yyyy')
+                                      .format(weight.recordedAt),
+                                ),
+                                trailing: Row(
+                                  mainAxisSize: MainAxisSize.min,
+                                  children: [
+                                    IconButton(
+                                      onPressed: () {
+                                        setState(() {
+                                          _editingWeight = weight;
+                                          _weightController.text =
+                                              weight.weight.toString();
+                                          _selectedDate = weight.recordedAt;
+                                          _dateController.text =
+                                              DateFormat('dd MMM yyyy')
+                                                  .format(weight.recordedAt);
+                                        });
+                                      },
+                                      icon: const Icon(Icons.edit),
+                                    ),
+                                    IconButton(
+                                      onPressed: () {
+                                        context.read<WeightBloc>().add(
+                                          DeleteWeightEvent(weight.id),
+                                        );
+                                      },
+                                      icon: const Icon(Icons.delete),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            );
+                          },
+                        ),
+                      ),
+                    ],
                   );
                 }
-
                 return const SizedBox.shrink();
-              },
+
+              }
+
+                //return const SizedBox.shrink();
             ),
           ),
         ],
