@@ -17,6 +17,7 @@ class _ProfilePageState extends State<ProfilePage> {
   final _nameController = TextEditingController();
   final _ageController = TextEditingController();
   final _heightController = TextEditingController();
+  final _formKey = GlobalKey<FormState>();
 
   @override
   void dispose() {
@@ -27,6 +28,9 @@ class _ProfilePageState extends State<ProfilePage> {
   }
 
   void _saveProfile(BuildContext context) {
+    if (!_formKey.currentState!.validate()) {
+      return;
+    }
     final profile = UserProfile(
       id: 0, // Use 0 for a new profile (or existing ID when updating)
       name: _nameController.text.trim(),
@@ -72,7 +76,9 @@ class _ProfilePageState extends State<ProfilePage> {
                 builder: (context, state) {
                   final isLoading = state is ProfileLoading;
 
-                  return Column(
+                  return Form(
+                      key: _formKey,
+                      child: Column(
                     crossAxisAlignment: CrossAxisAlignment.stretch,
                     children: [
                       TextFormField(
@@ -80,6 +86,23 @@ class _ProfilePageState extends State<ProfilePage> {
                         decoration: const InputDecoration(
                           labelText: 'Name',
                         ),
+                        validator: (value) {
+                          final name = value?.trim() ?? '';
+
+                          if (name.isEmpty) {
+                            return 'Please enter your name';
+                          }
+
+                          if (name.length < 2) {
+                            return 'Name must contain at least 2 characters';
+                          }
+
+                          if (!RegExp(r'^[a-zA-Z ]+$').hasMatch(name)) {
+                            return 'Only letters and spaces are allowed';
+                          }
+
+                          return null;
+                        },
                       ),
 
                       const SizedBox(height: 16),
@@ -90,17 +113,50 @@ class _ProfilePageState extends State<ProfilePage> {
                         decoration: const InputDecoration(
                           labelText: 'Age',
                         ),
+                        validator: (value) {
+                          final age = int.tryParse(value?.trim() ?? '');
+
+                          if (value == null || value.trim().isEmpty) {
+                            return 'Please enter your age';
+                          }
+
+                          if (age == null) {
+                            return 'Enter a valid age';
+                          }
+
+                          if (age < 1 || age > 120) {
+                            return 'Age must be between 1 and 120';
+                          }
+
+                          return null;
+                        },
                       ),
 
                       const SizedBox(height: 16),
 
                       TextFormField(
                         controller: _heightController,
-                        keyboardType:
-                        const TextInputType.numberWithOptions(decimal: true),
+                        keyboardType: const TextInputType.numberWithOptions(decimal: true),
                         decoration: const InputDecoration(
-                          labelText: 'Height',
+                          labelText: 'Height (cm)',
                         ),
+                        validator: (value) {
+                          final height = double.tryParse(value?.trim() ?? '');
+
+                          if (value == null || value.trim().isEmpty) {
+                            return 'Please enter your height';
+                          }
+
+                          if (height == null) {
+                            return 'Enter a valid height';
+                          }
+
+                          if (height < 30 || height > 300) {
+                            return 'Height must be between 30 and 300 cm';
+                          }
+
+                          return null;
+                        },
                       ),
 
                       const SizedBox(height: 24),
@@ -120,7 +176,7 @@ class _ProfilePageState extends State<ProfilePage> {
                             : const Text('Save'),
                       ),
                     ],
-                  );
+                  ),);
                 },
               ),
             ),

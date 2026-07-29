@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../core/di/service_locator.dart';
@@ -111,7 +112,9 @@ builder: (context) {
               children: [
                 TextFormField(
                   controller: _weightController,
-                  keyboardType: TextInputType.number,
+                  keyboardType: const TextInputType.numberWithOptions(
+                    decimal: true,
+                  ),
                   decoration: const InputDecoration(
                     labelText: 'Weight (kg)',
                     border: OutlineInputBorder(),
@@ -254,10 +257,38 @@ builder: (context) {
                                       icon: const Icon(Icons.edit),
                                     ),
                                     IconButton(
-                                      onPressed: () {
-                                        context.read<WeightBloc>().add(
-                                          DeleteWeightEvent(weight.id),
+                                      onPressed: () async {
+                                        final shouldDelete = await showDialog<bool>(
+                                          context: context,
+                                          builder: (context) {
+                                            return AlertDialog(
+                                              title: const Text('Delete Weight'),
+                                              content: const Text(
+                                                'Are you sure you want to delete this weight record?',
+                                              ),
+                                              actions: [
+                                                TextButton(
+                                                  onPressed: () {
+                                                    Navigator.pop(context, false);
+                                                  },
+                                                  child: const Text('Cancel'),
+                                                ),
+                                                FilledButton(
+                                                  onPressed: () {
+                                                    Navigator.pop(context, true);
+                                                  },
+                                                  child: const Text('Delete'),
+                                                ),
+                                              ],
+                                            );
+                                          },
                                         );
+
+                                        if (shouldDelete == true) {
+                                          context.read<WeightBloc>().add(
+                                            DeleteWeightEvent(weight.id),
+                                          );
+                                        }
                                       },
                                       icon: const Icon(Icons.delete),
                                     ),
