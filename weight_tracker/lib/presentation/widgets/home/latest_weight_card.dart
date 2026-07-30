@@ -27,7 +27,7 @@ class LatestWeightCard extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      '📊 Latest Weight',
+                      'Latest Weight',
                       style: TextStyle(
                         fontSize: 18,
                         fontWeight: FontWeight.bold,

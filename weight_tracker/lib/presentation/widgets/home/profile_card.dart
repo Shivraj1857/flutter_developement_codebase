@@ -29,12 +29,21 @@ class ProfileCard extends StatelessWidget {
                 return Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    const Text(
-                      '👤 Profile',
-                      style: TextStyle(
-                        fontSize: 18,
-                        fontWeight: FontWeight.bold,
-                      ),
+                    Row(
+                      children: const [
+                        Icon(
+                          Icons.person,
+                          size: 30,
+                        ),
+                        SizedBox(width: 10),
+                        Text(
+                          'Profile',
+                          style: TextStyle(
+                            fontSize: 18,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ],
                     ),
 
                     const SizedBox(height: 16),

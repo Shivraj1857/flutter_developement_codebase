@@ -1,5 +1,6 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
 
+import '../../../domain/usecases/profile/delete_user_profile.dart';
 import '../../../domain/usecases/profile/get_user_profile.dart';
 import '../../../domain/usecases/profile/save_user_profile.dart';
 import '../../../domain/usecases/profile/update_user_profile.dart';
@@ -10,15 +11,18 @@ class ProfileBloc extends Bloc<ProfileEvent, ProfileState> {
   final GetUserProfileUseCase getUserProfile;
   final SaveUserProfileUseCase saveUserProfile;
   final UpdateUserProfileUseCase updateUserProfile;
+  final DeleteUserProfileUseCase deleteUserProfile;
 
   ProfileBloc({
     required this.getUserProfile,
     required this.saveUserProfile,
     required this.updateUserProfile,
+    required this.deleteUserProfile,
   }) : super(const ProfileInitial()) {
     on<LoadProfileEvent>(_onLoadProfile);
     on<SaveProfileEvent>(_onSaveProfile);
     on<UpdateProfileEvent>(_onUpdateProfile);
+    on<DeleteProfileEvent>(_onDeleteProfile);
   }
 
   Future<void> _onLoadProfile(
@@ -60,6 +64,21 @@ class ProfileBloc extends Bloc<ProfileEvent, ProfileState> {
       emit(ProfileLoaded(event.profile));
     } catch (_) {
       emit(const ProfileError('Failed to update profile'));
+    }
+  }
+
+  Future<void> _onDeleteProfile(
+      DeleteProfileEvent event,
+      Emitter<ProfileState> emit,
+      ) async {
+    emit(const ProfileLoading());
+
+    try {
+      await deleteUserProfile();
+
+      emit(const ProfileInitial());
+    } catch (_) {
+      emit(const ProfileError('Failed to delete profile'));
     }
   }
 }

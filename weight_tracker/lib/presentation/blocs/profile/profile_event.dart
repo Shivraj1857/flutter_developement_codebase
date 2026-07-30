@@ -30,3 +30,7 @@ class UpdateProfileEvent extends ProfileEvent {
   @override
   List<Object?> get props => [profile];
 }
+
+class DeleteProfileEvent extends ProfileEvent {
+  const DeleteProfileEvent();
+}
