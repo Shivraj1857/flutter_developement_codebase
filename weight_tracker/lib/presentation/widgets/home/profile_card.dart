@@ -76,12 +76,23 @@ class ProfileCard extends StatelessWidget {
               return Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  const Text(
-                    '👤 Profile',
-                    style: TextStyle(
-                      fontSize: 18,
-                      fontWeight: FontWeight.bold,
-                    ),
+                  Row(
+                    children: const [
+                      CircleAvatar(
+                        radius: 18,
+                        backgroundImage: AssetImage(
+                          'assets/images/Shivraj_Deshmukh_Passport_size_photograph.png',
+                        ),
+                      ),
+                      SizedBox(width: 10),
+                      Text(
+                        'Profile',
+                        style: TextStyle(
+                          fontSize: 24,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ],
                   ),
 
                   const SizedBox(height: 16),

@@ -3,7 +3,6 @@ import '../../data/datasources/weight_local_datasource.dart';
 import '../../data/repositories/weight_repository_impl.dart';
 import '../../domain/repositories/weight_repository.dart';
 import '../../domain/usecases/get_filtered_weights_usecase.dart';
-import '../../domain/usecases/profile/delete_user_profile.dart';
 import '../../domain/usecases/weight/add_weight.dart';
 import '../../domain/usecases/weight/delete_weight.dart';
 import '../../domain/usecases/weight/get_latest_weight.dart';
@@ -60,17 +59,11 @@ Future<void> setupDependencies() async {
     ),
   );
 
-  getIt.registerLazySingleton(
-        () => DeleteUserProfileUseCase(
-      getIt<UserProfileRepository>(),
-    ),
-  );
 
   getIt.registerFactory(
         () => ProfileBloc(
       getUserProfile: getIt(),
       saveUserProfile: getIt(),
-      deleteUserProfile: getIt(),
       updateUserProfile: getIt(),
     ),
   );

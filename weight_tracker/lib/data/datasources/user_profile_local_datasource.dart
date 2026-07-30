@@ -21,7 +21,4 @@ class UserProfileLocalDataSource {
     return database.update(database.userProfileTable).replace(profile);
   }
 
-  Future<void> deleteProfile() async {
-    await database.delete(database.userProfileTable).go();
-  }
 }

@@ -21,6 +21,7 @@ class _ProfilePageState extends State<ProfilePage> {
   final _heightController = TextEditingController();
   final _formKey = GlobalKey<FormState>();
   UserProfile? _currentProfile;
+  bool _profileSaved = false;
 
   @override
   void dispose() {
@@ -34,6 +35,7 @@ class _ProfilePageState extends State<ProfilePage> {
     if (!_formKey.currentState!.validate()) {
       return;
     }
+    _profileSaved = true;
 
     final profile = UserProfile(
       id: _currentProfile?.id ?? 0,
@@ -75,24 +77,16 @@ class _ProfilePageState extends State<ProfilePage> {
                   _heightController.text = state.profile!.height.toString();
                 }
 
+                if (_profileSaved) {
+                  _profileSaved = false;
+                  Navigator.pop(context);
+                }
+
                 // ScaffoldMessenger.of(context).showSnackBar(
                 //   const SnackBar(
                 //     content: Text('Profile saved successfully'),
                 //   ),
                 // );
-              }
-              if (state is ProfileInitial) {
-                _currentProfile = null;
-
-                _nameController.clear();
-                _ageController.clear();
-                _heightController.clear();
-
-                ScaffoldMessenger.of(context).showSnackBar(
-                  const SnackBar(
-                    content: Text('Profile deleted successfully'),
-                  ),
-                );
               }
 
               if (state is ProfileError) {
@@ -208,16 +202,7 @@ class _ProfilePageState extends State<ProfilePage> {
                         )
                             : const Text('Save'),
                       ),
-                      const SizedBox(height: 12),
 
-                      ElevatedButton(
-                        onPressed: () {
-                          context.read<ProfileBloc>().add(
-                            const DeleteProfileEvent(),
-                          );
-                        },
-                        child: const Text('Reset Profile'),
-                      ),
                     ],
                   ),);
                 },

@@ -44,9 +44,5 @@ class UserProfileRepositoryImpl implements UserProfileRepository {
     await localDataSource.updateProfile(data);
   }
 
-  @override
-  Future<void> deleteUserProfile() async {
-    await localDataSource.deleteProfile();
-  }
   
 }
