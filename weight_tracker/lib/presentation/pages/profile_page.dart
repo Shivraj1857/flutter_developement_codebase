@@ -12,12 +12,15 @@ class ProfilePage extends StatefulWidget {
   @override
   State<ProfilePage> createState() => _ProfilePageState();
 }
+//profile page
 
 class _ProfilePageState extends State<ProfilePage> {
+
   final _nameController = TextEditingController();
   final _ageController = TextEditingController();
   final _heightController = TextEditingController();
   final _formKey = GlobalKey<FormState>();
+  UserProfile? _currentProfile;
 
   @override
   void dispose() {
@@ -31,23 +34,31 @@ class _ProfilePageState extends State<ProfilePage> {
     if (!_formKey.currentState!.validate()) {
       return;
     }
+
     final profile = UserProfile(
-      id: 0, // Use 0 for a new profile (or existing ID when updating)
+      id: _currentProfile?.id ?? 0,
       name: _nameController.text.trim(),
-      age: int.tryParse(_ageController.text.trim()) ?? 0,
-      height: double.tryParse(_heightController.text.trim()) ?? 0,
-      createdAt: DateTime.now(),
+      age: int.parse(_ageController.text.trim()),
+      height: double.parse(_heightController.text.trim()),
+      createdAt: _currentProfile?.createdAt ?? DateTime.now(),
     );
 
-    context.read<ProfileBloc>().add(
-      SaveProfileEvent(profile),
-    );
+    if (_currentProfile == null) {
+      context.read<ProfileBloc>().add(
+        SaveProfileEvent(profile),
+      );
+    } else {
+      context.read<ProfileBloc>().add(
+        UpdateProfileEvent(profile),
+      );
+    }
   }
 
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (_) => getIt<ProfileBloc>(),
+      create: (_) => getIt<ProfileBloc>()
+        ..add(const LoadProfileEvent()),
       child: Scaffold(
         appBar: AppBar(
           title: const Text('Profile'),
@@ -55,6 +66,15 @@ class _ProfilePageState extends State<ProfilePage> {
           body: BlocListener<ProfileBloc, ProfileState>(
             listener: (context, state) {
               if (state is ProfileLoaded) {
+                _currentProfile = state.profile;
+
+                if (state.profile != null) {
+                  debugPrint('Profile Loaded: ${state.profile?.name}');
+                  _nameController.text = state.profile!.name;
+                  _ageController.text = state.profile!.age.toString();
+                  _heightController.text = state.profile!.height.toString();
+                }
+
                 ScaffoldMessenger.of(context).showSnackBar(
                   const SnackBar(
                     content: Text('Profile saved successfully'),

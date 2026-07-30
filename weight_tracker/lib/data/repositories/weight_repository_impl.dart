@@ -21,7 +21,6 @@ class WeightRepositoryImpl implements WeightRepository {
 
   @override
   Future<WeightEntry?> getLatestWeight() async {
-    // Will implement in Step 15
     return null;
   }
 

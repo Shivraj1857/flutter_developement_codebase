@@ -81,11 +81,11 @@ class _WeightPageState extends State<WeightPage> {
             _selectedDate = null;
             _editingWeight = null;
 
-            ScaffoldMessenger.of(context).showSnackBar(
-              const SnackBar(
-                content: Text('Operation completed successfully'),
-              ),
-            );
+            // ScaffoldMessenger.of(context).showSnackBar(
+            //   const SnackBar(
+            //     content: Text('Operation completed successfully'),
+            //   ),
+            // );
           }
 
           if (state is WeightError) {
