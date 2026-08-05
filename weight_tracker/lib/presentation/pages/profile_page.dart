@@ -82,11 +82,6 @@ class _ProfilePageState extends State<ProfilePage> {
                   Navigator.pop(context);
                 }
 
-                // ScaffoldMessenger.of(context).showSnackBar(
-                //   const SnackBar(
-                //     content: Text('Profile saved successfully'),
-                //   ),
-                // );
               }
 
               if (state is ProfileError) {
