@@ -1,4 +1,4 @@
-import '../../domain/entities/login_entity.dart';
+import '../../domain/entities/auth_entity.dart';
 import '../../domain/repositories/auth_repository.dart';
 import '../datasources/remote/auth_remote_data_source.dart';
 
@@ -8,13 +8,15 @@ class AuthRepositoryImpl implements AuthRepository {
   AuthRepositoryImpl(this.remoteDataSource);
 
   @override
-  Future<LoginEntity> login({
-    required String email,
-    required String password,
-  }) async {
-    return await remoteDataSource.login(
-      email: email,
-      password: password,
+  Future<AuthEntity> login(
+      String username,
+      String password,
+      ) async {
+    final authModel = await remoteDataSource.login(
+      username,
+      password,
     );
+
+    return authModel.toEntity();
   }
 }

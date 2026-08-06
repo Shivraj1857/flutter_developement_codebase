@@ -8,6 +8,7 @@ class DioInterceptor extends Interceptor {
       ) {
     print("REQUEST URL: ${options.uri}");
     print("REQUEST METHOD: ${options.method}");
+    print("REQUEST DATA: ${options.data}");
 
     handler.next(options);
   }

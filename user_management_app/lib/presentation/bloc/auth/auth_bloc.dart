@@ -8,26 +8,22 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
   final LoginUseCase loginUseCase;
 
   AuthBloc(this.loginUseCase) : super(const AuthInitial()) {
-    on<LoginRequested>(_onLoginRequested);
+    on<LoginEvent>(_login);
   }
 
-  Future<void> _onLoginRequested(
-      LoginRequested event,
+  Future<void> _login(
+      LoginEvent event,
       Emitter<AuthState> emit,
       ) async {
-    try {
-      emit(const AuthLoading());
+     emit(const AuthLoading());
+     try {
 
-      final response = await loginUseCase(
-        email: event.email,
-        password: event.password,
-      );
+       final user = await loginUseCase(
+         event.username,
+         event.password,
+       );
 
-      emit(
-        AuthSuccess(
-          token: response.token,
-        ),
-      );
+       emit(AuthSuccess(user));
     } catch (e) {
       emit(
         AuthError(

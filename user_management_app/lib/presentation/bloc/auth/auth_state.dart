@@ -1,5 +1,7 @@
 import 'package:equatable/equatable.dart';
 
+import '../../../domain/entities/auth_entity.dart';
+
 class AuthState extends Equatable {
   const AuthState();
 
@@ -16,14 +18,9 @@ class AuthLoading extends AuthState {
 }
 
 class AuthSuccess extends AuthState {
-  final String token;
+  final AuthEntity user;
 
-  const AuthSuccess({
-    required this.token,
-  });
-
-  @override
-  List<Object?> get props => [token];
+  AuthSuccess(this.user);
 }
 
 class AuthError extends AuthState {

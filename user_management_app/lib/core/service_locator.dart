@@ -6,6 +6,11 @@ import '../domain/repositories/auth_repository.dart';
 import '../domain/usecases/login_usecase.dart';
 import '../presentation/bloc/auth/auth_bloc.dart';
 import 'network/dio_client.dart';
+import '../../data/datasources/remote/user_remote_data_source.dart';
+import '../../data/repositories/user_repository_impl.dart';
+import '../../domain/repositories/user_repository.dart';
+import '../../domain/usecases/get_users_usecase.dart';
+import '../../presentation/bloc/user/user_bloc.dart';
 
 final sl = GetIt.instance;
 
@@ -37,4 +42,23 @@ Future<void> init() async {
       sl<LoginUseCase>(),
     ),
   );
+
+  sl.registerLazySingleton<UserRemoteDataSource>(
+        () => UserRemoteDataSourceImpl(
+      sl<DioClient>().dio,
+    ),
+  );
+
+  sl.registerLazySingleton<UserRepository>(
+        () => UserRepositoryImpl(sl()),
+  );
+
+  sl.registerLazySingleton<GetUsersUseCase>(
+        () => GetUsersUseCase(sl()),
+  );
+
+  sl.registerFactory(
+        () => UserBloc(sl()),
+  );
+
 }

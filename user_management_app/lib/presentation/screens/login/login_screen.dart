@@ -1,9 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
+import '../../../core/service_locator.dart';
 import '../../bloc/auth/auth_bloc.dart';
 import '../../bloc/auth/auth_event.dart';
 import '../../bloc/auth/auth_state.dart';
+import '../../bloc/user/user_bloc.dart';
+import '../home_screen.dart';
+import '../user_list/user_list_screen.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -39,6 +43,16 @@ class _LoginScreenState extends State<LoginScreen> {
                 content: Text('Login successful'),
               ),
             );
+
+            Navigator.pushReplacement(
+              context,
+              MaterialPageRoute(
+                builder: (_) => BlocProvider(
+                  create: (_) => sl<UserBloc>(),
+                  child: const UserListScreen(),
+                ),
+              ),
+            );
           }
 
           if (state is AuthError) {
@@ -57,7 +71,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 TextField(
                   controller: emailController,
                   decoration: const InputDecoration(
-                    labelText: 'Email',
+                    labelText: 'Username',
                   ),
                 ),
                 const SizedBox(height: 20),
@@ -72,8 +86,8 @@ class _LoginScreenState extends State<LoginScreen> {
                 ElevatedButton(
                   onPressed: () {
                     context.read<AuthBloc>().add(
-                      LoginRequested(
-                        email: emailController.text.trim(),
+                      LoginEvent(
+                        username: emailController.text.trim(),
                         password: passwordController.text.trim(),
                       ),
                     );

@@ -1,32 +1,33 @@
 import 'package:dio/dio.dart';
 
-import '../../models/login_model.dart';
+import '../../models/auth_model.dart';
 
 abstract class AuthRemoteDataSource {
-  Future<LoginModel> login({
-    required String email,
-    required String password,
-  });
+  Future<AuthModel> login(
+      String username,
+      String password,
+      );
 }
 
-class AuthRemoteDataSourceImpl implements AuthRemoteDataSource {
+class AuthRemoteDataSourceImpl
+    implements AuthRemoteDataSource {
   final Dio dio;
 
   AuthRemoteDataSourceImpl(this.dio);
 
   @override
-  Future<LoginModel> login({
-    required String email,
-    required String password,
-  }) async {
+  Future<AuthModel> login(
+      String username,
+      String password,
+      ) async {
     final response = await dio.post(
-      '/login',
+      'https://dummyjson.com/auth/login',
       data: {
-        'email': email,
+        'username': username,
         'password': password,
       },
     );
 
-    return LoginModel.fromJson(response.data);
+    return AuthModel.fromJson(response.data);
   }
 }

@@ -1,4 +1,4 @@
-import '../entities/login_entity.dart';
+import '../entities/auth_entity.dart';
 import '../repositories/auth_repository.dart';
 
 class LoginUseCase {
@@ -6,13 +6,13 @@ class LoginUseCase {
 
   LoginUseCase(this.repository);
 
-  Future<LoginEntity> call({
-    required String email,
-    required String password,
-  }) {
-    return repository.login(
-      email: email,
-      password: password,
+  Future<AuthEntity> call(
+      String username,
+      String password,
+      ) async {
+    return await repository.login(
+      username,
+      password,
     );
   }
 }
