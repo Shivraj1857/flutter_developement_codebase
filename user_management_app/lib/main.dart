@@ -1,6 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
-void main() {
+import 'core/service_locator.dart';
+import 'presentation/bloc/auth/auth_bloc.dart';
+import 'presentation/screens/login/login_screen.dart';
+
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+
+  await init();
+
   runApp(const UserManagementApp());
 }
 
@@ -9,12 +19,11 @@ class UserManagementApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        body: Center(
-          child: Text("User Management App"),
-        ),
+      home: BlocProvider(
+        create: (_) => sl<AuthBloc>(),
+        child: const LoginScreen(),
       ),
     );
   }
