@@ -23,6 +23,7 @@ class _EditUserScreenState extends State<EditUserScreen> {
   late final TextEditingController firstNameController;
   late final TextEditingController lastNameController;
   late final TextEditingController emailController;
+  bool isUpdatingUser = false;
 
   @override
   void initState() {
@@ -51,6 +52,7 @@ class _EditUserScreenState extends State<EditUserScreen> {
   }
 
   void updateUser() {
+    isUpdatingUser = true;
     context.read<UserBloc>().add(
       EditUserEvent(
         EditUserEntity(
@@ -71,24 +73,25 @@ class _EditUserScreenState extends State<EditUserScreen> {
       ),
       body: BlocListener<UserBloc, UserState>(
         listener: (context, state) {
-          if (state is EditUserSuccess) {
+          if (state is UserLoaded && isUpdatingUser) {
+            isUpdatingUser = false;
+
             ScaffoldMessenger.of(context).showSnackBar(
               const SnackBar(
-                content: Text(
-                  'User updated successfully',
-                ),
+                content: Text('User Updated Successfully'),
               ),
             );
 
             Navigator.pop(context);
+            Navigator.pop(context);
           }
 
           if (state is UserError) {
+            isUpdatingUser = false;
+
             ScaffoldMessenger.of(context).showSnackBar(
               SnackBar(
-                content: Text(
-                  state.message,
-                ),
+                content: Text(state.message),
               ),
             );
           }

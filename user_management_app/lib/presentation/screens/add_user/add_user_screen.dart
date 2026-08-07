@@ -20,6 +20,8 @@ class _AddUserScreenState extends State<AddUserScreen> {
 
   final emailController = TextEditingController();
 
+  bool isAddingUser = false;
+
   @override
   void dispose() {
     firstNameController.dispose();
@@ -30,6 +32,7 @@ class _AddUserScreenState extends State<AddUserScreen> {
   }
 
   void addUser() {
+    isAddingUser = true;
     context.read<UserBloc>().add(
       AddUserEvent(
         AddUserEntity(
@@ -41,6 +44,8 @@ class _AddUserScreenState extends State<AddUserScreen> {
     );
   }
 
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -49,28 +54,24 @@ class _AddUserScreenState extends State<AddUserScreen> {
       ),
       body: BlocListener<UserBloc, UserState>(
         listener: (context, state) {
-          if (state is AddUserSuccess) {
+          if (state is UserLoaded && isAddingUser) {
+            isAddingUser = false;
+
             ScaffoldMessenger.of(context).showSnackBar(
               const SnackBar(
-                content: Text(
-                  'User added successfully',
-                ),
+                content: Text('User Added Successfully'),
               ),
             );
 
-            context.read<UserBloc>().add(
-              GetUsersEvent(),
-            );
-
-            Navigator.pop(context,true);
+            Navigator.pop(context);
           }
 
           if (state is UserError) {
+            isAddingUser = false;
+
             ScaffoldMessenger.of(context).showSnackBar(
               SnackBar(
-                content: Text(
-                  state.message,
-                ),
+                content: Text(state.message),
               ),
             );
           }

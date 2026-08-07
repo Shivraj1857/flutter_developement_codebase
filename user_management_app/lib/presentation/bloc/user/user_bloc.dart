@@ -76,11 +76,25 @@ class UserBloc extends Bloc<UserEvent, UserState> {
     emit(UserLoading());
 
     try {
-      final user = await editUserUseCase(
+      final updatedUser = await editUserUseCase(
         event.user,
       );
 
-      emit(EditUserSuccess(user));
+      final index = users.indexWhere(
+            (user) => user.id == updatedUser.id,
+      );
+
+      if (index != -1) {
+        users[index] = UserEntity(
+          id: updatedUser.id,
+          firstName: updatedUser.firstName,
+          lastName: updatedUser.lastName,
+          email: updatedUser.email,
+          image: users[index].image, // Keep existing image
+        );
+      }
+
+      emit(UserLoaded(List.from(users)));
     } catch (e) {
       emit(UserError(e.toString()));
     }
@@ -93,11 +107,15 @@ class UserBloc extends Bloc<UserEvent, UserState> {
     emit(UserLoading());
 
     try {
-      final user = await deleteUserUseCase(
+      final deletedUser = await deleteUserUseCase(
         event.user,
       );
 
-      emit(DeleteUserSuccess(user));
+      users.removeWhere(
+            (user) => user.id == deletedUser.id,
+      );
+
+      emit(UserLoaded(List.from(users)));
     } catch (e) {
       emit(UserError(e.toString()));
     }
