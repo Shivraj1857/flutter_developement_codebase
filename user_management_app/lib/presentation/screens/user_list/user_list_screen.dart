@@ -5,6 +5,7 @@ import '../../../domain/entities/user_entity.dart';
 import '../../bloc/user/user_bloc.dart';
 import '../../bloc/user/user_event.dart';
 import '../../bloc/user/user_state.dart';
+import '../add_user/add_user_screen.dart';
 import '../user_detail/user_detail_screen.dart';
 
 class UserListScreen extends StatefulWidget {
@@ -109,10 +110,12 @@ class _UserListScreenState extends State<UserListScreen> {
                             Navigator.push(
                               context,
                               MaterialPageRoute(
-                                builder: (_) =>
-                                    UserDetailScreen(
-                                      user: user,
-                                    ),
+                                builder: (_) => BlocProvider.value(
+                                  value: context.read<UserBloc>(),
+                                  child: UserDetailScreen(
+                                    user: user,
+                                  ),
+                                ),
                               ),
                             );
                           },
@@ -144,6 +147,26 @@ class _UserListScreenState extends State<UserListScreen> {
 
           return const SizedBox();
         },
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          final result =  Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (_) => BlocProvider.value(
+                value: context.read<UserBloc>(),
+                child: const AddUserScreen(),
+              ),
+            ),
+          );
+
+          if (result == true) {
+            context.read<UserBloc>().add(
+              GetUsersEvent(),
+            );
+          }
+        },
+        child: const Icon(Icons.add),
       ),
     );
   }

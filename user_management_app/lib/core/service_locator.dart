@@ -3,6 +3,9 @@ import 'package:get_it/get_it.dart';
 import '../data/datasources/remote/auth_remote_data_source.dart';
 import '../data/repositories/auth_repository_impl.dart';
 import '../domain/repositories/auth_repository.dart';
+import '../domain/usecases/add_user_usecase.dart';
+import '../domain/usecases/delete_user_usecase.dart';
+import '../domain/usecases/edit_user_usecase.dart';
 import '../domain/usecases/login_usecase.dart';
 import '../presentation/bloc/auth/auth_bloc.dart';
 import 'network/dio_client.dart';
@@ -58,7 +61,19 @@ Future<void> init() async {
   );
 
   sl.registerFactory(
-        () => UserBloc(sl()),
+        () => UserBloc(sl(),sl(),sl(),sl()),
+  );
+
+  sl.registerLazySingleton(
+        () => AddUserUseCase(sl()),
+  );
+
+  sl.registerLazySingleton(
+        () => EditUserUseCase(sl()),
+  );
+
+  sl.registerLazySingleton(
+        () => DeleteUserUseCase(sl()),
   );
 
 }
